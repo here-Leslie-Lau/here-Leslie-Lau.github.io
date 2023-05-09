@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready text-sm lg:text-base"
+  style="--bg: #faf6f1"
+  lang="en-us"
+>
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>进程控制块的作用 - Leslie&#39;s Blog</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  <meta name="description" content="大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。
+为了便于系统描述和管理进程的运行，在OS的核心为每个进程专门定义了一个数据结构——进程控制块PCB。PCB作为进程实体的一部分，记录了操作系统所需的，用于描述进程的当前情况以及管理进程运行的全部信息，是操作系统中最重要的记录型数据结构。PCB的作用是使一个在多道程序环境下不能独立运行的程序（含数据）成为一个能独立运行的基本单位，一个能与其他进程并发执行的进程。
+PCB能实现间断性运行方式。在多道程序环境下，程序是采用停停走走间断性的运行方式运行的。当进程因阻塞而暂停运行时，它必须保留自己运行时的CPU现场信息。在有了PCB后，系统就可以将CPU现场信息保存在被中断进程的PCB中，供该进程再次被调度执行时恢复CPU现场时使用。
+PCB提供进程管理所需要的信息。当调度程序调度到某进程运行时，只能根据该进程PCB中记录的程序和数据在内存或外存中的始址指针，找到相应的程序和数据；在进程运行过程中，当需要访问文件系统中的文件或I/O设备时，也都需要借助于PCB中的信息。另外，还可根据PCB中的资源清单了解到该进程所需的全部资源等。可见，在进程的整个生命周期中，操作系统总是根据PCB实施对进程的控制和管理。
+PCB提供进程调度所需要的信息。只有处于就绪状态的进程才能被调度执行，而在PCB中就提供了进程出于何种状态的信息。如果进程处于就绪状态，系统便将它插入到进程就绪队列中，等待着调度程序的调度；另外在进行调度时往往还需要了解进程的其他信息，如在优先级调度算法中，就需要知道进程的优先级。在有些较为公平的调度算法中，还需要知道进程的等待时间和已执行过的事件等。
+PCB实现与其他进程的同步与通信。进程同步机制是用于实现诸进程的协调运行的，在采用信号量机制时，它要求在每个进程中都设置有相应的用于同步的信号量。在PCB中还具有用于实现进程通信的区域或通信队列指针等" />
+  <meta name="author" content="Leslie&#39;s Blog" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="https://here-Leslie-Lau.github.io/main.min.css" />
+
+  
+  <script
+    defer
+    src="https://here-Leslie-Lau.github.io/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+   
+  <link rel="preload" as="image" href="https://here-Leslie-Lau.github.io/theme.png" />
+
+  
+  
+  
+  
+
+  
+
+  
+  <link rel="icon" href="https://here-Leslie-Lau.github.io/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://here-Leslie-Lau.github.io/apple-touch-icon.png" />
+
+  
+  <meta name="generator" content="Hugo 0.111.3">
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="进程控制块的作用" />
+<meta property="og:description" content="大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。
+为了便于系统描述和管理进程的运行，在OS的核心为每个进程专门定义了一个数据结构——进程控制块PCB。PCB作为进程实体的一部分，记录了操作系统所需的，用于描述进程的当前情况以及管理进程运行的全部信息，是操作系统中最重要的记录型数据结构。PCB的作用是使一个在多道程序环境下不能独立运行的程序（含数据）成为一个能独立运行的基本单位，一个能与其他进程并发执行的进程。
+PCB能实现间断性运行方式。在多道程序环境下，程序是采用停停走走间断性的运行方式运行的。当进程因阻塞而暂停运行时，它必须保留自己运行时的CPU现场信息。在有了PCB后，系统就可以将CPU现场信息保存在被中断进程的PCB中，供该进程再次被调度执行时恢复CPU现场时使用。
+PCB提供进程管理所需要的信息。当调度程序调度到某进程运行时，只能根据该进程PCB中记录的程序和数据在内存或外存中的始址指针，找到相应的程序和数据；在进程运行过程中，当需要访问文件系统中的文件或I/O设备时，也都需要借助于PCB中的信息。另外，还可根据PCB中的资源清单了解到该进程所需的全部资源等。可见，在进程的整个生命周期中，操作系统总是根据PCB实施对进程的控制和管理。
+PCB提供进程调度所需要的信息。只有处于就绪状态的进程才能被调度执行，而在PCB中就提供了进程出于何种状态的信息。如果进程处于就绪状态，系统便将它插入到进程就绪队列中，等待着调度程序的调度；另外在进行调度时往往还需要了解进程的其他信息，如在优先级调度算法中，就需要知道进程的优先级。在有些较为公平的调度算法中，还需要知道进程的等待时间和已执行过的事件等。
+PCB实现与其他进程的同步与通信。进程同步机制是用于实现诸进程的协调运行的，在采用信号量机制时，它要求在每个进程中都设置有相应的用于同步的信号量。在PCB中还具有用于实现进程通信的区域或通信队列指针等" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://here-Leslie-Lau.github.io/post/pcb/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-09T09:34:53+08:00" />
+<meta property="article:modified_time" content="2023-05-09T09:34:53+08:00" />
+
+  
+  <meta itemprop="name" content="进程控制块的作用">
+<meta itemprop="description" content="大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。
+为了便于系统描述和管理进程的运行，在OS的核心为每个进程专门定义了一个数据结构——进程控制块PCB。PCB作为进程实体的一部分，记录了操作系统所需的，用于描述进程的当前情况以及管理进程运行的全部信息，是操作系统中最重要的记录型数据结构。PCB的作用是使一个在多道程序环境下不能独立运行的程序（含数据）成为一个能独立运行的基本单位，一个能与其他进程并发执行的进程。
+PCB能实现间断性运行方式。在多道程序环境下，程序是采用停停走走间断性的运行方式运行的。当进程因阻塞而暂停运行时，它必须保留自己运行时的CPU现场信息。在有了PCB后，系统就可以将CPU现场信息保存在被中断进程的PCB中，供该进程再次被调度执行时恢复CPU现场时使用。
+PCB提供进程管理所需要的信息。当调度程序调度到某进程运行时，只能根据该进程PCB中记录的程序和数据在内存或外存中的始址指针，找到相应的程序和数据；在进程运行过程中，当需要访问文件系统中的文件或I/O设备时，也都需要借助于PCB中的信息。另外，还可根据PCB中的资源清单了解到该进程所需的全部资源等。可见，在进程的整个生命周期中，操作系统总是根据PCB实施对进程的控制和管理。
+PCB提供进程调度所需要的信息。只有处于就绪状态的进程才能被调度执行，而在PCB中就提供了进程出于何种状态的信息。如果进程处于就绪状态，系统便将它插入到进程就绪队列中，等待着调度程序的调度；另外在进行调度时往往还需要了解进程的其他信息，如在优先级调度算法中，就需要知道进程的优先级。在有些较为公平的调度算法中，还需要知道进程的等待时间和已执行过的事件等。
+PCB实现与其他进程的同步与通信。进程同步机制是用于实现诸进程的协调运行的，在采用信号量机制时，它要求在每个进程中都设置有相应的用于同步的信号量。在PCB中还具有用于实现进程通信的区域或通信队列指针等"><meta itemprop="datePublished" content="2023-05-09T09:34:53+08:00" />
+<meta itemprop="dateModified" content="2023-05-09T09:34:53+08:00" />
+<meta itemprop="wordCount" content="8">
+<meta itemprop="keywords" content="" />
+  
+  <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="进程控制块的作用"/>
+<meta name="twitter:description" content="大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。
+为了便于系统描述和管理进程的运行，在OS的核心为每个进程专门定义了一个数据结构——进程控制块PCB。PCB作为进程实体的一部分，记录了操作系统所需的，用于描述进程的当前情况以及管理进程运行的全部信息，是操作系统中最重要的记录型数据结构。PCB的作用是使一个在多道程序环境下不能独立运行的程序（含数据）成为一个能独立运行的基本单位，一个能与其他进程并发执行的进程。
+PCB能实现间断性运行方式。在多道程序环境下，程序是采用停停走走间断性的运行方式运行的。当进程因阻塞而暂停运行时，它必须保留自己运行时的CPU现场信息。在有了PCB后，系统就可以将CPU现场信息保存在被中断进程的PCB中，供该进程再次被调度执行时恢复CPU现场时使用。
+PCB提供进程管理所需要的信息。当调度程序调度到某进程运行时，只能根据该进程PCB中记录的程序和数据在内存或外存中的始址指针，找到相应的程序和数据；在进程运行过程中，当需要访问文件系统中的文件或I/O设备时，也都需要借助于PCB中的信息。另外，还可根据PCB中的资源清单了解到该进程所需的全部资源等。可见，在进程的整个生命周期中，操作系统总是根据PCB实施对进程的控制和管理。
+PCB提供进程调度所需要的信息。只有处于就绪状态的进程才能被调度执行，而在PCB中就提供了进程出于何种状态的信息。如果进程处于就绪状态，系统便将它插入到进程就绪队列中，等待着调度程序的调度；另外在进行调度时往往还需要了解进程的其他信息，如在优先级调度算法中，就需要知道进程的优先级。在有些较为公平的调度算法中，还需要知道进程的等待时间和已执行过的事件等。
+PCB实现与其他进程的同步与通信。进程同步机制是用于实现诸进程的协调运行的，在采用信号量机制时，它要求在每个进程中都设置有相应的用于同步的信号量。在PCB中还具有用于实现进程通信的区域或通信队列指针等"/>
+
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[5rem] max-w-3xl px-8 lg:justify-center">
+  <div class="relative z-50 mr-auto flex items-center">
+    <a
+      class="-translate-x-[1px] -translate-y-0.5 text-3xl font-bold"
+      href="https://here-Leslie-Lau.github.io/"
+      >Leslie&#39;s Blog</a
+    >
+    <div
+      class="btn-dark text-[0] ml-6 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 -mr-8 flex h-[5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = `"#faf6f1"`.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-10rem)] max-w-3xl px-8 pt-16 pb-24 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-20">
+    <h1 class="!my-0 pb-2.5">进程控制块的作用</h1>
+
+    
+    <div class="text-sm opacity-60">
+      
+      <time>May 9, 2023</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。</p>
+<ol>
+<li>
+<p>为了便于系统描述和管理进程的运行，在OS的核心为每个进程专门定义了一个数据结构——进程控制块PCB。PCB作为进程实体的一部分，记录了操作系统所需的，用于描述进程的当前情况以及管理进程运行的全部信息，是操作系统中最重要的记录型数据结构。PCB的作用是使一个在多道程序环境下不能独立运行的程序（含数据）成为一个能独立运行的基本单位，一个能与其他进程并发执行的进程。</p>
+</li>
+<li>
+<p>PCB能实现间断性运行方式。在多道程序环境下，程序是采用停停走走间断性的运行方式运行的。当进程因阻塞而暂停运行时，它必须保留自己运行时的CPU现场信息。在有了PCB后，系统就可以将CPU现场信息保存在被中断进程的PCB中，供该进程再次被调度执行时恢复CPU现场时使用。</p>
+</li>
+<li>
+<p>PCB提供进程管理所需要的信息。当调度程序调度到某进程运行时，只能根据该进程PCB中记录的程序和数据在内存或外存中的始址指针，找到相应的程序和数据；在进程运行过程中，当需要访问文件系统中的文件或I/O设备时，也都需要借助于PCB中的信息。另外，还可根据PCB中的资源清单了解到该进程所需的全部资源等。可见，在进程的整个生命周期中，操作系统总是根据PCB实施对进程的控制和管理。</p>
+</li>
+<li>
+<p>PCB提供进程调度所需要的信息。只有处于就绪状态的进程才能被调度执行，而在PCB中就提供了进程出于何种状态的信息。如果进程处于就绪状态，系统便将它插入到进程就绪队列中，等待着调度程序的调度；另外在进行调度时往往还需要了解进程的其他信息，如在优先级调度算法中，就需要知道进程的优先级。在有些较为公平的调度算法中，还需要知道进程的等待时间和已执行过的事件等。</p>
+</li>
+<li>
+<p>PCB实现与其他进程的同步与通信。进程同步机制是用于实现诸进程的协调运行的，在采用信号量机制时，它要求在每个进程中都设置有相应的用于同步的信号量。在PCB中还具有用于实现进程通信的区域或通信队列指针等</p>
+</li>
+</ol>
+</section>
+
+  
+  
+
+  
+  
+  
+
+  
+  
+
+  
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="opaco mx-auto flex h-[5rem] max-w-3xl items-center px-8 text-[0.9em] opacity-60"
+>
+  <div class="mr-auto">
+    &copy; 2023
+    <a class="link" href="https://here-Leslie-Lau.github.io/">Leslie&#39;s Blog</a>
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >Powered by Hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >Theme Paper</a
+  >
+</footer>
+
+  </body>
+</html>
