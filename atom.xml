@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2023-05-10T06:43:35&#43;00:00</updated>
+    <updated>2023-05-11T03:23:31&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -17,10 +17,99 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.111.3">Hugo</generator>
         <entry>
+            <title type="text">记录一次mysql update导致的锁表问题</title>
+            <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/mysql/update_lock_table/" />
+            <id>https://here-Leslie-Lau.github.io/post/mysql/update_lock_table/</id>
+            <updated>2023-05-11T11:22:57&#43;08:00</updated>
+            <published>2023-05-11T11:11:39&#43;08:00</published>
+            <author>
+                    <name>here-Leslie-Lau</name>
+                    <uri>https://github.com/here-Leslie-Lau/</uri>
+                    <email>i.leslie.lau@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">事发情况 当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个…</summary>
+            
+                <content type="html">&lt;h2 id=&#34;事发情况&#34;&gt;事发情况&lt;/h2&gt;
+&lt;p&gt;当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个服务接口都耗时，对外表现为整个服务不可用。&lt;/p&gt;
+&lt;p&gt;于是优先排查宽带情况，其次看代码逻辑，看错误日志（无一例外都是接口耗时过长报警）。&lt;/p&gt;
+&lt;p&gt;接着看监控发现goroutine明显增多，依然没有头绪。于是想到重启服务。&lt;/p&gt;
+&lt;p&gt;重启服务过程中，弹出一个告警日志-db连接数过多，已经超过筏值。这个时候问题才确定。&lt;/p&gt;
+&lt;h2 id=&#34;问题原因&#34;&gt;问题原因&lt;/h2&gt;
+&lt;p&gt;是最初的那个数据保存接口，逻辑很简单，接口拿到请求时，insert或者update进入db内。&lt;strong&gt;问题在于update时未对where的条件加上索引&lt;/strong&gt;，导致数据量大时，会锁住全表，导致整个服务不可用。&lt;/p&gt;
+&lt;p&gt;该接口上线一个多月稳定，事发晚上数据量达到某一临界点，update时锁住全表，后面该接口的请求一直在等待前面的响应。随着请求数量不断增多，从而引发雪崩效应。&lt;/p&gt;
+&lt;p&gt;定位原因后排查日志，发现错误信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;Lock&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;wait&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;timeout&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;exceeded&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;try&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;restarting&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;transaction&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;为什么该表被锁会影响到服务其他业务响应&#34;&gt;为什么该表被锁会影响到服务其他业务响应&lt;/h2&gt;
+&lt;p&gt;一个服务内有配置数据库的连接数上限，而这个接口因为锁表了，导致把连接数占光。从而影响服务其他正常业务的响应。&lt;/p&gt;
+&lt;p&gt;同时go中每个http请求底层都会new一个goroutine出来，当大量请求访问时，也就解释了为什么goroutine数量会暴涨。&lt;/p&gt;
+&lt;h2 id=&#34;反思&#34;&gt;反思&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;先从排查方向来说，当时排查带宽时思路是错误的，如果带宽有问题那么其他服务应该也是异常的，而不只是这个服务。&lt;/li&gt;
+&lt;li&gt;当一个服务不可用时，应当优先考虑重启该服务或者回滚到之前版本，而不是先分析错误原因。&lt;/li&gt;
+&lt;li&gt;mysql的存储引擎用的是innodb，update时基于&lt;code&gt;next-key lock&lt;/code&gt;，如果不加上索引会锁住整张表进行操作，这是个大坑。之前本人没注意过该问题&lt;/li&gt;
+&lt;li&gt;一些关键的地方开发时没有及时加上短信/邮件告警及时通知开发人员，导致这么久错误才被定位到，也浪费了大量的排查时间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;该问题更优解决方案&#34;&gt;该问题更优解决方案&lt;/h2&gt;
+&lt;p&gt;即使加了索引，但是mysql update时也有可能会锁住全表(可以通过&lt;code&gt;explain&lt;/code&gt;查看)。以使用 force index([index_name]) 可以告诉优化器使用哪个索引，以此避免有几率锁全表带来的隐患。&lt;/p&gt;
+&lt;p&gt;面对这种频繁更新的需求，维护索引也是有很高的代价。最适合方案应该考虑非关系型数据库来做存储(如&lt;code&gt;mongodb&lt;/code&gt;)&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://here-Leslie-Lau.github.io/post/" term="post" label="post" />
+                        
+                    
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/categories/mysql/" term="mysql" label="mysql" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/mysql/" term="mysql" label="mysql" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">进程控制块的作用</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/pcb/" />
             <id>https://here-Leslie-Lau.github.io/post/pcb/</id>
-            <updated>2023-05-10T14:21:09&#43;08:00</updated>
+            <updated>2023-05-11T11:22:57&#43;08:00</updated>
             <published>2023-05-09T09:34:53&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -76,6 +165,14 @@
                         
                     
                 
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/operating-system/" term="operating system" label="operating system" />
+                            
+                        
                     
                 
             
