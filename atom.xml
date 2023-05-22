@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2023-05-20T08:28:50&#43;00:00</updated>
+    <updated>2023-05-22T08:03:44&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">unsafe.Pointer&amp;uintptr</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/golang/unsafe_pointer_uintptr/" />
             <id>https://here-Leslie-Lau.github.io/post/golang/unsafe_pointer_uintptr/</id>
-            <updated>2023-05-19T12:21:12&#43;08:00</updated>
+            <updated>2023-05-22T16:03:17&#43;08:00</updated>
             <published>2023-05-18T14:34:08&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -32,6 +32,9 @@
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;本文将介绍下golang源码里经常出现的东西: &lt;code&gt;unsafe.Pointer&lt;/code&gt;和&lt;code&gt;uintptr&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;工作中很少接触到这两个，但是平时如果看源码的话对这两个就不陌生了。所以还是有必要记录一下。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文代码基于golang 1.18&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h2 id=&#34;unsafepointer&#34;&gt;unsafe.Pointer&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Pointer&lt;/code&gt;代表一个可以指向任何类型的指针，&lt;em&gt;注意是任何。&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;golang源码对它的描述如下:&lt;/p&gt;
@@ -288,7 +291,7 @@
             <title type="text">golang源码分析-启动一个http服务到底发生了什么？</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/golang/http_server/" />
             <id>https://here-Leslie-Lau.github.io/post/golang/http_server/</id>
-            <updated>2023-05-17T10:41:21&#43;08:00</updated>
+            <updated>2023-05-22T16:03:17&#43;08:00</updated>
             <published>2023-05-16T11:20:01&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -305,6 +308,9 @@
 &lt;li&gt;再看库有哪些核心的结构(该库提供的功能肯定依赖于某种数据结构)&lt;/li&gt;
 &lt;li&gt;最后看这些核心结构有哪些私有方法(核心的数据结构它是如何实现功能的)&lt;/li&gt;
 &lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文代码基于golang 1.18&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;http协议介绍&#34;&gt;http协议介绍&lt;/h2&gt;
 &lt;p&gt;这里只是简单介绍下该协议是啥，更详细的可以参考互联网。&lt;/p&gt;
