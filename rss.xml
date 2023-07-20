@@ -23,10 +23,116 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 20 Jul 2023 04:15:11 &#43;0000</lastBuildDate>
+        <lastBuildDate>Thu, 20 Jul 2023 08:48:48 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Lock Category</title>
+                <link>https://here-Leslie-Lau.github.io/post/os/lock_category/</link>
+                <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/os/lock_category/</guid>
+                <pubDate>Mon, 17 Jul 2023 19:06:51 &#43;0800</pubDate>
+                
+                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;p&gt;编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。&lt;/p&gt;
+&lt;h2 id=&#34;乐观锁悲观锁&#34;&gt;乐观锁/悲观锁&lt;/h2&gt;
+&lt;p&gt;这一对锁名字比较形象。&lt;/p&gt;
+&lt;h3 id=&#34;悲观锁&#34;&gt;悲观锁&lt;/h3&gt;
+&lt;p&gt;先说悲观锁，把锁比作人的话。这位小伙子遇事会比较“悲观”。它会先把资源给锁住再进行操作，这样其他线程请求该资源的时候就会被阻塞，直到悲观锁把资源释放为止。&lt;/p&gt;
+&lt;p&gt;数据库的锁基本都是悲观锁，比如&lt;code&gt;行锁、表锁等&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;乐观锁&#34;&gt;乐观锁&lt;/h3&gt;
+&lt;p&gt;乐观锁的操作方式是：线程遇到资源后不会马上锁住而是先进行自己的逻辑操作，但是在写入的时候会进行判断(判断数据有无被其他线程修改)。&lt;/p&gt;
+&lt;p&gt;乐观锁一般有两种实现方式:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;版本号&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;版本号机制一般在要修改的数据上增加一个&lt;code&gt;version&lt;/code&gt;字段。操作之前先读出来，操作完之后再&lt;code&gt;version + 1&lt;/code&gt;塞回去。&lt;/p&gt;
+&lt;p&gt;写入&lt;code&gt;version + 1&lt;/code&gt;之前会校验当前数据的&lt;code&gt;version&lt;/code&gt;值与操作之前读出的值是否一致。如果不一致则说明数据被修改过，那就再执行上述步奏，直到修改成功。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;CAS(Compare And Swap)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;CAS是一中无锁算法。可以在没有变量被阻塞的情况下实现变量的同步。&lt;/p&gt;
+&lt;p&gt;一般CAS操作有三个元素: 需要读写的内存值(v)、进行比较的值(a)、拟写入的新值(b)&lt;/p&gt;
+&lt;p&gt;仅当a与v相同时，才会将v修改为b，否则啥都不做。很多编程语言都会提供方法来完成CAS操作，这些方法的底层基本都是直接调用cpu的CAS原子操作。&lt;/p&gt;
+&lt;p&gt;乐观锁这里可能会存在一个&lt;code&gt;ABA问题&lt;/code&gt;，假设一个线程读取时原比较字段为A，想更新为C，最后写入时发现该字段仍为A。但是我们就能说明这其中该字段没有被更改过吗(更为B)？相当于乐观锁只关注一个数据的起始和结束状态，对中间状态是不关心的。这种问题的解决方法不是本文重点，各位可以去网上查询。&lt;/p&gt;
+&lt;h3 id=&#34;两种锁使用场景&#34;&gt;两种锁使用场景&lt;/h3&gt;
+&lt;p&gt;悲观锁适合写多读少的场景，但是只能有一个线程才能获取到锁，其他线程会阻塞，所以性能比较低。&lt;/p&gt;
+&lt;p&gt;乐观锁适合读多写少的场景，因为这种场景很少发生冲突，可以省去锁的开销。但是如果冲突很多，那么线程可能会一直轮询，浪费了cpu时间片。&lt;/p&gt;
+&lt;h2 id=&#34;公平锁非公平锁&#34;&gt;公平锁/非公平锁&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;根据线程获取锁的抢占机制&lt;/strong&gt;，锁可以分为公平锁与非公平锁。&lt;/p&gt;
+&lt;p&gt;公平锁，多个线程按照时间先后顺序来获取锁，意味着先请求锁的线程会先拿到锁，后面的线程只能阻塞等待。&lt;/p&gt;
+&lt;p&gt;非公平锁，线程之间并不会按照时间先后顺序来获取锁，可能后来的线程也会获取到锁。&lt;/p&gt;
+&lt;p&gt;如果没有什么特别的要求，建议使用非公平锁。因为公平锁会导致cpu经常切换线程，带来线程开销。&lt;/p&gt;
+&lt;h2 id=&#34;独占锁共享锁&#34;&gt;独占锁/共享锁&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;根据锁可以被单个还是多个线程持有&lt;/strong&gt;，锁可以分为独占锁与共享锁&lt;/p&gt;
+&lt;p&gt;独占锁：任意一个时间点只能由一个线程持有锁。&lt;/p&gt;
+&lt;p&gt;共享锁：资源可以被多个线程所持有。比如我们常见的读写锁中的读锁就是共享锁。&lt;/p&gt;
+&lt;h2 id=&#34;可重入锁非可重入锁&#34;&gt;可重入锁/非可重入锁&lt;/h2&gt;
+&lt;p&gt;当一个线程想要获取其他线程占据的锁，该线程会被阻塞。如果该线程获取自己占用的锁呢？&lt;/p&gt;
+&lt;p&gt;如果不被阻塞，则说明该锁为&lt;code&gt;可重入锁&lt;/code&gt;。如果被阻塞则说明为&lt;code&gt;不可重入锁&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;可重入锁原理&#34;&gt;可重入锁原理&lt;/h3&gt;
+&lt;p&gt;可重入锁内部会有一个线程标识，代表该锁当前被哪个线程所占用。除了此标识外还有一个计数器。&lt;/p&gt;
+&lt;p&gt;线程获取到锁时，计数器&lt;code&gt;+1&lt;/code&gt;。释放锁时，计数器&lt;code&gt;-1&lt;/code&gt;。类似&lt;code&gt;pv操作&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;此时如果其他线程尝试获取锁时，会检测线程标识，发现不是对应线程则会挂起阻塞。当计数器变为0时，线程标识重置为&lt;code&gt;null&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;其他锁&#34;&gt;其他锁&lt;/h2&gt;
+&lt;p&gt;自旋锁&lt;/p&gt;
+&lt;p&gt;当一个线程获取不到锁时，会一直旋转，此类锁为自旋锁。我们上文介绍的乐观锁其实也是自旋锁。&lt;/p&gt;
+&lt;p&gt;还有一些其他锁，如&lt;em&gt;分段锁&lt;/em&gt;、&lt;em&gt;偏向锁&lt;/em&gt;等。这里先不介绍了，后续慢慢补上&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://here-Leslie-Lau.github.io/post/">post</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/os/">os</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/os/">os</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/lock/">lock</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>golang源码分析-Context</title>
