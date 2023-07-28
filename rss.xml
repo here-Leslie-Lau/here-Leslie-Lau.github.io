@@ -23,10 +23,119 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 24 Jul 2023 03:31:42 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 28 Jul 2023 09:04:36 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
+        
+            <item>
+                <title>我的Neovim配置分享</title>
+                <link>https://here-Leslie-Lau.github.io/post/vim/neovim_config/</link>
+                <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/vim/neovim_config/</guid>
+                <pubDate>Fri, 28 Jul 2023 15:20:58 &#43;0800</pubDate>
+                
+                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这篇文章的目的是为了分享下我自己的&lt;code&gt;Neovim&lt;/code&gt;配置。&lt;/p&gt;
+&lt;p&gt;本人是Golang程序员，最开始使用的IDE是&lt;code&gt;JetBrains Goland&lt;/code&gt;。有一说一这个ide适配度很高，认识的很多人都使用这个。但是它也有几个对我来说的缺点：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;内存占用度高，我个人电脑配置不太跟的上&lt;/li&gt;
+&lt;li&gt;费用较高(DDDD)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;去年的时候换了&lt;code&gt;vim&lt;/code&gt;来作为我的IDE，用各种插件来满足我日常开发的需求。之所以没选用&lt;code&gt;VsCode&lt;/code&gt;是因为听人说打开大型项目的时候不太给力(我也没试过)。&lt;/p&gt;
+&lt;p&gt;今年决定换成&lt;code&gt;Neovim&lt;/code&gt;，因为自己意识到了几个问题：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;万一以后换电脑，重新配置&lt;code&gt;vim&lt;/code&gt;过于麻烦。本人用到了&lt;code&gt;YouCompleteMe&lt;/code&gt;和&lt;code&gt;Cstags&lt;/code&gt;插件，安装过这两个的应该知道多么蛋疼。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Neovim&lt;/code&gt;可以采用lua进行配置，它比&lt;code&gt;vim&lt;/code&gt;的vimscript更加友好。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Neovim&lt;/code&gt;社区更加活跃，且近几年比&lt;code&gt;vim&lt;/code&gt;更早支持新特性。如悬浮终端与异步api。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;效果图:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/nvim.png&#34; alt=&#34;screenshot1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/nvim2.png&#34; alt=&#34;screenshow2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/nvim3.png&#34; alt=&#34;screenshow3&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;仓库地址&#34;&gt;仓库地址&lt;/h2&gt;
+&lt;p&gt;本人仓库配置地址: &lt;a href=&#34;https://github.com/here-Leslie-Lau/my-nvim&#34;&gt;my-nvim&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;只需几步，即可开箱即用。&lt;/p&gt;
+&lt;h2 id=&#34;用法&#34;&gt;用法&lt;/h2&gt;
+&lt;p&gt;确保你本地的&lt;code&gt;Neovim,lua,nodejs&lt;/code&gt;大于指定版本&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;neovim &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 0.8.0
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nodejs &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; v14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;lua &amp;gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 5.2.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;自行备份好当前的&lt;code&gt;Neovim&lt;/code&gt;配置，接着:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;rm -rf ~/.config/nvim/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; ~/.config
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone git@github.com:here-Leslie-Lau/my-nvim.git
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mv my-nvim nvim
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;cd&lt;/span&gt; nvim &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; nvim lua/plugins.lua
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;在执行最后一步之后，在&lt;code&gt;Neovim&lt;/code&gt;中按&lt;code&gt;:w&lt;/code&gt;。等待插件完毕即可。&lt;/p&gt;
+&lt;p&gt;代码提示这块我用的是&lt;code&gt;coc.nvim&lt;/code&gt;，所以我会安装一些我需要的lsp。如&lt;code&gt;coc-go, coc-json, coc-lua, coc-git, coc-snippets&lt;/code&gt;。你可以自行选择安装你需要的:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;:CocInstall &amp;lt;你需要的lsp&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;特别注意，&lt;code&gt;coc-git&lt;/code&gt;为必须的。因为用到了相关git配置。不知道lsp名称的话，可以去&lt;a href=&#34;https://github.com/neoclide/coc.nvim&#34;&gt;官网&lt;/a&gt;查询&lt;/p&gt;
+&lt;h2 id=&#34;快捷键&#34;&gt;快捷键&lt;/h2&gt;
+&lt;p&gt;仓库里面有介绍，各位可以移步到仓库中。&lt;/p&gt;
+&lt;p&gt;说明下，快捷键可以在这两个文件中更改: &lt;code&gt;lua/keymaps.lua&lt;/code&gt; &lt;code&gt;lua/options-plugins.lua&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;前者是更改一些通用的快捷键，后者是更改编程语言相关的。&lt;/p&gt;
+&lt;h2 id=&#34;问题反馈&#34;&gt;问题反馈&lt;/h2&gt;
+&lt;p&gt;有任何问题都可以在博客下方的评论区联系我，或者去仓库提个&lt;a href=&#34;https://github.com/here-Leslie-Lau/my-nvim/issues&#34;&gt;issue&lt;/a&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://here-Leslie-Lau.github.io/post/">post</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Lock Category</title>
