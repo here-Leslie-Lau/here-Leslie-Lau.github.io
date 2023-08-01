@@ -10,7 +10,7 @@
         <title>Leslie&#39;s Blog</title>
         <link>https://here-Leslie-Lau.github.io/</link>
         <description>leslie的杂谈</description>
-        <generator>Hugo 0.115.4 https://gohugo.io/</generator>
+        <generator>Hugo 0.116.1 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 28 Jul 2023 09:04:36 &#43;0000</lastBuildDate>
+        <lastBuildDate>Tue, 01 Aug 2023 09:31:27 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -131,7 +131,29 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/vim/">vim</category>
+                                
+                            
+                        
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/vim/">vim</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/%E5%88%86%E4%BA%AB/">分享</category>
+                                
+                            
                         
                     
                 
