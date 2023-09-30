@@ -23,10 +23,143 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 29 Sep 2023 09:50:21 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sat, 30 Sep 2023 06:57:15 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
+        
+            <item>
+                <title>git commit规范</title>
+                <link>https://here-Leslie-Lau.github.io/post/git/commit_standard/</link>
+                <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/git/commit_standard/</guid>
+                <pubDate>Tue, 12 Sep 2023 20:52:25 &#43;0800</pubDate>
+                
+                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;git&lt;/code&gt;作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的&lt;code&gt;git commit message&lt;/code&gt;尤其重要，经常看到commit信息内有&lt;code&gt;fix bug, change XXX&lt;/code&gt;等各种千奇百怪的描述，会气的一口老血上来。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;commit message&lt;/code&gt;能够帮助我们定位一个提交主要是完成了什么功能，如何实现等。它应该清晰明了，因此特别写这一篇文章记录下相关规范(曾经的我也爱&lt;em&gt;fix bug...&lt;/em&gt;)&lt;/p&gt;
+&lt;h2 id=&#34;规范&#34;&gt;规范&lt;/h2&gt;
+&lt;p&gt;commit message格式:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;type&amp;gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&amp;lt;scope&amp;gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: &amp;lt;subject&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;接下来会一一讲解&lt;/p&gt;
+&lt;h3 id=&#34;type&#34;&gt;type&lt;/h3&gt;
+&lt;p&gt;type为必须填写。代表&lt;code&gt;git commit&lt;/code&gt;的类别，且需要在以下类型中选择:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;feat: 新功能(feature)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;fix/to: 修复bug，&lt;code&gt;fix&lt;/code&gt;代表产生diff并修复，适用于一次提交修复问题。&lt;code&gt;to&lt;/code&gt;代表产生diff却没有修复，适用于多次提交修复问题，最终提交使用&lt;code&gt;fix&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;docs: 文档相关提交&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;style: 格式，不影响代码功能的变动&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;refactor：重构（即不是新增功能，也不是修改 bug 的代码变动）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;perf：优化相关，比如提升性能、体验&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;test：增加测试&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;chore：构建过程或辅助工具的变动&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;revert：回滚到上一个版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;merge：代码合并&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sync：同步主线或分支的 Bug&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;scope-可选&#34;&gt;scope (可选)&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;scope&lt;/code&gt; 用于说明 commit 影响的范围，比如数据层、控制层、视图层等等，视项目不同而不同&lt;/p&gt;
+&lt;p&gt;例如，在后端服务中改动了某一个接口，那么&lt;code&gt;scope&lt;/code&gt;就可以填写api&lt;/p&gt;
+&lt;p&gt;如果你修改了不止一个&lt;code&gt;scope&lt;/code&gt;，可以用&lt;code&gt;*&lt;/code&gt;来表示&lt;/p&gt;
+&lt;h3 id=&#34;subject&#34;&gt;subject&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;subject&lt;/code&gt;是commit目的的简短描述，不超过50个字符&lt;/p&gt;
+&lt;p&gt;这里没必要硬使用英文，是中文能够表达清楚也是可以的。举个例子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -am &lt;span class=&#34;s2&#34;&gt;&amp;#34;feat(api): 用户登录接口的开发&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;以上就是我们梳理的&lt;code&gt;git commit&lt;/code&gt;规范，那么我们这样规范&lt;code&gt;git commit&lt;/code&gt;到底有哪些好处呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;便于程序员对提交历史进行追溯，了解发生了什么情况。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一旦约束了&lt;code&gt;commit message&lt;/code&gt;，意味着我们将慎重的进行每一次提交，不能再一股脑的把各种各样的改动都放在一个&lt;code&gt;git commit&lt;/code&gt;里面，这样一来整个代码改动的历史也将更加清晰。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
+&lt;p&gt;编码规范、流程规范在软件开发过程中是至关重要的，它可以使我们在开发过程中少走很多弯路。Git commit 规范也是如此，确实也是很有必要的，几乎不花费额外精力和时间，但在之后查找问题的效率却很高。作为一名程序员，我们更应注重代码和流程的规范性，永远不要在质量上将就。&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://here-Leslie-Lau.github.io/post/">post</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/git/">git</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/git/">git</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>golang位运算那些事</title>
