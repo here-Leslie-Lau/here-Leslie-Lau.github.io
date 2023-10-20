@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2023-10-20T14:01:31&#43;00:00</updated>
+    <updated>2023-10-20T14:10:18&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -16,6 +16,141 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.119.0">Hugo</generator>
+        <entry>
+            <title type="text">算法记录-大数相乘</title>
+            <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/" />
+            <id>https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</id>
+            <updated>2023-10-20T22:09:52&#43;08:00</updated>
+            <published>2023-10-14T13:12:12&#43;08:00</published>
+            <author>
+                    <name>here-Leslie-Lau</name>
+                    <uri>https://github.com/here-Leslie-Lau/</uri>
+                    <email>i.leslie.lau@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文代码使用golang实现 前言 这篇文章主要记录下如何实现大数相乘。讲道理作为一个正…</summary>
+            
+                <content type="html">&lt;p&gt;&lt;em&gt;本文代码使用golang实现&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这篇文章主要记录下如何实现大数相乘。讲道理作为一个正式工作两年的程序员，不应该对这一块不了解，可能是因为工作中基本没有这个场景，所以也没考虑到。&lt;/p&gt;
+&lt;p&gt;这个问题是因为前段时间和朋友吃饭，忽然谈论到了，所以写下这篇文章记录下。&lt;/p&gt;
+&lt;h2 id=&#34;正文&#34;&gt;正文&lt;/h2&gt;
+&lt;p&gt;问题为：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如何用程序实现1到100的阶乘(1乘以2乘以3乘以...直到100)，并用变量保存且打印出来。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这个问题其实可以简化成大数相乘。难点是大部分编程语言很少有数字类型的变量可以正确且高效地存储最终结果。&lt;/p&gt;
+&lt;h3 id=&#34;初步算法&#34;&gt;初步算法&lt;/h3&gt;
+&lt;p&gt;第一版是先最简单，具体是循环1到100，每次循环相乘：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;uint64&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;uint64&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;result:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;最终控制台打印的结果为:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;result&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这个明显不正确，因为最终的结果远远超过了&lt;code&gt;uint64&lt;/code&gt;支持的最大值。故普通的方法不可行。&lt;/p&gt;
+&lt;h3 id=&#34;第二步算法&#34;&gt;第二步算法&lt;/h3&gt;
+&lt;p&gt;第二版想到的是用&lt;strong&gt;分段&lt;/strong&gt;的思想:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/algorithm_multiplication_01.png&#34; alt=&#34;分段计算结果&#34;&gt;&lt;/p&gt;
+&lt;p&gt;分多个变量，每个变量保存分段的结果集，最终结果相加就是答案。但是仍然有一个问题，每个分段的变量可以保存结果集，相加起来还是会超过。&lt;/p&gt;
+&lt;p&gt;可以使用第三方包&lt;code&gt;decimal&lt;/code&gt;来解决这个数值问题。(虽然我没试过，但感觉应该没问题0-0)。但如果这样的话，我们不如直接用&lt;code&gt;decimal&lt;/code&gt;类型再基于第一版的算法去实现，省去了分段的操作，更加简便。&lt;/p&gt;
+&lt;h3 id=&#34;最终算法&#34;&gt;最终算法&lt;/h3&gt;
+&lt;p&gt;这里我们考虑，是否可以不借助外部库(只用golang标准库)去实现大数相乘。&lt;/p&gt;
+&lt;p&gt;答案是肯定的，这里使用切片或者字符串。代码实现:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;string&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;100&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;temp&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;strconv&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Itoa&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+=&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;temp&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;res:&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;res&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;输出结果:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;res: &lt;span class=&#34;m&#34;&gt;261220304256729011013215618221024027230634238042046250655260065070275681287093099210561122119012601332140614821560164017221806189219802070216222562352245025502652275628622970308031923306342235403660378239064032416042904422455646924830497051125256540255505700585260066162632064806642680669727140731074827656783280108190837285568742893091209312950697029900&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;tips: 好久没写博客了，就当我水了篇文章。&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://here-Leslie-Lau.github.io/post/" term="post" label="post" />
+                        
+                    
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/categories/algorithm/" term="algorithm" label="algorithm" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/algorithm/" term="algorithm" label="algorithm" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">git commit规范</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/git/commit_standard/" />
