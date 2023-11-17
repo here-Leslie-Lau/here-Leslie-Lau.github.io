@@ -23,10 +23,106 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 16 Nov 2023 11:15:29 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 17 Nov 2023 08:01:04 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
+        
+            <item>
+                <title>socket是什么</title>
+                <link>https://here-Leslie-Lau.github.io/post/network/what_is_socket/</link>
+                <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/network/what_is_socket/</guid>
+                <pubDate>Mon, 13 Nov 2023 18:40:49 &#43;0800</pubDate>
+                
+                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;socket介绍&#34;&gt;Socket介绍&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不知道大家有没有想过网络通信到底是什么东西，为什么两个计算机之间可以通信？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其实本质上就是两个计算机之间的数据交换，而这个数据交换的过程就是通过&lt;code&gt;socket&lt;/code&gt;来完成的。&lt;/p&gt;
+&lt;p&gt;大家都知道现代网络分层模型有7层模型、5层模型等等。就拿八股文中常问的5层模型举例，分为：物理层、数据链路层、网络层、传输层、应用层。这些模型都是为了更好的管理网络通信，而&lt;code&gt;socket&lt;/code&gt;就是在应用层和传输层之间的一个抽象层，它把复杂的传输层抽象成了一个简单的接口，供应用层调用。这样应用层就不用太过于关注传输层实现，只需要简单的调用几个接口即可实现网络通信的功能。类似编程中的门面模式。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/what_is_socket_01.png&#34; alt=&#34;socket作用&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;socket&lt;/code&gt;的英文意思是“插座”，想像一下，我们在家里插上电源，就可以使用电器了。而&lt;code&gt;socket&lt;/code&gt;也是一样的道理，我们在应用层调用&lt;code&gt;socket&lt;/code&gt;接口，就可以使用网络通信了。&lt;/p&gt;
+&lt;h2 id=&#34;连接与通信的过程&#34;&gt;连接与通信的过程&lt;/h2&gt;
+&lt;p&gt;说完&lt;code&gt;socket&lt;/code&gt;是个啥，这里就来说说&lt;code&gt;socket&lt;/code&gt;的通信过程。&lt;/p&gt;
+&lt;p&gt;上文说到&lt;code&gt;socket&lt;/code&gt;是一个介于应用层和传输层之间的一个抽象层，它能够简化网络通信。假设我们现在有两台计算机，一台是服务端，一台是客户端。两个计算机都可以各自创建并维护一个&lt;code&gt;socket&lt;/code&gt;，来进行通信。&lt;/p&gt;
+&lt;h3 id=&#34;服务端&#34;&gt;服务端&lt;/h3&gt;
+&lt;p&gt;服务端首先调用&lt;code&gt;socket()&lt;/code&gt;方法，这个方法有两个参数，第一个参数是&lt;code&gt;domain&lt;/code&gt;，第二个参数是&lt;code&gt;type&lt;/code&gt;。&lt;code&gt;domain&lt;/code&gt;是指定协议族，&lt;code&gt;type&lt;/code&gt;是指定协议类型。这里的协议族指的是网络协议，比如&lt;code&gt;AF_INET&lt;/code&gt;就是IPv4协议族，&lt;code&gt;AF_INET6&lt;/code&gt;就是IPv6协议族。而协议类型指的是传输协议，比如&lt;code&gt;SOCK_STREAM&lt;/code&gt;就是TCP协议，&lt;code&gt;SOCK_DGRAM&lt;/code&gt;就是UDP协议。这里的&lt;code&gt;socket()&lt;/code&gt;方法就是创建一个&lt;code&gt;socket&lt;/code&gt;，并且指定了协议族和协议类型。&lt;/p&gt;
+&lt;p&gt;创建好之后，接着调用&lt;code&gt;bind()&lt;/code&gt;方法来绑定服务端主机ip地址和端口。绑定端口的作用是内核收到数据包之后，可以根据端口号找到对应的&lt;code&gt;socket&lt;/code&gt;。绑定ip的作用是因为一个计算机通常有多个网卡，每个网卡的ip都不同，我们可以指定&lt;code&gt;socket&lt;/code&gt;只监听对应网卡的数据。&lt;/p&gt;
+&lt;p&gt;前置工作做好后，接着调用&lt;code&gt;listen()&lt;/code&gt;方法来进行监听。一般咱们要看一个网络程序有没有启动，都是通过终端输入&lt;code&gt;netstat&lt;/code&gt;命令来查看的。这个命令本质上也是看端口是否被监听。&lt;/p&gt;
+&lt;p&gt;最后调用&lt;code&gt;accept()&lt;/code&gt;方法来接收客户端的连接。如果有客户端连接过来，内核就会把相关的数据转发到对应的应用程序上，如果没有的话就会一直阻塞。&lt;/p&gt;
+&lt;h3 id=&#34;客户端&#34;&gt;客户端&lt;/h3&gt;
+&lt;p&gt;客户端首先也是调用&lt;code&gt;socket()&lt;/code&gt;方法来创建一个socket，这里也是指定了协议族和协议类型。&lt;/p&gt;
+&lt;p&gt;创建好socket之后，接着调用&lt;code&gt;connect()&lt;/code&gt;方法来连接服务端。这里的&lt;code&gt;connect()&lt;/code&gt;方法有三个参数，第一个参数是&lt;code&gt;socket&lt;/code&gt;，第二个参数是服务端的ip地址，第三个参数是服务端的端口号。这里的&lt;code&gt;connect()&lt;/code&gt;方法会向服务端发送一个&lt;code&gt;SYN&lt;/code&gt;包，服务端收到之后会回复一个&lt;code&gt;SYN+ACK&lt;/code&gt;包，客户端再回复一个&lt;code&gt;ACK&lt;/code&gt;包，这样就完成了三次握手，建立了连接。万众瞩目的tcp三次握手就是这个过程。&lt;/p&gt;
+&lt;p&gt;建立连接之后，服务端和客户端就可以通过&lt;code&gt;write()&lt;/code&gt;和&lt;code&gt;read()&lt;/code&gt;方法来进行通信了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/what_is_socket_02.jpg&#34; alt=&#34;socket连接建立过程&#34;&gt;&lt;/p&gt;
+&lt;p&gt;这里补充说明下，服务端的内核会维护两个队列。分别是&lt;strong&gt;TCP半连接队列&lt;/strong&gt;和&lt;strong&gt;TCP全连接队列&lt;/strong&gt;。前者主要保存还未完成三次握手的连接，后者主要保存已经完成三次握手的连接。&lt;/p&gt;
+&lt;p&gt;服务端调用&lt;code&gt;accept()&lt;/code&gt;方法会从&lt;strong&gt;TCP全连接队列&lt;/strong&gt;取出一个连接返回给应用程序。后续客户端和服务端通信都是使用这个连接。&lt;/p&gt;
+&lt;h2 id=&#34;socket底层原理&#34;&gt;socket底层原理&lt;/h2&gt;
+&lt;p&gt;到这里大家有没有发现，&lt;code&gt;socket&lt;/code&gt;的通信过程和文件读写的过程很像。其实&lt;code&gt;socket&lt;/code&gt;的底层原理就是文件读写。我们知道，进程里面有一个文件描述符数组，这个数组里面保存了所有打开的文件描述符。而&lt;code&gt;socket&lt;/code&gt;也是一个文件描述符，所以&lt;code&gt;socket&lt;/code&gt;也会保存在这个数组里面。该数组里列出这个进程打开的所有文件的文件描述符。数组的下标是文件描述符，是一个整数，而数组的内容是一个指针，指向内核中所有打开的文件的列表，也就是说内核可以通过文件描述符找到对应打开的文件。&lt;/p&gt;
+&lt;p&gt;然后每个文件都有一个 inode，Socket 文件的 inode 指向了内核中的 Socket 结构，在这个结构体里有两个队列，分别是发送队列和接收队列，这个两个队列里面保存的是一个个 &lt;code&gt;struct sk_buff&lt;/code&gt;，用链表的组织形式串起来。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sk_buff&lt;/code&gt; 可以表示各个层的数据包，在应用层数据包叫 data，在 TCP 层我们称为 segment，在 IP 层我们叫 packet，在数据链路层称为 frame。&lt;/p&gt;
+&lt;p&gt;你可能会好奇，为什么全部数据包只用一个结构体来描述呢？协议栈采用的是分层结构，上层向下层传递数据时需要增加包头，下层向上层数据时又需要去掉包头，如果每一层都用一个结构体，那在层之间传递数据的时候，就要发生多次拷贝，这将大大降低 CPU 效率。&lt;/p&gt;
+&lt;p&gt;于是，为了在层级之间传递数据时，不发生拷贝，只用 &lt;code&gt;sk_buff&lt;/code&gt; 一个结构体来描述所有的网络包，那它是如何做到的呢？是通过调整 &lt;code&gt;sk_buff&lt;/code&gt; 中 data 的指针，比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当接收报文时，从网卡驱动开始，通过协议栈层层往上传送数据报，通过增加 &lt;code&gt;skb-&amp;gt;data&lt;/code&gt; 的值，来逐步剥离协议首部。&lt;/li&gt;
+&lt;li&gt;当要发送报文时，创建 &lt;code&gt;sk_buff&lt;/code&gt; 结构体，数据缓存区的头部预留足够的空间，用来填充各层首部，在经过各下层协议时，通过减少 &lt;code&gt;skb-&amp;gt;data&lt;/code&gt; 的值来增加协议首部。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/what_is_socket_03.jpg&#34; alt=&#34;5层网络模型解包和封包秒数&#34;&gt;&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://here-Leslie-Lau.github.io/post/">post</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/network/">network</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/socket/">socket</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/network/">network</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>算法记录-大数相乘</title>
