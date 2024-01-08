@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-01-01T09:13:29&#43;00:00</updated>
+    <updated>2024-01-08T06:48:10&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -15,7 +15,93 @@
                 <email>i.leslie.lau@gmail.com</email>
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.121.1">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.121.2">Hugo</generator>
+        <entry>
+            <title type="text">常见提高Api性能的方法</title>
+            <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/" />
+            <id>https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/</id>
+            <updated>2024-01-08T14:47:44&#43;08:00</updated>
+            <published>2024-01-07T19:26:53&#43;08:00</published>
+            <author>
+                    <name>here-Leslie-Lau</name>
+                    <uri>https://github.com/here-Leslie-Lau/</uri>
+                    <email>i.leslie.lau@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">分页(Pagination) 分页这个优化方式特别常见。目前有两种方式： 客户端指定每页…</summary>
+            
+                <content type="html">&lt;h2 id=&#34;分页pagination&#34;&gt;分页(Pagination)&lt;/h2&gt;
+&lt;p&gt;分页这个优化方式特别常见。目前有两种方式：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;客户端指定每页的数量和当前第几页，服务端返回总页数和当前页的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务端把结果通过流式传输回客户端，以提高服务的响应速度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/familiar_improve_api_perf_01.png&#34; alt=&#34;分页描述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;一般都是第一种方式，第二种方式在实际开发中很少用到。因为前者实现简单，后者还需要考虑流式传输和客户端的实时变动渲染。&lt;/p&gt;
+&lt;h2 id=&#34;异步日志记录asynchronous-logging&#34;&gt;异步日志记录(Asynchronous Logging)&lt;/h2&gt;
+&lt;p&gt;同步日志处理每次调用都会涉及磁盘操作，可能会减慢系统速度。异步日志首先将日志发送到无锁缓冲区，然后立即返回。这些日志将定期刷新到磁盘上，从而显著减少了I/O开销。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/familiar_improve_api_perf_02.png&#34; alt=&#34;异步日志描述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;其实不只是日志可以运用，很多写入频繁且数据一致性要求不高的场景也可以使用该方式进行优化。比如可以将用户的操作记录到缓冲区，然后定期或异步刷新到数据库中。&lt;/p&gt;
+&lt;h2 id=&#34;缓存caching&#34;&gt;缓存(Caching)&lt;/h2&gt;
+&lt;p&gt;对于经常访问的数据，可以将其缓存到内存中，这样可以减少数据库的访问次数，提高系统的响应速度。&lt;/p&gt;
+&lt;p&gt;当缓存没有需要查询的数据时，可以通过数据库查询，然后将数据缓存到内存中。当缓存中有需要查询的数据时，直接从缓存中获取数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/familiar_improve_api_perf_03.png&#34; alt=&#34;缓存描述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;当然，这里可能会涉及到缓存和数据库一致性的问题，不过并不在本文讨论范围内。&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;载荷压缩payload-compression&#34;&gt;载荷压缩(Payload Compression)&lt;/h2&gt;
+&lt;p&gt;载荷压缩是一种减少网络流量的方法。它通过压缩数据来减少数据传输量，从而提高系统的响应速度。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/familiar_improve_api_perf_04.png&#34; alt=&#34;载荷压缩描述&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通常使用&lt;code&gt;gzip&lt;/code&gt;等技术将请求体和响应体进行压缩，使得数据量减少，从而提高系统的响应速度。&lt;/p&gt;
+&lt;h2 id=&#34;连接池connection-pool&#34;&gt;连接池(Connection Pool)&lt;/h2&gt;
+&lt;p&gt;在访问资源时，我们经常需要从数据库中加载数据。打开和关闭数据库连接会增加相当大的开销。因此，我们应该从一个连接池中来获取数据库连接。连接池负责管理连接的生命周期。&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://here-Leslie-Lau.github.io/post/" term="post" label="post" />
+                        
+                    
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/categories/network/" term="network" label="network" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/network/" term="network" label="network" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">socket是什么</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/network/what_is_socket/" />
