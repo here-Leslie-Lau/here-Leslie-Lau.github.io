@@ -10,7 +10,7 @@
         <title>Leslie&#39;s Blog</title>
         <link>https://here-Leslie-Lau.github.io/</link>
         <description>leslie的杂谈</description>
-        <generator>Hugo 0.122.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.123.1 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 19 Feb 2024 11:15:04 &#43;0000</lastBuildDate>
+        <lastBuildDate>Thu, 22 Feb 2024 15:05:55 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -118,13 +118,13 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/shell/">shell</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/shell/">Shell</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/fish/">fish</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/fish/">Fish</category>
                                 
                             
                                 
@@ -251,13 +251,13 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/os/">os</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/os/">Os</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/byte_order/">byte_order</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/byte_order/">Byte_order</category>
                                 
                             
                         
@@ -330,7 +330,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/network/">network</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/network/">Network</category>
                                 
                             
                         
@@ -340,7 +340,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/network/">network</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/network/">Network</category>
                                 
                             
                         
@@ -420,7 +420,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/network/">network</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/network/">Network</category>
                                 
                             
                         
@@ -430,13 +430,13 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/socket/">socket</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/socket/">Socket</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/network/">network</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/network/">Network</category>
                                 
                             
                         
@@ -558,7 +558,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/algorithm/">algorithm</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/algorithm/">Algorithm</category>
                                 
                             
                         
@@ -568,7 +568,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/algorithm/">algorithm</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/algorithm/">Algorithm</category>
                                 
                             
                         
@@ -691,7 +691,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/git/">git</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/git/">Git</category>
                                 
                             
                         
@@ -701,7 +701,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/git/">git</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/git/">Git</category>
                                 
                             
                         
@@ -1042,7 +1042,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">Golang</category>
                                 
                             
                         
@@ -1052,7 +1052,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">Golang</category>
                                 
                             
                                 
@@ -1173,7 +1173,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/vim/">vim</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/vim/">Vim</category>
                                 
                             
                         
@@ -1183,7 +1183,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/vim/">vim</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/vim/">Vim</category>
                                 
                             
                                 
@@ -1279,7 +1279,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/os/">os</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/os/">Os</category>
                                 
                             
                         
@@ -1289,13 +1289,13 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/os/">os</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/os/">Os</category>
                                 
                             
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/lock/">lock</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/lock/">Lock</category>
                                 
                             
                         
@@ -2110,7 +2110,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">Golang</category>
                                 
                             
                         
@@ -2120,7 +2120,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">Golang</category>
                                 
                             
                                 
@@ -2378,7 +2378,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">Golang</category>
                                 
                             
                         
@@ -2388,7 +2388,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">Golang</category>
                                 
                             
                                 
@@ -2978,7 +2978,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">Golang</category>
                                 
                             
                         
@@ -2988,7 +2988,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">Golang</category>
                                 
                             
                                 
@@ -3569,7 +3569,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">Golang</category>
                                 
                             
                         
@@ -3579,7 +3579,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">Golang</category>
                                 
                             
                                 
@@ -3739,7 +3739,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/git/">git</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/git/">Git</category>
                                 
                             
                         
@@ -3749,7 +3749,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/git/">git</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/git/">Git</category>
                                 
                             
                         
@@ -4239,7 +4239,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/golang/">Golang</category>
                                 
                             
                         
@@ -4249,7 +4249,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">golang</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/golang/">Golang</category>
                                 
                             
                         
@@ -4325,7 +4325,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/mysql/">mysql</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/mysql/">Mysql</category>
                                 
                             
                         
@@ -4335,7 +4335,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/mysql/">mysql</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/mysql/">Mysql</category>
                                 
                             
                         
@@ -4395,7 +4395,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/categories/operating-system/">operating system</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/operating-system/">Operating System</category>
                                 
                             
                         
@@ -4405,7 +4405,7 @@
                                 
                                 
                                 
-                                    <category domain="https://here-Leslie-Lau.github.io/tags/operating-system/">operating system</category>
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/operating-system/">Operating System</category>
                                 
                             
                         
