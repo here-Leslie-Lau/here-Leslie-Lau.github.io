@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.127.0"><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.128.0"><meta name="theme-color" content="#16171d" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -63,7 +63,7 @@
         "description": "什么是内存对齐 我们时常会以为一个变量在内存中可以任意存放(假设内存空间足够, 不考虑占…",
         "inLanguage" : "en",
         "articleSection": "post",
-        "wordCount":  1783 ,
+        "wordCount":  1779 ,
         "image": ["https://here-Leslie-Lau.github.io/icons/memory_alignment_01.png","https://here-Leslie-Lau.github.io/icons/memory_alignment_02.png","https://here-Leslie-Lau.github.io/icons/memory_alignment_03.png","https://here-Leslie-Lau.github.io/icons/memory_alignment_04.png"],
         "author": {
             "@type": "Person",
@@ -256,7 +256,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1783</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;1779</span>
     
     
         
@@ -341,12 +341,12 @@
 </div>
 </div><p>同样的结构体定义，只是换了成员顺序，结果分配的内存大小却不一样。继续画图说明：</p>
 <p><img src="/icons/memory_alignment_03.png" alt="memory_alignment_03"></p>
-<p>结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为<code>int32</code>类型，占4个字节(0x0~0x3)。之后第二个成员为<code>int64</code>类型，占8个字节(0x8~0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：</p>
+<p>结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为<code>int32</code>类型，占4个字节(0x0<del>0x3)。之后第二个成员为<code>int64</code>类型，占8个字节(0x8</del>0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：</p>
 <blockquote>
 <p>它的地址只要是它的长度的整数倍就行了</p>
 </blockquote>
 <p><code>BirthUnix</code>成员的起始地址必须是8的整数倍，也就是要从0x8开始。就导致<code>Age</code>字段之后的空间空出了4个字节。</p>
-<p>第三个字段<code>Ip</code>是<code>int32</code>类型，占4个字节(0x16~0x19)。之后又空出了4个字节(0x20~0x23)是因为结构体内存对齐有个规则：<strong>结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。</strong>。</p>
+<p>第三个字段<code>Ip</code>是<code>int32</code>类型，占4个字节(0x16<del>0x19)。之后又空出了4个字节(0x20</del>0x23)是因为结构体内存对齐有个规则：<strong>结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。</strong>。</p>
 <p>所以Person1的内存大小为24个字节。通过图片我们得出优化结论，如果把<code>Ip</code>字段放到<code>BirthUnix</code>字段之前，那么<code>Ip</code>字段的起始地址就是0x4，<code>BirthUnix</code>字段的起始地址还是0x8，这样就不会浪费4个字节的空间了。相当于把图中绿色的部分挪到黄色后面：</p>
 <p><img src="/icons/memory_alignment_04.png" alt="memory_alignment_04"></p>
 <p>这样Person2的内存大小就是16个字节了。</p>

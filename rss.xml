@@ -10,7 +10,7 @@
         <title>Leslie&#39;s Blog</title>
         <link>https://here-Leslie-Lau.github.io/</link>
         <description>leslie的杂谈</description>
-        <generator>Hugo 0.127.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.128.0 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 25 Jun 2024 11:29:31 &#43;0000</lastBuildDate>
+        <lastBuildDate>Wed, 26 Jun 2024 02:36:07 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -212,12 +212,12 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;同样的结构体定义，只是换了成员顺序，结果分配的内存大小却不一样。继续画图说明：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/memory_alignment_03.png&#34; alt=&#34;memory_alignment_03&#34;&gt;&lt;/p&gt;
-&lt;p&gt;结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x0~0x3)。之后第二个成员为&lt;code&gt;int64&lt;/code&gt;类型，占8个字节(0x8~0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：&lt;/p&gt;
+&lt;p&gt;结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x0&lt;del&gt;0x3)。之后第二个成员为&lt;code&gt;int64&lt;/code&gt;类型，占8个字节(0x8&lt;/del&gt;0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;它的地址只要是它的长度的整数倍就行了&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;BirthUnix&lt;/code&gt;成员的起始地址必须是8的整数倍，也就是要从0x8开始。就导致&lt;code&gt;Age&lt;/code&gt;字段之后的空间空出了4个字节。&lt;/p&gt;
-&lt;p&gt;第三个字段&lt;code&gt;Ip&lt;/code&gt;是&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x16~0x19)。之后又空出了4个字节(0x20~0x23)是因为结构体内存对齐有个规则：&lt;strong&gt;结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;第三个字段&lt;code&gt;Ip&lt;/code&gt;是&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x16&lt;del&gt;0x19)。之后又空出了4个字节(0x20&lt;/del&gt;0x23)是因为结构体内存对齐有个规则：&lt;strong&gt;结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;所以Person1的内存大小为24个字节。通过图片我们得出优化结论，如果把&lt;code&gt;Ip&lt;/code&gt;字段放到&lt;code&gt;BirthUnix&lt;/code&gt;字段之前，那么&lt;code&gt;Ip&lt;/code&gt;字段的起始地址就是0x4，&lt;code&gt;BirthUnix&lt;/code&gt;字段的起始地址还是0x8，这样就不会浪费4个字节的空间了。相当于把图中绿色的部分挪到黄色后面：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/memory_alignment_04.png&#34; alt=&#34;memory_alignment_04&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这样Person2的内存大小就是16个字节了。&lt;/p&gt;
