@@ -23,10 +23,118 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 08 Jul 2024 10:20:30 &#43;0000</lastBuildDate>
+        <lastBuildDate>Tue, 09 Jul 2024 04:28:15 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
+        
+            <item>
+                <title>My Workflow</title>
+                <link>https://here-Leslie-Lau.github.io/post/others/workflow/</link>
+                <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/others/workflow/</guid>
+                <pubDate>Mon, 08 Jul 2024 20:50:56 &#43;0800</pubDate>
+                
+                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;
+&lt;p&gt;最早开始用&lt;code&gt;macOS&lt;/code&gt;，之后转到了Redhat系的&lt;code&gt;Fedora&lt;/code&gt;，再到现在转到了&lt;code&gt;Arch Linux&lt;/code&gt;。目前比较爱折腾，所以感觉还好(说不定有一天会入坑&lt;code&gt;Gentoo&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/index_01.png&#34; alt=&#34;arch linux&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装&lt;code&gt;Arch Linux&lt;/code&gt;时个人主要参考了&lt;a href=&#34;https://wiki.archlinux.org/title/Installation_guide&#34;&gt;官方Wiki&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;值得一提的是，官方文档还是比较全面的，不过还是碰到了两个坑(硬盘分区与万恶的N卡驱动)。后面还是解决了，有时间的话会写一篇文章来记录一下。&lt;/p&gt;
+&lt;p&gt;桌面环境的话我选择的是&lt;code&gt;Gnome&lt;/code&gt;，因为&lt;code&gt;KDE&lt;/code&gt;个人不太喜欢繁多的配置项，加上&lt;code&gt;Gnome&lt;/code&gt;的UI本人更加喜欢。其他的DE还没太了解。&lt;/p&gt;
+&lt;h2 id=&#34;terminalshell&#34;&gt;Terminal&amp;amp;Shell&lt;/h2&gt;
+&lt;p&gt;终端用的是&lt;a href=&#34;https://github.com/kovidgoyal/kitty&#34;&gt;Kitty&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;本人配置文件:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# BEGIN_KITTY_THEME
+# Hipster Green
+include current-theme.conf
+# END_KITTY_THEME
+
+# font_family
+font_family Hack Nerd Font Bold
+font_size 14.0
+font_features FiraCodeNerdFontCompleteM-Retina +ss02 +ss03 +ss04 +ss05 +ss07 +zero
+
+# cursor
+cursor_shape block
+cursor_beam_thickness 12.0
+cursor_blink_interval -1
+
+# tab customization
+tab_bar_edge bottom
+tab_bar_style powerline
+tab_bar_align left
+
+copy_on_select yes
+mouse_hide_wait 3.0
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Shell使用&lt;a href=&#34;https://github.com/fish-shell/fish-shell&#34;&gt;fish&lt;/a&gt;，搭配自己编写的&lt;a href=&#34;https://github.com/here-Leslie-Lau/clearance&#34;&gt;prompt&lt;/a&gt;使用&lt;/p&gt;
+&lt;h2 id=&#34;editor&#34;&gt;Editor&lt;/h2&gt;
+&lt;p&gt;编辑器用的是&lt;code&gt;Neovim&lt;/code&gt;，配置文件已经开源了: &lt;a href=&#34;https://github.com/here-Leslie-Lau/my-nvim&#34;&gt;here-Leslie-Lau/my-nvim&lt;/a&gt;, 欢迎star~&lt;/p&gt;
+&lt;p&gt;易于安装使用，功能强劲:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/nvim3.png&#34; alt=&#34;neovim&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;common-software&#34;&gt;Common Software&lt;/h2&gt;
+&lt;p&gt;常用软件(可能会有遗漏):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;chrome浏览器&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/dbcli/mycli&#34;&gt;mycli&lt;/a&gt;: 终端mysql连接工具, 提供命令补全和高亮&lt;/li&gt;
+&lt;li&gt;mongodb compass: mongodb可视化工具, mongodb官网找即可&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/charmbracelet/glow&#34;&gt;glow&lt;/a&gt;: 终端markdown预览工具&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/koodo-reader/koodo-reader&#34;&gt;koodo-reader&lt;/a&gt;: 一款开源的阅读器&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/web1n/wechat-universal-flatpak&#34;&gt;wechat&lt;/a&gt;: Flatpak 打包微信 Linux Universal 版&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://here-Leslie-Lau.github.io/post/">post</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/categories/others/">Others</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/others/">Others</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/workflow/">Workflow</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>golang源码分析-深入理解WaitGroup</title>
