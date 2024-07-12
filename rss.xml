@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 12 Jul 2024 09:32:47 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 12 Jul 2024 17:31:34 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -296,7 +296,23 @@ mouse_hide_wait 3.0
 &lt;li&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt; 终端分屏工具(利器)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;附上我的tmux配置文件:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# 设置默认终端模式为 256color
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# 设置快捷键刷新配置
+unbind r
+bind r source-file ~/.tmux.conf
+
+# leader键为&amp;lt;C-s&amp;gt;
+set -g prefix C-s
+
+# vim模式移动面板
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+# 状态栏在上方
+set-option -g status-position top
+
+# 设置默认终端模式为 256color
 set -g default-terminal &amp;#34;screen-256color&amp;#34;
 
 # 状态栏

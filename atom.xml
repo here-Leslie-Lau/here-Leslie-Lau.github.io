@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-07-12T09:32:47&#43;00:00</updated>
+    <updated>2024-07-12T17:31:34&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -233,7 +233,7 @@
             <title type="text">My Workflow</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/workflow/" />
             <id>https://here-Leslie-Lau.github.io/post/others/workflow/</id>
-            <updated>2024-07-12T17:32:27&#43;08:00</updated>
+            <updated>2024-07-13T01:31:16&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -290,7 +290,23 @@ mouse_hide_wait 3.0
 &lt;li&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt; 终端分屏工具(利器)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;附上我的tmux配置文件:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# 设置默认终端模式为 256color
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# 设置快捷键刷新配置
+unbind r
+bind r source-file ~/.tmux.conf
+
+# leader键为&amp;lt;C-s&amp;gt;
+set -g prefix C-s
+
+# vim模式移动面板
+bind-key h select-pane -L
+bind-key j select-pane -D
+bind-key k select-pane -U
+bind-key l select-pane -R
+
+# 状态栏在上方
+set-option -g status-position top
+
+# 设置默认终端模式为 256color
 set -g default-terminal &amp;#34;screen-256color&amp;#34;
 
 # 状态栏
