@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-07-10T07:30:36&#43;00:00</updated>
+    <updated>2024-07-12T09:32:47&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -233,7 +233,7 @@
             <title type="text">My Workflow</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/workflow/" />
             <id>https://here-Leslie-Lau.github.io/post/others/workflow/</id>
-            <updated>2024-07-09T12:27:56&#43;08:00</updated>
+            <updated>2024-07-12T17:32:27&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -287,8 +287,28 @@ mouse_hide_wait 3.0
 &lt;li&gt;&lt;a href=&#34;https://github.com/charmbracelet/glow&#34;&gt;glow&lt;/a&gt;: 终端markdown预览工具&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/koodo-reader/koodo-reader&#34;&gt;koodo-reader&lt;/a&gt;: 一款开源的阅读器&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/web1n/wechat-universal-flatpak&#34;&gt;wechat&lt;/a&gt;: Flatpak 打包微信 Linux Universal 版&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt; 终端分屏工具(利器)&lt;/li&gt;
 &lt;/ul&gt;
-</content>
+&lt;p&gt;附上我的tmux配置文件:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# 设置默认终端模式为 256color
+set -g default-terminal &amp;#34;screen-256color&amp;#34;
+
+# 状态栏
+set -g status-justify left # 状态栏列表左对齐
+setw -g monitor-activity on # 非当前窗口有内容更新时在状态栏通知
+set -g status-right &amp;#34;%H:%M:%S %d-%b&amp;#34;
+set -g status-interval 1 # 状态栏刷新时间
+set -g status-left &amp;#34;#[bg=gray] [#S] &amp;#34; # 状态栏-左侧内容 (#S: 会话(session)名称)
+set -g status-left-length 300 # 状态栏-左边长度300
+set -g status-right-length 500 # 状态栏-左边长度500
+
+# 状态栏theme
+# 设置整个状态栏背景颜色 bg(背景色) fg(前景色)
+set -g status-style &amp;#34;bg=#2e3436,fg=#d3d7cf&amp;#34;
+set -wg window-status-current-style &amp;#34;fg=#d7fcaf,bg=#60875f&amp;#34; # 状态栏当前窗口名称的样式
+
+set -g renumber-windows on    # 关掉某个窗口后，编号重排
+&lt;/code&gt;&lt;/pre&gt;</content>
             
             
             
