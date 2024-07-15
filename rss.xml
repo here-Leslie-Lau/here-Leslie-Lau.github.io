@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 12 Jul 2024 17:31:34 &#43;0000</lastBuildDate>
+        <lastBuildDate>Mon, 15 Jul 2024 10:01:36 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -314,6 +314,9 @@ set-option -g status-position top
 
 # 设置默认终端模式为 256color
 set -g default-terminal &amp;#34;screen-256color&amp;#34;
+
+# 开启鼠标
+set -g mouse on
 
 # 状态栏
 set -g status-justify left # 状态栏列表左对齐

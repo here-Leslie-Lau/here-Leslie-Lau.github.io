@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-07-12T17:31:34&#43;00:00</updated>
+    <updated>2024-07-15T10:01:36&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -233,7 +233,7 @@
             <title type="text">My Workflow</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/workflow/" />
             <id>https://here-Leslie-Lau.github.io/post/others/workflow/</id>
-            <updated>2024-07-13T01:31:16&#43;08:00</updated>
+            <updated>2024-07-15T18:01:16&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -308,6 +308,9 @@ set-option -g status-position top
 
 # 设置默认终端模式为 256color
 set -g default-terminal &amp;#34;screen-256color&amp;#34;
+
+# 开启鼠标
+set -g mouse on
 
 # 状态栏
 set -g status-justify left # 状态栏列表左对齐
