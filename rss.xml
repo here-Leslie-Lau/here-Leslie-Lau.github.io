@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 16 Aug 2024 06:48:31 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sat, 17 Aug 2024 11:27:53 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -834,6 +834,7 @@ mouse_hide_wait 3.0
 &lt;li&gt;&lt;a href=&#34;https://github.com/koodo-reader/koodo-reader&#34;&gt;koodo-reader&lt;/a&gt;: 一款开源的阅读器&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/web1n/wechat-universal-flatpak&#34;&gt;wechat&lt;/a&gt;: Flatpak 打包微信 Linux Universal 版&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt; 终端分屏工具(利器)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.mitmproxy.org/stable/&#34;&gt;mitmproxy&lt;/a&gt; 一款开源的抓包工具&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;附上我的tmux配置文件:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# 设置快捷键刷新配置

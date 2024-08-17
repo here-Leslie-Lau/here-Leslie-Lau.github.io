@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-08-16T06:48:31&#43;00:00</updated>
+    <updated>2024-08-17T11:27:53&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -776,7 +776,7 @@
             <title type="text">My Workflow</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/workflow/" />
             <id>https://here-Leslie-Lau.github.io/post/others/workflow/</id>
-            <updated>2024-07-15T18:01:16&#43;08:00</updated>
+            <updated>2024-08-17T19:27:29&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -831,6 +831,7 @@ mouse_hide_wait 3.0
 &lt;li&gt;&lt;a href=&#34;https://github.com/koodo-reader/koodo-reader&#34;&gt;koodo-reader&lt;/a&gt;: 一款开源的阅读器&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/web1n/wechat-universal-flatpak&#34;&gt;wechat&lt;/a&gt;: Flatpak 打包微信 Linux Universal 版&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt; 终端分屏工具(利器)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.mitmproxy.org/stable/&#34;&gt;mitmproxy&lt;/a&gt; 一款开源的抓包工具&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;附上我的tmux配置文件:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# 设置快捷键刷新配置
