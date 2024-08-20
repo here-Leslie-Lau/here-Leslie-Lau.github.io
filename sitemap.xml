@@ -2,6 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://here-Leslie-Lau.github.io/</loc>
+    <lastmod>2024-08-20T12:00:58+08:00</lastmod>
+  </url><url>
+    <loc>https://here-Leslie-Lau.github.io/post/</loc>
+    <lastmod>2024-08-20T12:00:58+08:00</lastmod>
+  </url><url>
     <loc>https://here-Leslie-Lau.github.io/categories/</loc>
     <lastmod>2024-08-17T19:27:29+08:00</lastmod>
   </url><url>
@@ -13,12 +19,6 @@
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</loc>
     <lastmod>2024-08-16T14:48:01+08:00</lastmod>
-  </url><url>
-    <loc>https://here-Leslie-Lau.github.io/</loc>
-    <lastmod>2024-08-17T19:27:29+08:00</lastmod>
-  </url><url>
-    <loc>https://here-Leslie-Lau.github.io/post/</loc>
-    <lastmod>2024-08-17T19:27:29+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/tags/</loc>
     <lastmod>2024-08-17T19:27:29+08:00</lastmod>
