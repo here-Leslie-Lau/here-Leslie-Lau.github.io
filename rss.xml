@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 28 Aug 2024 11:13:48 &#43;0000</lastBuildDate>
+        <lastBuildDate>Fri, 30 Aug 2024 07:11:37 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -794,6 +794,7 @@
 &lt;p&gt;安装&lt;code&gt;Arch Linux&lt;/code&gt;时个人主要参考了&lt;a href=&#34;https://wiki.archlinux.org/title/Installation_guide&#34;&gt;官方Wiki&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;值得一提的是，官方文档还是比较全面的，不过还是碰到了两个坑(硬盘分区与万恶的N卡驱动)。后面还是解决了，有时间的话会写一篇文章来记录一下。&lt;/p&gt;
 &lt;p&gt;桌面环境的话我选择的是&lt;code&gt;Gnome&lt;/code&gt;，因为&lt;code&gt;KDE&lt;/code&gt;个人不太喜欢繁多的配置项，加上&lt;code&gt;Gnome&lt;/code&gt;的UI本人更加喜欢。其他的DE还没太了解。&lt;/p&gt;
+&lt;p&gt;2024-08-30更新: 由于&lt;code&gt;Gnome&lt;/code&gt;的一些bug弄得不得劲。目前我改成裸奔一个&lt;code&gt;i3wm&lt;/code&gt;了。适应之后还是比较舒服的。&lt;/p&gt;
 &lt;h2 id=&#34;terminalshell&#34;&gt;Terminal&amp;amp;Shell&lt;/h2&gt;
 &lt;p&gt;终端用的是&lt;a href=&#34;https://github.com/kovidgoyal/kitty&#34;&gt;Kitty&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本人配置文件:&lt;/p&gt;
@@ -824,6 +825,8 @@ mouse_hide_wait 3.0
 &lt;p&gt;编辑器用的是&lt;code&gt;Neovim&lt;/code&gt;，配置文件已经开源了: &lt;a href=&#34;https://github.com/here-Leslie-Lau/my-nvim&#34;&gt;here-Leslie-Lau/my-nvim&lt;/a&gt;, 欢迎star~&lt;/p&gt;
 &lt;p&gt;易于安装使用，功能强劲:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/nvim3.png&#34; alt=&#34;neovim&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;i3wm&#34;&gt;I3wm&lt;/h2&gt;
+&lt;p&gt;TODO, 这周末更新&lt;/p&gt;
 &lt;h2 id=&#34;common-software&#34;&gt;Common Software&lt;/h2&gt;
 &lt;p&gt;常用软件(可能会有遗漏):&lt;/p&gt;
 &lt;ul&gt;
