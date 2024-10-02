@@ -10,7 +10,7 @@
         <title>Leslie&#39;s Blog</title>
         <link>https://here-Leslie-Lau.github.io/</link>
         <description>leslie的杂谈</description>
-        <generator>Hugo 0.133.1 https://gohugo.io/</generator>
+        <generator>Hugo 0.135.0 https://gohugo.io/</generator>
         
             <language>en</language>
         
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 01 Sep 2024 10:51:09 &#43;0000</lastBuildDate>
+        <lastBuildDate>Wed, 02 Oct 2024 16:42:36 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -4196,38 +4196,38 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
 &lt;p&gt;计算机的世界万物都是二进制(都是0和1)，位运算本质上就是对这些0和1直接进行操作。常见的操作方式会将编程语言转换为二进制，而位运算省略了转换步骤，所以它的效率会更高。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;golang&lt;/code&gt;中常见的位运算有:&lt;/p&gt;
 &lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;运算符号&lt;/th&gt;
-&lt;th&gt;用途&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&amp;amp;&lt;/td&gt;
-&lt;td&gt;与运算, 两个二进制都为1则结果为1, 其他情况均为0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;|&lt;/td&gt;
-&lt;td&gt;或运算, 只要有一个二进制为1, 结果就为1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;^&lt;/td&gt;
-&lt;td&gt;异或运算, 两个二进制不同, 结果为1&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;~&lt;/td&gt;
-&lt;td&gt;取反运算, 0变1, 1变0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&amp;lt;&amp;lt;&lt;/td&gt;
-&lt;td&gt;左移运算, 高位丢弃, 低位补0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&amp;gt;&amp;gt;&lt;/td&gt;
-&lt;td&gt;右移运算, 低位丢弃, 无符号数高位补0, 有符号数高位补符号&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;运算符号&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;用途&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;amp;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;与运算, 两个二进制都为1则结果为1, 其他情况均为0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;|&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;或运算, 只要有一个二进制为1, 结果就为1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;^&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;异或运算, 两个二进制不同, 结果为1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;~&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;取反运算, 0变1, 1变0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;lt;&amp;lt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;左移运算, 高位丢弃, 低位补0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&amp;gt;&amp;gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;右移运算, 低位丢弃, 无符号数高位补0, 有符号数高位补符号&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;tips: golang中可以使用&lt;code&gt;fmt.Printf(&amp;quot;%b&amp;quot;, num)&lt;/code&gt;得到一个变量的二进制。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

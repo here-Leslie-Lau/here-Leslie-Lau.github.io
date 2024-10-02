@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.133.1"><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.135.0"><meta name="theme-color" content="#16171d" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -58,8 +58,8 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2024-08-20T11:54:25+08:00",
-        "dateModified": "2024-09-01T18:50:46+08:00",
+        "datePublished": "2024-10-01T22:37:18+08:00",
+        "dateModified": "2024-10-03T00:42:14+08:00",
         "url": "https://here-Leslie-Lau.github.io/",
         "description": "leslie的杂谈",
         "image": "https://here-Leslie-Lau.github.io/icons/apple-touch-icon.png",
@@ -252,7 +252,9 @@
 
                 
                 <summary class="summary p-summary">
-                    本文代码基于go 1.22, 其他版本大差不差 前言 上篇博客分析了sync.Mutex的源码，我们…
+                    <p><em>本文代码基于go 1.22, 其他版本大差不差</em></p>
+<h2 id="前言">前言</h2>
+<p>上篇博客分析了<code>sync.Mutex</code>的源码，我们在碰到共享资源问题的时候可以使用<code>sync.Mutex</code>来解决。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -324,7 +326,8 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 刚刚开始接触golang时，觉得mutex锁简单易用。到下个阶段自己觉得这种是悲…
+                    <h2 id="前言">前言</h2>
+<p>刚刚开始接触golang时，觉得<code>mutex</code>锁简单易用。到下个阶段自己觉得这种是悲观锁，效率很低。直到学习和了解它的原理才明白<code>mutex</code>是一个兼顾性能和公平的精妙设计。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -396,7 +399,9 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 前段时间入了fish-shell的坑，将其作为默认的shell，发现很多环境变量…
+                    <h2 id="前言">前言</h2>
+<p>前段时间入了<a href="https://fishshell.com/">fish-shell</a>的坑，将其作为默认的shell，发现很多环境变量都失效了，比如<code>$PATH</code>，<code>$GOPATH</code>等等，这里记录一下解决方案。</p>
+<p><em>标题党一下，互联网上很多文章写的都是垃圾。要么互相复制，要么没有彻底解决问题。</em></p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -468,7 +473,8 @@
 
                 
                 <summary class="summary p-summary">
-                    什么是字节序 最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所…
+                    <h2 id="什么是字节序">什么是字节序</h2>
+<p>最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所以就想着整理一下字节序的相关知识。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -540,7 +546,11 @@
 
                 
                 <summary class="summary p-summary">
-                    分页(Pagination) 分页这个优化方式特别常见。目前有两种方式： 客户端指定每页…
+                    <h2 id="分页pagination">分页(Pagination)</h2>
+<p>分页这个优化方式特别常见。目前有两种方式：</p>
+<ol>
+<li>
+<p>客户端指定每页的数量和当前第几页，服务端返回总页数和当前页的数据。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -612,7 +622,11 @@
 
                 
                 <summary class="summary p-summary">
-                    Socket介绍 不知道大家有没有想过网络通信到底是什么东西，为什么两个计算机之间可以…
+                    <h2 id="socket介绍">Socket介绍</h2>
+<blockquote>
+<p>不知道大家有没有想过网络通信到底是什么东西，为什么两个计算机之间可以通信？</p>
+</blockquote>
+<p>其实本质上就是两个计算机之间的数据交换，而这个数据交换的过程就是通过<code>socket</code>来完成的。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -684,7 +698,9 @@
 
                 
                 <summary class="summary p-summary">
-                    本文代码使用golang实现 前言 这篇文章主要记录下如何实现大数相乘。讲道理作为一个正…
+                    <p><em>本文代码使用golang实现</em></p>
+<h2 id="前言">前言</h2>
+<p>这篇文章主要记录下如何实现大数相乘。讲道理作为一个正式工作两年的程序员，不应该对这一块不了解，可能是因为工作中基本没有这个场景，所以也没考虑到。</p>…
                 </summary>
                 
                     <div class="read-more-container">
