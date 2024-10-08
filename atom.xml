@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-10-04T15:41:07&#43;00:00</updated>
+    <updated>2024-10-08T14:21:34&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">《认知觉醒-大脑》阅读笔记</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/reading/awakening_brain/" />
             <id>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</id>
-            <updated>2024-10-04T23:40:44&#43;08:00</updated>
+            <updated>2024-10-08T22:21:07&#43;08:00</updated>
             <published>2024-10-01T22:37:18&#43;08:00</published>
             <author>
                     <name>here-Leslie-Lau</name>
@@ -90,6 +90,20 @@
                 
                     
                 
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/reading/" term="Reading" label="Reading" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92/" term="认知觉醒" label="认知觉醒" />
+                            
+                        
                     
                 
             
