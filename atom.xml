@@ -4,18 +4,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-10-08T14:21:34&#43;00:00</updated>
+    <updated>2024-10-17T07:45:37&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
-    <author>
-            <name>here-Leslie-Lau</name>
-            <uri>https://here-Leslie-Lau.github.io/</uri>
-            
-                <email>i.leslie.lau@gmail.com</email>
-            </author>
+    
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.135.0">Hugo</generator>
+    <generator uri="https://gohugo.io/" version="0.124.0">Hugo</generator>
         <entry>
             <title type="text">《认知觉醒-大脑》阅读笔记</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/reading/awakening_brain/" />
@@ -23,12 +18,9 @@
             <updated>2024-10-08T22:21:07&#43;08:00</updated>
             <published>2024-10-01T22:37:18&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;本书的大脑理论&#34;&gt;本书的大脑理论&lt;/h2&gt;
-&lt;p&gt;本书作者：周岭在开篇时就介绍了人的大脑大致分为三个部分，分别为本能脑、情绪脑、理智脑&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本书的大脑理论 本书作者：周岭在开篇时就介绍了人的大脑大致分为三个部分，分别为本能脑、…</summary>
             
                 <content type="html">&lt;h2 id=&#34;本书的大脑理论&#34;&gt;本书的大脑理论&lt;/h2&gt;
 &lt;p&gt;本书作者：周岭在开篇时就介绍了人的大脑大致分为三个部分，分别为本能脑、情绪脑、理智脑&lt;/p&gt;
@@ -116,12 +108,9 @@
             <updated>2024-08-16T14:48:01&#43;08:00</updated>
             <published>2024-08-15T20:06:01&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
-&lt;p&gt;在&lt;code&gt;golang&lt;/code&gt;中，&lt;code&gt;map&lt;/code&gt;是一种非常常用的数据结构。但是在并发环境下，&lt;code&gt;map&lt;/code&gt;是不安全的，会出现并发问题。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">问题描述 在golang中，map是一种非常常用的数据结构。但是在并发环境下，map是…</summary>
             
                 <content type="html">&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;
 &lt;p&gt;在&lt;code&gt;golang&lt;/code&gt;中，&lt;code&gt;map&lt;/code&gt;是一种非常常用的数据结构。但是在并发环境下，&lt;code&gt;map&lt;/code&gt;是不安全的，会出现并发问题。&lt;/p&gt;
@@ -660,12 +649,9 @@
             <updated>2024-07-10T15:30:16&#43;08:00</updated>
             <published>2024-07-09T16:50:13&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;once介绍&#34;&gt;Once介绍&lt;/h2&gt;
-&lt;p&gt;在项目开发中，我们经常会需要调用其他服务或初始化一些资源。此时就需要用到单例模式，通过一个全局变量，在资源首次被使用时服务会去初始化它，其他地方需要使用资源时就用这个全局变量。但是在多线程环境下，这个全局变量可能会被多个线程同时初始化，这时就需要用到&lt;code&gt;sync.Once&lt;/code&gt;。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Once介绍 在项目开发中，我们经常会需要调用其他服务或初始化一些资源。此时就需要用到…</summary>
             
                 <content type="html">&lt;h2 id=&#34;once介绍&#34;&gt;Once介绍&lt;/h2&gt;
 &lt;p&gt;在项目开发中，我们经常会需要调用其他服务或初始化一些资源。此时就需要用到单例模式，通过一个全局变量，在资源首次被使用时服务会去初始化它，其他地方需要使用资源时就用这个全局变量。但是在多线程环境下，这个全局变量可能会被多个线程同时初始化，这时就需要用到&lt;code&gt;sync.Once&lt;/code&gt;。&lt;/p&gt;
@@ -874,12 +860,9 @@
             <updated>2024-08-31T00:58:24&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;
-&lt;p&gt;最早开始用&lt;code&gt;macOS&lt;/code&gt;，之后转到了Redhat系的&lt;code&gt;Fedora&lt;/code&gt;，再到现在转到了&lt;code&gt;Arch Linux&lt;/code&gt;。目前比较爱折腾，所以感觉还好(说不定有一天会入坑&lt;code&gt;Gentoo&lt;/code&gt;)&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">OS 最早开始用macOS，之后转到了Redhat系的Fedora，再到现在转到了Arc…</summary>
             
                 <content type="html">&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;
 &lt;p&gt;最早开始用&lt;code&gt;macOS&lt;/code&gt;，之后转到了Redhat系的&lt;code&gt;Fedora&lt;/code&gt;，再到现在转到了&lt;code&gt;Arch Linux&lt;/code&gt;。目前比较爱折腾，所以感觉还好(说不定有一天会入坑&lt;code&gt;Gentoo&lt;/code&gt;)&lt;/p&gt;
@@ -1508,12 +1491,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-06-27T17:30:10&#43;08:00</updated>
             <published>2024-06-21T10:21:29&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;waitgroup介绍&#34;&gt;WaitGroup介绍&lt;/h2&gt;
-&lt;p&gt;实际开发中经常会碰到一种情况：一个聚合信息的接口(如app首页/用户信息等)，需要查询一大堆数据，而这些数据都是分散在各个服务中。同步去一个一个查询会导致接口响应过长。于是很自然而然想到了并发查询。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">WaitGroup介绍 实际开发中经常会碰到一种情况：一个聚合信息的接口(如app首页…</summary>
             
                 <content type="html">&lt;h2 id=&#34;waitgroup介绍&#34;&gt;WaitGroup介绍&lt;/h2&gt;
 &lt;p&gt;实际开发中经常会碰到一种情况：一个聚合信息的接口(如app首页/用户信息等)，需要查询一大堆数据，而这些数据都是分散在各个服务中。同步去一个一个查询会导致接口响应过长。于是很自然而然想到了并发查询。&lt;/p&gt;
@@ -1874,12 +1854,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-06-18T11:53:43&#43;08:00</updated>
             <published>2024-06-11T18:26:31&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;最近工作中涉及到了挺多的索引的问题，仔细梳理下来发现自己掌握的并不深入，所以记录一下。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 最近工作中涉及到了挺多的索引的问题，仔细梳理下来发现自己掌握的并不深入，所以记录…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;最近工作中涉及到了挺多的索引的问题，仔细梳理下来发现自己掌握的并不深入，所以记录一下。&lt;/p&gt;
@@ -1991,12 +1968,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-05-22T15:12:39&#43;08:00</updated>
             <published>2024-05-21T10:22:48&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;什么是内存对齐&#34;&gt;什么是内存对齐&lt;/h2&gt;
-&lt;p&gt;我们时常会以为一个变量在内存中可以任意存放(假设内存空间足够, 不考虑占用情况)。但实际上并不是这样。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是内存对齐 我们时常会以为一个变量在内存中可以任意存放(假设内存空间足够, 不考虑占…</summary>
             
                 <content type="html">&lt;h2 id=&#34;什么是内存对齐&#34;&gt;什么是内存对齐&lt;/h2&gt;
 &lt;p&gt;我们时常会以为一个变量在内存中可以任意存放(假设内存空间足够, 不考虑占用情况)。但实际上并不是这样。&lt;/p&gt;
@@ -2059,12 +2033,12 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;同样的结构体定义，只是换了成员顺序，结果分配的内存大小却不一样。继续画图说明：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/memory_alignment_03.png&#34; alt=&#34;memory_alignment_03&#34;&gt;&lt;/p&gt;
-&lt;p&gt;结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x0&lt;del&gt;0x3)。之后第二个成员为&lt;code&gt;int64&lt;/code&gt;类型，占8个字节(0x8&lt;/del&gt;0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：&lt;/p&gt;
+&lt;p&gt;结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x0~0x3)。之后第二个成员为&lt;code&gt;int64&lt;/code&gt;类型，占8个字节(0x8~0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;它的地址只要是它的长度的整数倍就行了&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;BirthUnix&lt;/code&gt;成员的起始地址必须是8的整数倍，也就是要从0x8开始。就导致&lt;code&gt;Age&lt;/code&gt;字段之后的空间空出了4个字节。&lt;/p&gt;
-&lt;p&gt;第三个字段&lt;code&gt;Ip&lt;/code&gt;是&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x16&lt;del&gt;0x19)。之后又空出了4个字节(0x20&lt;/del&gt;0x23)是因为结构体内存对齐有个规则：&lt;strong&gt;结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;第三个字段&lt;code&gt;Ip&lt;/code&gt;是&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x16~0x19)。之后又空出了4个字节(0x20~0x23)是因为结构体内存对齐有个规则：&lt;strong&gt;结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;所以Person1的内存大小为24个字节。通过图片我们得出优化结论，如果把&lt;code&gt;Ip&lt;/code&gt;字段放到&lt;code&gt;BirthUnix&lt;/code&gt;字段之前，那么&lt;code&gt;Ip&lt;/code&gt;字段的起始地址就是0x4，&lt;code&gt;BirthUnix&lt;/code&gt;字段的起始地址还是0x8，这样就不会浪费4个字节的空间了。相当于把图中绿色的部分挪到黄色后面：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/memory_alignment_04.png&#34; alt=&#34;memory_alignment_04&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这样Person2的内存大小就是16个字节了。&lt;/p&gt;
@@ -2136,12 +2110,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-05-03T17:32:41&#43;08:00</updated>
             <published>2024-04-29T16:35:06&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;什么是函数式编程&#34;&gt;什么是函数式编程&lt;/h2&gt;
-&lt;p&gt;这边文章没有很复杂的概念，单纯介绍下函数式编程的概念，以及在Golang中如何实现函数式编程。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是函数式编程 这边文章没有很复杂的概念，单纯介绍下函数式编程的概念，以及在Gola…</summary>
             
                 <content type="html">&lt;h2 id=&#34;什么是函数式编程&#34;&gt;什么是函数式编程&lt;/h2&gt;
 &lt;p&gt;这边文章没有很复杂的概念，单纯介绍下函数式编程的概念，以及在Golang中如何实现函数式编程。&lt;/p&gt;
@@ -2533,13 +2504,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-06-21T10:27:26&#43;08:00</updated>
             <published>2024-03-25T11:57:42&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;&lt;em&gt;本文代码基于go 1.22, 其他版本大差不差&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;上篇博客分析了&lt;code&gt;sync.Mutex&lt;/code&gt;的源码，我们在碰到共享资源问题的时候可以使用&lt;code&gt;sync.Mutex&lt;/code&gt;来解决。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文代码基于go 1.22, 其他版本大差不差 前言 上篇博客分析了sync.Mutex的源码，我们…</summary>
             
                 <content type="html">&lt;p&gt;&lt;em&gt;本文代码基于go 1.22, 其他版本大差不差&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -2812,12 +2779,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-02-29T18:17:36&#43;08:00</updated>
             <published>2024-02-26T10:15:06&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;刚刚开始接触golang时，觉得&lt;code&gt;mutex&lt;/code&gt;锁简单易用。到下个阶段自己觉得这种是悲观锁，效率很低。直到学习和了解它的原理才明白&lt;code&gt;mutex&lt;/code&gt;是一个兼顾性能和公平的精妙设计。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 刚刚开始接触golang时，觉得mutex锁简单易用。到下个阶段自己觉得这种是悲…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;刚刚开始接触golang时，觉得&lt;code&gt;mutex&lt;/code&gt;锁简单易用。到下个阶段自己觉得这种是悲观锁，效率很低。直到学习和了解它的原理才明白&lt;code&gt;mutex&lt;/code&gt;是一个兼顾性能和公平的精妙设计。&lt;/p&gt;
@@ -3624,13 +3588,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-01-29T11:27:30&#43;08:00</updated>
             <published>2024-01-28T11:03:31&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;前段时间入了&lt;a href=&#34;https://fishshell.com/&#34;&gt;fish-shell&lt;/a&gt;的坑，将其作为默认的shell，发现很多环境变量都失效了，比如&lt;code&gt;$PATH&lt;/code&gt;，&lt;code&gt;$GOPATH&lt;/code&gt;等等，这里记录一下解决方案。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;标题党一下，互联网上很多文章写的都是垃圾。要么互相复制，要么没有彻底解决问题。&lt;/em&gt;&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 前段时间入了fish-shell的坑，将其作为默认的shell，发现很多环境变量…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;前段时间入了&lt;a href=&#34;https://fishshell.com/&#34;&gt;fish-shell&lt;/a&gt;的坑，将其作为默认的shell，发现很多环境变量都失效了，比如&lt;code&gt;$PATH&lt;/code&gt;，&lt;code&gt;$GOPATH&lt;/code&gt;等等，这里记录一下解决方案。&lt;/p&gt;
@@ -3739,12 +3699,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-01-25T14:49:43&#43;08:00</updated>
             <published>2024-01-11T19:51:17&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;什么是字节序&#34;&gt;什么是字节序&lt;/h2&gt;
-&lt;p&gt;最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所以就想着整理一下字节序的相关知识。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">什么是字节序 最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所…</summary>
             
                 <content type="html">&lt;h2 id=&#34;什么是字节序&#34;&gt;什么是字节序&lt;/h2&gt;
 &lt;p&gt;最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所以就想着整理一下字节序的相关知识。&lt;/p&gt;
@@ -3870,15 +3827,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2024-01-08T14:47:44&#43;08:00</updated>
             <published>2024-01-07T19:26:53&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;分页pagination&#34;&gt;分页(Pagination)&lt;/h2&gt;
-&lt;p&gt;分页这个优化方式特别常见。目前有两种方式：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;客户端指定每页的数量和当前第几页，服务端返回总页数和当前页的数据。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">分页(Pagination) 分页这个优化方式特别常见。目前有两种方式： 客户端指定每页…</summary>
             
                 <content type="html">&lt;h2 id=&#34;分页pagination&#34;&gt;分页(Pagination)&lt;/h2&gt;
 &lt;p&gt;分页这个优化方式特别常见。目前有两种方式：&lt;/p&gt;
@@ -3960,15 +3911,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-11-17T16:00:40&#43;08:00</updated>
             <published>2023-11-13T18:40:49&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;socket介绍&#34;&gt;Socket介绍&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;不知道大家有没有想过网络通信到底是什么东西，为什么两个计算机之间可以通信？&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;其实本质上就是两个计算机之间的数据交换，而这个数据交换的过程就是通过&lt;code&gt;socket&lt;/code&gt;来完成的。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Socket介绍 不知道大家有没有想过网络通信到底是什么东西，为什么两个计算机之间可以…</summary>
             
                 <content type="html">&lt;h2 id=&#34;socket介绍&#34;&gt;Socket介绍&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -4063,13 +4008,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-10-20T22:09:52&#43;08:00</updated>
             <published>2023-10-14T13:12:12&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;&lt;em&gt;本文代码使用golang实现&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;这篇文章主要记录下如何实现大数相乘。讲道理作为一个正式工作两年的程序员，不应该对这一块不了解，可能是因为工作中基本没有这个场景，所以也没考虑到。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文代码使用golang实现 前言 这篇文章主要记录下如何实现大数相乘。讲道理作为一个正…</summary>
             
                 <content type="html">&lt;p&gt;&lt;em&gt;本文代码使用golang实现&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -4200,12 +4141,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-09-30T14:56:48&#43;08:00</updated>
             <published>2023-09-12T20:52:25&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;git&lt;/code&gt;作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的&lt;code&gt;git commit message&lt;/code&gt;尤其重要，经常看到commit信息内有&lt;code&gt;fix bug, change XXX&lt;/code&gt;等各种千奇百怪的描述，会气的一口老血上来。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 git作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的git commit m…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;git&lt;/code&gt;作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的&lt;code&gt;git commit message&lt;/code&gt;尤其重要，经常看到commit信息内有&lt;code&gt;fix bug, change XXX&lt;/code&gt;等各种千奇百怪的描述，会气的一口老血上来。&lt;/p&gt;
@@ -4337,12 +4275,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-08-02T11:51:35&#43;08:00</updated>
             <published>2023-08-02T10:56:54&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;写这篇文章是因为看&lt;code&gt;golang&lt;/code&gt;源码的时候，经常会出现位运算。有时看着有点懵，所以写篇文章记录下。同时该文章也会探讨我们在生产中的哪些场景可以使用位运算。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 写这篇文章是因为看golang源码的时候，经常会出现位运算。有时看着有点懵，所以…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;写这篇文章是因为看&lt;code&gt;golang&lt;/code&gt;源码的时候，经常会出现位运算。有时看着有点懵，所以写篇文章记录下。同时该文章也会探讨我们在生产中的哪些场景可以使用位运算。&lt;/p&gt;
@@ -4350,38 +4285,38 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
 &lt;p&gt;计算机的世界万物都是二进制(都是0和1)，位运算本质上就是对这些0和1直接进行操作。常见的操作方式会将编程语言转换为二进制，而位运算省略了转换步骤，所以它的效率会更高。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;golang&lt;/code&gt;中常见的位运算有:&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;运算符号&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;用途&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&amp;amp;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;与运算, 两个二进制都为1则结果为1, 其他情况均为0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;|&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;或运算, 只要有一个二进制为1, 结果就为1&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;^&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;异或运算, 两个二进制不同, 结果为1&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;~&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;取反运算, 0变1, 1变0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&amp;lt;&amp;lt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;左移运算, 高位丢弃, 低位补0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&amp;gt;&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;右移运算, 低位丢弃, 无符号数高位补0, 有符号数高位补符号&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;运算符号&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;amp;&lt;/td&gt;
+&lt;td&gt;与运算, 两个二进制都为1则结果为1, 其他情况均为0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;td&gt;或运算, 只要有一个二进制为1, 结果就为1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;^&lt;/td&gt;
+&lt;td&gt;异或运算, 两个二进制不同, 结果为1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;~&lt;/td&gt;
+&lt;td&gt;取反运算, 0变1, 1变0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;lt;&amp;lt;&lt;/td&gt;
+&lt;td&gt;左移运算, 高位丢弃, 低位补0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;td&gt;右移运算, 低位丢弃, 无符号数高位补0, 有符号数高位补符号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;tips: golang中可以使用&lt;code&gt;fmt.Printf(&amp;quot;%b&amp;quot;, num)&lt;/code&gt;得到一个变量的二进制。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -4698,13 +4633,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-08-01T17:31:03&#43;08:00</updated>
             <published>2023-07-28T15:20:58&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;这篇文章的目的是为了分享下我自己的&lt;code&gt;Neovim&lt;/code&gt;配置。&lt;/p&gt;
-&lt;p&gt;本人是Golang程序员，最开始使用的IDE是&lt;code&gt;JetBrains Goland&lt;/code&gt;。有一说一这个ide适配度很高，认识的很多人都使用这个。但是它也有几个对我来说的缺点：&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 这篇文章的目的是为了分享下我自己的Neovim配置。 本人是Golang程序员，最…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;这篇文章的目的是为了分享下我自己的&lt;code&gt;Neovim&lt;/code&gt;配置。&lt;/p&gt;
@@ -4834,15 +4765,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-07-20T16:48:22&#43;08:00</updated>
             <published>2023-07-17T19:06:51&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。&lt;/p&gt;
-&lt;h2 id=&#34;乐观锁悲观锁&#34;&gt;乐观锁/悲观锁&lt;/h2&gt;
-&lt;p&gt;这一对锁名字比较形象。&lt;/p&gt;
-&lt;h3 id=&#34;悲观锁&#34;&gt;悲观锁&lt;/h3&gt;
-&lt;p&gt;先说悲观锁，把锁比作人的话。这位小伙子遇事会比较“悲观”。它会先把资源给锁住再进行操作，这样其他线程请求该资源的时候就会被阻塞，直到悲观锁把资源释放为止。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。 乐观锁/悲观锁 这一对锁名字…</summary>
             
                 <content type="html">&lt;p&gt;编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。&lt;/p&gt;
 &lt;h2 id=&#34;乐观锁悲观锁&#34;&gt;乐观锁/悲观锁&lt;/h2&gt;
@@ -4947,12 +4872,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-06-07T16:05:39&#43;08:00</updated>
             <published>2023-05-20T16:24:27&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;平时写代码或者阅读代码的时候，经常会在方法内看到&lt;code&gt;ctx context.Context&lt;/code&gt;这样的参数。本文就记录一下有关于&lt;code&gt;context.Context&lt;/code&gt;的知识。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 平时写代码或者阅读代码的时候，经常会在方法内看到ctx context.Conte…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;平时写代码或者阅读代码的时候，经常会在方法内看到&lt;code&gt;ctx context.Context&lt;/code&gt;这样的参数。本文就记录一下有关于&lt;code&gt;context.Context&lt;/code&gt;的知识。&lt;/p&gt;
@@ -5782,12 +5704,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-05-22T16:03:17&#43;08:00</updated>
             <published>2023-05-18T14:34:08&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;本文将介绍下golang源码里经常出现的东西: &lt;code&gt;unsafe.Pointer&lt;/code&gt;和&lt;code&gt;uintptr&lt;/code&gt;&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 本文将介绍下golang源码里经常出现的东西: unsafe.Pointer和ui…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;本文将介绍下golang源码里经常出现的东西: &lt;code&gt;unsafe.Pointer&lt;/code&gt;和&lt;code&gt;uintptr&lt;/code&gt;&lt;/p&gt;
@@ -6054,12 +5973,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-05-22T16:03:17&#43;08:00</updated>
             <published>2023-05-16T11:20:01&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;本文将从golang的源码方面分析：如何启动http服务，这个服务是怎么对外提供服务的，以及为什么可以保证高性能。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">前言 本文将从golang的源码方面分析：如何启动http服务，这个服务是怎么对外提供…</summary>
             
                 <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;本文将从golang的源码方面分析：如何启动http服务，这个服务是怎么对外提供服务的，以及为什么可以保证高性能。&lt;/p&gt;
@@ -6658,12 +6574,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-05-15T14:48:59&#43;08:00</updated>
             <published>2023-05-14T15:39:15&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;本文将介绍slice的数据结构、常用操作的源码。&lt;/p&gt;
-&lt;p&gt;源码基于golang 1.18，位于&lt;code&gt;runtime/slice.go&lt;/code&gt;&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">本文将介绍slice的数据结构、常用操作的源码。 源码基于golang 1.18，位于r…</summary>
             
                 <content type="html">&lt;p&gt;本文将介绍slice的数据结构、常用操作的源码。&lt;/p&gt;
 &lt;p&gt;源码基于golang 1.18，位于&lt;code&gt;runtime/slice.go&lt;/code&gt;&lt;/p&gt;
@@ -7253,27 +7166,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-05-13T23:05:33&#43;08:00</updated>
             <published>2023-05-13T14:17:49&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;git-submodules介绍&#34;&gt;git submodules介绍&lt;/h2&gt;
-&lt;p&gt;来自git官方的介绍&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; submodules
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       git-submodule - Initialize, update or inspect submodules
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;这个命令可以用于初始化、更新、检查子模块。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">git submodules介绍 来自git官方的介绍 1 2 3 4 $ git help submodules NAME git-submodule - Initialize, update or inspect submodules 这个命…</summary>
             
                 <content type="html">&lt;h2 id=&#34;git-submodules介绍&#34;&gt;git submodules介绍&lt;/h2&gt;
 &lt;p&gt;来自git官方的介绍&lt;/p&gt;
@@ -7436,109 +7331,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-05-12T09:42:19&#43;08:00</updated>
             <published>2023-05-11T18:27:56&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;切片使用&#34;&gt;切片使用&lt;/h2&gt;
-&lt;p&gt;仅记录一些常用操作&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;创建切片:&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// 创建切片
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 使用make可以创建切片的引用，第二个参数代表切片长度，第三个代表切片的容量，使用该种方法生成具有空值
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// 创建切片
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 直接对切片进行初始化操作
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;切片遍历:&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// 使用foreach遍历
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;// 直接使用索引进行遍历
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;使用append追加切片元素:&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;		&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// 该方式会在切片的末尾追加元素
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;切片拷贝:&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;slice1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;slice2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nb&#34;&gt;copy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;切片索引取值:&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;	&lt;span class=&#34;c1&#34;&gt;// 输出内容:[1 2], slice[0:2]代表去slice第[0]个元素，一直取到第[2]元素(不包括[2])
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;	&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 输出内容:[1], slice[0:1:2]第三个数字表示新切片容量为(2-0=2)
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;切片的数据结构&#34;&gt;切片的数据结构&lt;/h2&gt;
-&lt;p&gt;刚刚在&lt;strong&gt;切片特性&lt;/strong&gt;内介绍到了golang中切片其实是值拷贝。
-这里其实有一个疑问，如果切片元素内过多，那么每次传值不会特别特别慢吗？毕竟每次都要拷贝一个数组。别急，接下来介绍一下切片的数据结构。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">切片使用 仅记录一些常用操作 创建切片: 1 2 3 4 // 创建切片 slice := make([]int, 1, 3) // 使用make可以创…</summary>
             
                 <content type="html">&lt;h2 id=&#34;切片使用&#34;&gt;切片使用&lt;/h2&gt;
 &lt;p&gt;仅记录一些常用操作&lt;/p&gt;
@@ -8037,12 +7832,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-05-11T11:22:57&#43;08:00</updated>
             <published>2023-05-11T11:11:39&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;事发情况&#34;&gt;事发情况&lt;/h2&gt;
-&lt;p&gt;当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个服务接口都耗时，对外表现为整个服务不可用。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">事发情况 当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个…</summary>
             
                 <content type="html">&lt;h2 id=&#34;事发情况&#34;&gt;事发情况&lt;/h2&gt;
 &lt;p&gt;当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个服务接口都耗时，对外表现为整个服务不可用。&lt;/p&gt;
@@ -8127,11 +7919,9 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
             <updated>2023-05-11T11:22:57&#43;08:00</updated>
             <published>2023-05-09T09:34:53&#43;08:00</published>
             <author>
-                    <name>here-Leslie-Lau</name>
-                    <uri>https://github.com/here-Leslie-Lau/</uri>
-                    <email>i.leslie.lau@gmail.com</email>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;p&gt;大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。&lt;/p&gt;…</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control blo…</summary>
             
                 <content type="html">&lt;p&gt;大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。&lt;/p&gt;
 &lt;ol&gt;

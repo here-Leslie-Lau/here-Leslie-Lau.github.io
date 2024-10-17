@@ -10,20 +10,16 @@
         <title>Leslie&#39;s Blog</title>
         <link>https://here-Leslie-Lau.github.io/</link>
         <description>leslie的杂谈</description>
-        <generator>Hugo 0.135.0 https://gohugo.io/</generator>
+        <generator>Hugo 0.124.0 https://gohugo.io/</generator>
         
             <language>en</language>
         
         
-            <managingEditor>i.leslie.lau@gmail.com (here-Leslie-Lau)</managingEditor>
-        
-        
-            <webMaster>i.leslie.lau@gmail.com (here-Leslie-Lau)</webMaster>
         
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 08 Oct 2024 14:21:34 &#43;0000</lastBuildDate>
+        <lastBuildDate>Thu, 17 Oct 2024 07:45:37 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -33,8 +29,6 @@
                 <link>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</guid>
                 <pubDate>Tue, 01 Oct 2024 22:37:18 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -122,8 +116,6 @@
                 <link>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</guid>
                 <pubDate>Thu, 15 Aug 2024 20:06:01 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -663,8 +655,6 @@
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/once/</guid>
                 <pubDate>Tue, 09 Jul 2024 16:50:13 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;once介绍&#34;&gt;Once介绍&lt;/h2&gt;
@@ -872,8 +862,6 @@
                 <link>https://here-Leslie-Lau.github.io/post/others/workflow/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/others/workflow/</guid>
                 <pubDate>Mon, 08 Jul 2024 20:50:56 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -1503,8 +1491,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/waitgroup/</guid>
                 <pubDate>Fri, 21 Jun 2024 10:21:29 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;waitgroup介绍&#34;&gt;WaitGroup介绍&lt;/h2&gt;
@@ -1865,8 +1851,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/mysql/b-and-b-plus-tree/</guid>
                 <pubDate>Tue, 11 Jun 2024 18:26:31 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -1978,8 +1962,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/os/memory_alignment/</guid>
                 <pubDate>Tue, 21 May 2024 10:22:48 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;什么是内存对齐&#34;&gt;什么是内存对齐&lt;/h2&gt;
@@ -2043,12 +2025,12 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;同样的结构体定义，只是换了成员顺序，结果分配的内存大小却不一样。继续画图说明：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/memory_alignment_03.png&#34; alt=&#34;memory_alignment_03&#34;&gt;&lt;/p&gt;
-&lt;p&gt;结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x0&lt;del&gt;0x3)。之后第二个成员为&lt;code&gt;int64&lt;/code&gt;类型，占8个字节(0x8&lt;/del&gt;0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：&lt;/p&gt;
+&lt;p&gt;结构体的内存布局时根据成员的顺序来决定的，这里Person1第一个成员为&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x0~0x3)。之后第二个成员为&lt;code&gt;int64&lt;/code&gt;类型，占8个字节(0x8~0x15)。大家注意到0x4~0x7空出来了，因为上文说到的：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;它的地址只要是它的长度的整数倍就行了&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;code&gt;BirthUnix&lt;/code&gt;成员的起始地址必须是8的整数倍，也就是要从0x8开始。就导致&lt;code&gt;Age&lt;/code&gt;字段之后的空间空出了4个字节。&lt;/p&gt;
-&lt;p&gt;第三个字段&lt;code&gt;Ip&lt;/code&gt;是&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x16&lt;del&gt;0x19)。之后又空出了4个字节(0x20&lt;/del&gt;0x23)是因为结构体内存对齐有个规则：&lt;strong&gt;结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;第三个字段&lt;code&gt;Ip&lt;/code&gt;是&lt;code&gt;int32&lt;/code&gt;类型，占4个字节(0x16~0x19)。之后又空出了4个字节(0x20~0x23)是因为结构体内存对齐有个规则：&lt;strong&gt;结构体的总大小为 最大对齐数的整数倍（每个成员变量都有自己的对齐数），如有需要编译器会在最末一个成员之后加上填充字节。&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;所以Person1的内存大小为24个字节。通过图片我们得出优化结论，如果把&lt;code&gt;Ip&lt;/code&gt;字段放到&lt;code&gt;BirthUnix&lt;/code&gt;字段之前，那么&lt;code&gt;Ip&lt;/code&gt;字段的起始地址就是0x4，&lt;code&gt;BirthUnix&lt;/code&gt;字段的起始地址还是0x8，这样就不会浪费4个字节的空间了。相当于把图中绿色的部分挪到黄色后面：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://here-Leslie-Lau.github.io/icons/memory_alignment_04.png&#34; alt=&#34;memory_alignment_04&#34;&gt;&lt;/p&gt;
 &lt;p&gt;这样Person2的内存大小就是16个字节了。&lt;/p&gt;
@@ -2118,8 +2100,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/golang/functional_options/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/functional_options/</guid>
                 <pubDate>Mon, 29 Apr 2024 16:35:06 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -2512,8 +2492,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/rw_mutex/</guid>
                 <pubDate>Mon, 25 Mar 2024 11:57:42 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;p&gt;&lt;em&gt;本文代码基于go 1.22, 其他版本大差不差&lt;/em&gt;&lt;/p&gt;
@@ -2785,8 +2763,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/golang/mutex/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/mutex/</guid>
                 <pubDate>Mon, 26 Feb 2024 10:15:06 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -3594,8 +3570,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/os/fish_path_variable/</guid>
                 <pubDate>Sun, 28 Jan 2024 11:03:31 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -3703,8 +3677,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/os/byte_order/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/os/byte_order/</guid>
                 <pubDate>Thu, 11 Jan 2024 19:51:17 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -3831,8 +3803,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/</guid>
                 <pubDate>Sun, 07 Jan 2024 19:26:53 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;分页pagination&#34;&gt;分页(Pagination)&lt;/h2&gt;
@@ -3913,8 +3883,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/network/what_is_socket/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/network/what_is_socket/</guid>
                 <pubDate>Mon, 13 Nov 2023 18:40:49 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -4009,8 +3977,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</guid>
                 <pubDate>Sat, 14 Oct 2023 13:12:12 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -4141,8 +4107,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/git/commit_standard/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/git/commit_standard/</guid>
                 <pubDate>Tue, 12 Sep 2023 20:52:25 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -4275,8 +4239,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/bit_operation/</guid>
                 <pubDate>Wed, 02 Aug 2023 10:56:54 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -4285,38 +4247,38 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
 &lt;p&gt;计算机的世界万物都是二进制(都是0和1)，位运算本质上就是对这些0和1直接进行操作。常见的操作方式会将编程语言转换为二进制，而位运算省略了转换步骤，所以它的效率会更高。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;golang&lt;/code&gt;中常见的位运算有:&lt;/p&gt;
 &lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;运算符号&lt;/th&gt;
-          &lt;th style=&#34;text-align: left&#34;&gt;用途&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&amp;amp;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;与运算, 两个二进制都为1则结果为1, 其他情况均为0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;|&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;或运算, 只要有一个二进制为1, 结果就为1&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;^&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;异或运算, 两个二进制不同, 结果为1&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;~&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;取反运算, 0变1, 1变0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&amp;lt;&amp;lt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;左移运算, 高位丢弃, 低位补0&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;&amp;gt;&amp;gt;&lt;/td&gt;
-          &lt;td style=&#34;text-align: left&#34;&gt;右移运算, 低位丢弃, 无符号数高位补0, 有符号数高位补符号&lt;/td&gt;
-      &lt;/tr&gt;
-  &lt;/tbody&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;运算符号&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;amp;&lt;/td&gt;
+&lt;td&gt;与运算, 两个二进制都为1则结果为1, 其他情况均为0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;td&gt;或运算, 只要有一个二进制为1, 结果就为1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;^&lt;/td&gt;
+&lt;td&gt;异或运算, 两个二进制不同, 结果为1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;~&lt;/td&gt;
+&lt;td&gt;取反运算, 0变1, 1变0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;lt;&amp;lt;&lt;/td&gt;
+&lt;td&gt;左移运算, 高位丢弃, 低位补0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;gt;&amp;gt;&lt;/td&gt;
+&lt;td&gt;右移运算, 低位丢弃, 无符号数高位补0, 有符号数高位补符号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;tips: golang中可以使用&lt;code&gt;fmt.Printf(&amp;quot;%b&amp;quot;, num)&lt;/code&gt;得到一个变量的二进制。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -4632,8 +4594,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/vim/neovim_config/</guid>
                 <pubDate>Fri, 28 Jul 2023 15:20:58 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -4763,8 +4723,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/os/lock_category/</guid>
                 <pubDate>Mon, 17 Jul 2023 19:06:51 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;p&gt;编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。&lt;/p&gt;
@@ -4868,8 +4826,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/golang/context/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/context/</guid>
                 <pubDate>Sat, 20 May 2023 16:24:27 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -5700,8 +5656,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/unsafe_pointer_uintptr/</guid>
                 <pubDate>Thu, 18 May 2023 14:34:08 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
@@ -5967,8 +5921,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/golang/http_server/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/http_server/</guid>
                 <pubDate>Tue, 16 May 2023 11:20:01 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -6568,8 +6520,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/source_code_slice/</guid>
                 <pubDate>Sun, 14 May 2023 15:39:15 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;p&gt;本文将介绍slice的数据结构、常用操作的源码。&lt;/p&gt;
@@ -7159,8 +7109,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/git/submodules/</guid>
                 <pubDate>Sat, 13 May 2023 14:17:49 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;git-submodules介绍&#34;&gt;git submodules介绍&lt;/h2&gt;
@@ -7322,8 +7270,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/golang/slice/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/golang/slice/</guid>
                 <pubDate>Thu, 11 May 2023 18:27:56 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
@@ -7823,8 +7769,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/mysql/update_lock_table/</guid>
                 <pubDate>Thu, 11 May 2023 11:11:39 &#43;0800</pubDate>
                 
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
-                
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;事发情况&#34;&gt;事发情况&lt;/h2&gt;
@@ -7908,8 +7852,6 @@ set -g renumber-windows on    # 关掉某个窗口后，编号重排
                 <link>https://here-Leslie-Lau.github.io/post/pcb/</link>
                 <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/pcb/</guid>
                 <pubDate>Tue, 09 May 2023 09:34:53 &#43;0800</pubDate>
-                
-                    <author>i.leslie.lau@gmail.com (here-Leslie-Lau)</author>
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
