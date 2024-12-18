@@ -4,13 +4,93 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2024-12-07T09:13:57&#43;00:00</updated>
+    <updated>2024-12-18T03:29:57&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
     
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.124.0">Hugo</generator>
+        <entry>
+            <title type="text">触动学习法</title>
+            <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/" />
+            <id>https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/</id>
+            <updated>2024-12-18T11:29:27&#43;08:00</updated>
+            <published>2024-12-08T22:16:39&#43;08:00</published>
+            <author>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">何为触动学习法 即通过在阅读时找到「最触动」自身的点并与自己已有的知识体系相关联起来，…</summary>
+            
+                <content type="html">&lt;h2 id=&#34;何为触动学习法&#34;&gt;何为触动学习法&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即通过在阅读时找到「最触动」自身的点并与自己已有的知识体系相关联起来，转化并运用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单来说就是读一本书我们可以没必要完全读完，而是阅读下来发现自己被触动点，通过触动点来引发自己的思考，从而达到学习的目的。&lt;/p&gt;
+&lt;p&gt;这里的触动点是指在阅读过程中，读者被书中某个观点、某个事例、某个论述、某个观念等所触动，引发自己的思考，从而产生共鸣，或者产生新的认知，或者产生新的想法，或者产生新的行动，或者产生新的决策，或者产生新的价值观等。&lt;/p&gt;
+&lt;p&gt;读书的方法里也有个概念和这个类似，叫&amp;quot;熔断不读书法&amp;quot;。即在阅读时，如果发现自己对某个观点或者某个事例产生了共鸣，那么就停下来，思考这个观点或者事例，与自己已有的知识体系相关联起来，转化并运用。&lt;/p&gt;
+&lt;h2 id=&#34;为什么需要&#34;&gt;为什么需要&lt;/h2&gt;
+&lt;p&gt;一本书一般是一个作者的思考，最后变成文字体现在书本上。&lt;/p&gt;
+&lt;p&gt;往往一本书的内容包括很多东西，读者一般很难短时间了解全部。再加上读书一个最大目的是学习解惑，而在阅读一本书时，往往很多内容我们是无需阅读的，这里使用&amp;quot;触动学习法&amp;quot;可以很好的节省我们的时间。同时也能让我们在舒适区边缘，不至于让我们感到太过于困难。&lt;/p&gt;
+&lt;h2 id=&#34;触动点落实&#34;&gt;触动点落实&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;练习反思(找到触动点)：在阅读时，如果发现自己对某个观点或者某个事例产生了共鸣，那么就停下来，思考这个观点或者事例，与自己已有的知识体系相关联起来，转化并运用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自己语言描述：将自己的思考用自己的语言描述出来，这样可以更好的理解自己的思考。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;脑中的相关想法要深究：如果此时脑子里冒出一些相关，千万不要&amp;quot;敷衍了事&amp;quot;。而是要&amp;quot;刨根问底&amp;quot;，深究下去。这样是为了提前练习刚刚的触动点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;现实中多实践：在现实中多实践，这样才能更好的将触动点转化并运用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://here-Leslie-Lau.github.io/post/" term="post" label="post" />
+                        
+                    
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/reading/" term="Reading" label="Reading" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92/" term="认知觉醒" label="认知觉醒" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Faker不死者</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/faker_no_death/" />
