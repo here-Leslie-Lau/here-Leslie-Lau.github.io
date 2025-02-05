@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2025-02-05T06:29:14&#43;00:00</updated>
+    <updated>2025-02-05T10:48:19&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -1403,7 +1403,7 @@
             <title type="text">My Workflow</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/workflow/" />
             <id>https://here-Leslie-Lau.github.io/post/others/workflow/</id>
-            <updated>2025-02-05T14:28:50&#43;08:00</updated>
+            <updated>2025-02-05T18:47:54&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
                     <uri>https://here-Leslie-Lau.github.io/</uri>
@@ -1978,6 +1978,7 @@ set -g @plugin &amp;#39;tmux-plugins/tmux-cpu&amp;#39;
 
 set -g @plugin &amp;#39;catppuccin/tmux#v2.1.2&amp;#39; # See https://github.com/catppuccin/tmux/tags for additional tags
 set -g @catppuccin_flavor &amp;#39;mocha&amp;#39;
+set -g @catppuccin_window_status_style &amp;#34;rounded&amp;#34;
 
 set -g @plugin &amp;#39;tmux-plugins/tpm&amp;#39;
 set -g @plugin &amp;#39;tmux-plugins/tmux-sensible&amp;#39;
@@ -1994,19 +1995,21 @@ set -g @ctp_fg &amp;#34;#cad3f5&amp;#34;
 set -g @ctp_mauve &amp;#34;#c6a0f6&amp;#34;
 set -g @ctp_crust &amp;#34;#181926&amp;#34;
 
-# windows
-set -gF window-status-format &amp;#34;#[bg=#{@ctp_surface_1},fg=#{@ctp_fg}] ##I ##T &amp;#34;
-set -gF window-status-current-format &amp;#34;#[bg=#{@ctp_mauve},fg=#{@ctp_crust}] ##I ##T &amp;#34;
-
 # Make the status line pretty and add some modules
 set -g status-right-length 100
 set -g status-left-length 100
+# status line
 set -g status-right &amp;#34;#{E:@catppuccin_status_application}&amp;#34;
 set -agF status-right &amp;#34;#{E:@catppuccin_status_cpu}&amp;#34;
 set -ag status-right &amp;#34;#{E:@catppuccin_status_uptime}&amp;#34;
 
 # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
 run &amp;#39;~/.tmux/plugins/tpm/tpm&amp;#39;
+
+# windows
+set -gF window-status-format &amp;#34;#[bg=#{@ctp_surface_1},fg=#{@ctp_fg}] ##I ##W &amp;#34;
+set -gF window-status-current-format &amp;#34;#[bg=#{@ctp_mauve},fg=#{@ctp_crust}] ##I ##T &amp;#34;
+set -g @catppuccin_window_status_style &amp;#34;rounded&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;</content>
             
             
