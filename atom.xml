@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2025-02-12T13:48:37&#43;00:00</updated>
+    <updated>2025-02-23T11:57:50&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -1531,7 +1531,7 @@
             <title type="text">My Workflow</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/workflow/" />
             <id>https://here-Leslie-Lau.github.io/post/others/workflow/</id>
-            <updated>2025-02-05T18:47:54&#43;08:00</updated>
+            <updated>2025-02-23T19:56:26&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
                     <uri>https://here-Leslie-Lau.github.io/</uri>
@@ -1546,30 +1546,27 @@
 &lt;p&gt;&lt;del&gt;桌面环境的话我选择的是&lt;code&gt;Gnome&lt;/code&gt;，因为&lt;code&gt;KDE&lt;/code&gt;个人不太喜欢繁多的配置项，加上&lt;code&gt;Gnome&lt;/code&gt;的UI本人更加喜欢。其他的DE还没太了解。&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;2024-08-30更新: 由于&lt;code&gt;Gnome&lt;/code&gt;的一些bug弄得不得劲。目前我改成裸奔一个&lt;code&gt;i3wm&lt;/code&gt;了。主要是占用资源少，定好工作流之后效率高很多。&lt;/p&gt;
 &lt;h2 id=&#34;terminalshell&#34;&gt;Terminal&amp;amp;Shell&lt;/h2&gt;
-&lt;p&gt;终端用的是&lt;a href=&#34;https://github.com/kovidgoyal/kitty&#34;&gt;Kitty&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;终端用的是&lt;a href=&#34;https://github.com/kovidgoyal/kitty&#34;&gt;Kitty&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;2025-02-23更新：现在换成&lt;a href=&#34;https://github.com/ghostty-org/ghostty&#34;&gt;ghostty&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本人配置文件:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# BEGIN_KITTY_THEME
-# Hipster Green
-include current-theme.conf
-# END_KITTY_THEME
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# font
+# font-family = &amp;#34;Hack Nerd Font Mono&amp;#34;
+font-size = 14
 
-# font_family
-font_family Hack Nerd Font Bold
-font_size 14.0
-font_features FiraCodeNerdFontCompleteM-Retina +ss02 +ss03 +ss04 +ss05 +ss07 +zero
+# theme and styles
+theme = &amp;#34;GruvboxDarkHard&amp;#34;
+# theme = &amp;#34;ayu&amp;#34;
+cursor-style = &amp;#34;block&amp;#34;
+macos-icon = &amp;#34;retro&amp;#34;
 
-# cursor
-cursor_shape block
-cursor_beam_thickness 12.0
-cursor_blink_interval -1
+# window
+window-theme = &amp;#34;dark&amp;#34;
 
-# tab customization
-tab_bar_edge bottom
-tab_bar_style powerline
-tab_bar_align left
-
-copy_on_select yes
-mouse_hide_wait 3.0
+# mouse
+mouse-hide-while-typing = true
+clipboard-read = &amp;#34;allow&amp;#34;
+clipboard-write = &amp;#34;allow&amp;#34;
+copy-on-select = true
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Shell使用&lt;a href=&#34;https://github.com/fish-shell/fish-shell&#34;&gt;fish&lt;/a&gt;，搭配自己编写的&lt;a href=&#34;https://github.com/here-Leslie-Lau/clearance&#34;&gt;prompt&lt;/a&gt;使用&lt;/p&gt;
 &lt;h2 id=&#34;editor&#34;&gt;Editor&lt;/h2&gt;
 &lt;p&gt;编辑器用的是&lt;code&gt;Neovim&lt;/code&gt;，配置文件已经开源了: &lt;a href=&#34;https://github.com/here-Leslie-Lau/my-nvim&#34;&gt;here-Leslie-Lau/my-nvim&lt;/a&gt;, 欢迎star~&lt;/p&gt;
