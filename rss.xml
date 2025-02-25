@@ -19,7 +19,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 23 Feb 2025 11:57:50 &#43;0000</lastBuildDate>
+        <lastBuildDate>Tue, 25 Feb 2025 12:26:28 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -1536,23 +1536,33 @@
 &lt;p&gt;2025-02-23更新：现在换成&lt;a href=&#34;https://github.com/ghostty-org/ghostty&#34;&gt;ghostty&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本人配置文件:&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# font
-# font-family = &amp;#34;Hack Nerd Font Mono&amp;#34;
-font-size = 14
+# font-family = &amp;#34;JetBrains Mono Nerd Font&amp;#34;
+
+font-style-bold = &amp;#34;Heavy&amp;#34;
+font-size = 12.0
+font-thicken = true
+grapheme-width-method = &amp;#34;unicode&amp;#34;
 
 # theme and styles
 theme = &amp;#34;GruvboxDarkHard&amp;#34;
-# theme = &amp;#34;ayu&amp;#34;
+# theme = &amp;#34;Cobalt Neon&amp;#34;
+# theme = &amp;#34;MonaLisa&amp;#34;
 cursor-style = &amp;#34;block&amp;#34;
 macos-icon = &amp;#34;retro&amp;#34;
 
 # window
 window-theme = &amp;#34;dark&amp;#34;
+window-decoration = &amp;#34;none&amp;#34;
 
 # mouse
 mouse-hide-while-typing = true
 clipboard-read = &amp;#34;allow&amp;#34;
 clipboard-write = &amp;#34;allow&amp;#34;
 copy-on-select = true
+mouse-scroll-multiplier = 0.4
+
+# 颜色设置
+# background = 100000
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Shell使用&lt;a href=&#34;https://github.com/fish-shell/fish-shell&#34;&gt;fish&lt;/a&gt;，搭配自己编写的&lt;a href=&#34;https://github.com/here-Leslie-Lau/clearance&#34;&gt;prompt&lt;/a&gt;使用&lt;/p&gt;
 &lt;h2 id=&#34;editor&#34;&gt;Editor&lt;/h2&gt;
 &lt;p&gt;编辑器用的是&lt;code&gt;Neovim&lt;/code&gt;，配置文件已经开源了: &lt;a href=&#34;https://github.com/here-Leslie-Lau/my-nvim&#34;&gt;here-Leslie-Lau/my-nvim&lt;/a&gt;, 欢迎star~&lt;/p&gt;
