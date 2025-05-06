@@ -4,13 +4,70 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2025-04-14T13:57:41&#43;00:00</updated>
+    <updated>2025-05-06T14:30:27&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
     
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.124.0">Hugo</generator>
+        <entry>
+            <title type="text">鲁迅语录：此后如竟没有炬火，我便是唯一的光</title>
+            <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/reading/to_be_lighter/" />
+            <id>https://here-Leslie-Lau.github.io/post/reading/to_be_lighter/</id>
+            <updated>2025-05-06T22:30:06&#43;08:00</updated>
+            <published>2025-05-06T22:25:05&#43;08:00</published>
+            <author>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">所以我时常害怕，愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做…</summary>
+            
+                <content type="html">&lt;p&gt;&lt;strong&gt;所以我时常害怕，愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;此后如竟没有炬火，我便是唯一的光。&lt;/strong&gt;&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://here-Leslie-Lau.github.io/post/" term="post" label="post" />
+                        
+                    
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/reading/" term="Reading" label="Reading" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/%E9%B2%81%E8%BF%85%E8%AF%AD%E5%BD%95/" term="鲁迅语录" label="鲁迅语录" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">带点主动，去读书吧</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/reading/active_reading/" />
