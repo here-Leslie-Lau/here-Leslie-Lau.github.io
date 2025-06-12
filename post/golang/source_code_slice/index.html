@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.124.0"><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.147.8"><meta name="theme-color" content="#16171d" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>golang源码分析-slice篇 | Leslie&#39;s Blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5bc8ad779f98303deeab915e22bbf21fc82e81bc2753c66a06b85a93b0f488c4.css"/>
+    <link rel="stylesheet" href="/css/meme.min.1421b7a9fea585b8c5ae1b66bd3acbfe130f5ce2286ddeb3a9e84515724d11fe.css"/>
 
     
     
-        <script src="/js/meme.min.a673f70254da0b736ecc71bed491cfc798c2469379678ee4908f4c0cabbe3b80.js"></script>
+        <script src="/js/meme.min.c9f957c8c969c043d1d7a14322657eecee4c6b1d56632ede69fb92bddbcce713.js"></script>
 
     
 
@@ -30,7 +30,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="here-Leslie-Lau" /><meta name="description" content="本文将介绍slice的数据结构、常用操作的源码。 源码基于golang 1.18，位于r…" />
+    <meta name="author" content="here-Leslie-Lau" /><meta name="description" content="本文将介绍slice的数据结构、常用操作的源码。
+源码基于golang 1.18，位于runtime/slice.go
+…" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -60,7 +62,7 @@
         "dateModified": "2023-05-15T14:48:59+08:00",
         "url": "https://here-Leslie-Lau.github.io/post/golang/source_code_slice/",
         "headline": "golang源码分析-slice篇",
-        "description": "本文将介绍slice的数据结构、常用操作的源码。 源码基于golang 1.18，位于r…",
+        "description": "本文将介绍slice的数据结构、常用操作的源码。\n源码基于golang 1.18，位于runtime/slice.go\n…",
         "inLanguage" : "en",
         "articleSection": "post",
         "wordCount":  2611 ,
@@ -97,7 +99,9 @@
 
 
 <meta property="og:title" content="golang源码分析-slice篇" />
-<meta property="og:description" content="本文将介绍slice的数据结构、常用操作的源码。 源码基于golang 1.18，位于r…" />
+<meta property="og:description" content="本文将介绍slice的数据结构、常用操作的源码。
+源码基于golang 1.18，位于runtime/slice.go
+…" />
 <meta property="og:url" content="https://here-Leslie-Lau.github.io/post/golang/source_code_slice/" />
 <meta property="og:site_name" content="Leslie&#39;s Blog" />
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://here-Leslie-Lau.github.io/icons/apple-touch-icon.png" />
@@ -296,12 +300,12 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">slice</span> <span class="kd">struct</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 底层数组的引用
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">array</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 切片长度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">len</span>   <span class="kt">int</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 切片容量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">cap</span>   <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 底层数组的引用</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">array</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 切片长度</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">len</span>   <span class="kt">int</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 切片容量</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">cap</span>   <span class="kt">int</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table></div>
 </div>
@@ -317,11 +321,11 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 声明一个slice, 每个元素类型是int
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">list</span> <span class="p">[]</span><span class="kt">int</span>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 声明一个slice, 每个元素类型是int</span>
+</span></span><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">list</span> <span class="p">[]</span><span class="kt">int</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 使用内置的make函数创建一个slice, 每个元素类型是int, 长度为1, 最多可容纳5个元素。使用该种方法生成的切片元素具有默认值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">list</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 使用内置的make函数创建一个slice, 每个元素类型是int, 长度为1, 最多可容纳5个元素。使用该种方法生成的切片元素具有默认值</span>
+</span></span><span class="line"><span class="cl"><span class="nx">list</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 </span></span></code></pre></td></tr></table></div>
 </div>
 </div><p>make函数创建slice的源码:</p>
@@ -354,30 +358,30 @@
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 创建一个slice
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 请求参数, et: 元素类型, len: 长度, cap: 容量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">makeslice</span><span class="p">(</span><span class="nx">et</span> <span class="o">*</span><span class="nx">_type</span><span class="p">,</span> <span class="nx">len</span><span class="p">,</span> <span class="nx">cap</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 计算出创建切片所占用的内存大小(每个元素类型所占用的大小*容量)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">mem</span><span class="p">,</span> <span class="nx">overflow</span> <span class="o">:=</span> <span class="nx">math</span><span class="p">.</span><span class="nf">MulUintptr</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">,</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">cap</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 判断切片所占用内存是否溢出、是否超过最大可分配大小、长度是否小于0、长度是否比容量大
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 如果满足其中一个条件，则panic
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="nx">overflow</span> <span class="o">||</span> <span class="nx">mem</span> <span class="p">&gt;</span> <span class="nx">maxAlloc</span> <span class="o">||</span> <span class="nx">len</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">len</span> <span class="p">&gt;</span> <span class="nx">cap</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// NOTE: Produce a &#39;len out of range&#39; error instead of a
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// &#39;cap out of range&#39; error when someone does make([]T, bignumber).
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// &#39;cap out of range&#39; is true too, but since the cap is only being
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// supplied implicitly, saying len is clearer.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// See golang.org/issue/4085.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">mem</span><span class="p">,</span> <span class="nx">overflow</span> <span class="o">:=</span> <span class="nx">math</span><span class="p">.</span><span class="nf">MulUintptr</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">,</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">len</span><span class="p">))</span>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 创建一个slice</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 请求参数, et: 元素类型, len: 长度, cap: 容量</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">makeslice</span><span class="p">(</span><span class="nx">et</span> <span class="o">*</span><span class="nx">_type</span><span class="p">,</span> <span class="nx">len</span><span class="p">,</span> <span class="nx">cap</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 计算出创建切片所占用的内存大小(每个元素类型所占用的大小*容量)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">mem</span><span class="p">,</span> <span class="nx">overflow</span> <span class="o">:=</span> <span class="nx">math</span><span class="p">.</span><span class="nf">MulUintptr</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">,</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">cap</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 判断切片所占用内存是否溢出、是否超过最大可分配大小、长度是否小于0、长度是否比容量大</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 如果满足其中一个条件，则panic</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">overflow</span> <span class="o">||</span> <span class="nx">mem</span> <span class="p">&gt;</span> <span class="nx">maxAlloc</span> <span class="o">||</span> <span class="nx">len</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">len</span> <span class="p">&gt;</span> <span class="nx">cap</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// NOTE: Produce a &#39;len out of range&#39; error instead of a</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// &#39;cap out of range&#39; error when someone does make([]T, bignumber).</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// &#39;cap out of range&#39; is true too, but since the cap is only being</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// supplied implicitly, saying len is clearer.</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// See golang.org/issue/4085.</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">mem</span><span class="p">,</span> <span class="nx">overflow</span> <span class="o">:=</span> <span class="nx">math</span><span class="p">.</span><span class="nf">MulUintptr</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">,</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">len</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">overflow</span> <span class="o">||</span> <span class="nx">mem</span> <span class="p">&gt;</span> <span class="nx">maxAlloc</span> <span class="o">||</span> <span class="nx">len</span> <span class="p">&lt;</span> <span class="mi">0</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="c1">// 细分异常类型, 这个分支抛出长度限制异常
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">panicmakeslicelen</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 细分异常类型, 这个分支抛出长度限制异常</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">panicmakeslicelen</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// 报出容量限制的异常
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">panicmakeslicecap</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 报出容量限制的异常</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">panicmakeslicecap</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 分配切片的内存
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">return</span> <span class="nf">mallocgc</span><span class="p">(</span><span class="nx">mem</span><span class="p">,</span> <span class="nx">et</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 分配切片的内存</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nf">mallocgc</span><span class="p">(</span><span class="nx">mem</span><span class="p">,</span> <span class="nx">et</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table></div>
 </div>
@@ -456,32 +460,32 @@
 </span><span class="lnt">50
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 该方法可以从字符串或一个切片中拷贝到新的切片内
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 请求参数: toPtr: 新切片的引用, toLen: 新切片的长度, fromPtr: 旧切片的指针, fromLen: 旧切片的长度, width: 切片单个元素的占用大小
-</span></span></span><span class="line"><span class="cl"><span class="c1">// slicecopy is used to copy from a string or slice of pointerless elements into a slice.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">slicecopy</span><span class="p">(</span><span class="nx">toPtr</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="p">,</span> <span class="nx">toLen</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">fromPtr</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="p">,</span> <span class="nx">fromLen</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">width</span> <span class="kt">uintptr</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 长度校验，如果旧切片或者新切片的长度有一个为0，那么没必要复制了，直接返回
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="nx">fromLen</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">toLen</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 该方法可以从字符串或一个切片中拷贝到新的切片内</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 请求参数: toPtr: 新切片的引用, toLen: 新切片的长度, fromPtr: 旧切片的指针, fromLen: 旧切片的长度, width: 切片单个元素的占用大小</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// slicecopy is used to copy from a string or slice of pointerless elements into a slice.</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">slicecopy</span><span class="p">(</span><span class="nx">toPtr</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="p">,</span> <span class="nx">toLen</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">fromPtr</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="p">,</span> <span class="nx">fromLen</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">width</span> <span class="kt">uintptr</span><span class="p">)</span> <span class="kt">int</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 长度校验，如果旧切片或者新切片的长度有一个为0，那么没必要复制了，直接返回</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">fromLen</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">toLen</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 定义n, n为两个切片较短的长度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 该函数会复制切片，复制的结果取决于较短的切片，当较短的切片复制完成整个操作也就结束。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 所以需要n来记录较短切片的长度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">n</span> <span class="o">:=</span> <span class="nx">fromLen</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 定义n, n为两个切片较短的长度</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 该函数会复制切片，复制的结果取决于较短的切片，当较短的切片复制完成整个操作也就结束。</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 所以需要n来记录较短切片的长度</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">n</span> <span class="o">:=</span> <span class="nx">fromLen</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">toLen</span> <span class="p">&lt;</span> <span class="nx">n</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">n</span> <span class="p">=</span> <span class="nx">toLen</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 如果单个元素不占用内存大小, 那么也没必要复制了, 直接返回较短的长度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="nx">width</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 如果单个元素不占用内存大小, 那么也没必要复制了, 直接返回较短的长度</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">width</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">n</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 计算切片所占用的内存大小(切片长度*每个元素所占用的内存大小)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">size</span> <span class="o">:=</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="o">*</span> <span class="nx">width</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 竞争检测
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="nx">raceenabled</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 计算切片所占用的内存大小(切片长度*每个元素所占用的内存大小)</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">size</span> <span class="o">:=</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">n</span><span class="p">)</span> <span class="o">*</span> <span class="nx">width</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 竞争检测</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">raceenabled</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">callerpc</span> <span class="o">:=</span> <span class="nf">getcallerpc</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">pc</span> <span class="o">:=</span> <span class="nx">abi</span><span class="p">.</span><span class="nf">FuncPCABIInternal</span><span class="p">(</span><span class="nx">slicecopy</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="nf">racereadrangepc</span><span class="p">(</span><span class="nx">fromPtr</span><span class="p">,</span> <span class="nx">size</span><span class="p">,</span> <span class="nx">callerpc</span><span class="p">,</span> <span class="nx">pc</span><span class="p">)</span>
@@ -496,13 +500,13 @@
 </span></span><span class="line"><span class="cl">		<span class="nf">asanwrite</span><span class="p">(</span><span class="nx">toPtr</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 如果切片占用为1字节，直接值拷贝过去
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="nx">size</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">// common case worth about 2x to do here
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// TODO: is this still worth it with new memmove impl?
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="kt">byte</span><span class="p">)(</span><span class="nx">toPtr</span><span class="p">)</span> <span class="p">=</span> <span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="kt">byte</span><span class="p">)(</span><span class="nx">fromPtr</span><span class="p">)</span> <span class="c1">// known to be a byte pointer
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// 否则调用memmove函数，拷贝数据
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">memmove</span><span class="p">(</span><span class="nx">toPtr</span><span class="p">,</span> <span class="nx">fromPtr</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 如果切片占用为1字节，直接值拷贝过去</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">size</span> <span class="o">==</span> <span class="mi">1</span> <span class="p">{</span> <span class="c1">// common case worth about 2x to do here</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// TODO: is this still worth it with new memmove impl?</span>
+</span></span><span class="line"><span class="cl">		<span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="kt">byte</span><span class="p">)(</span><span class="nx">toPtr</span><span class="p">)</span> <span class="p">=</span> <span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="kt">byte</span><span class="p">)(</span><span class="nx">fromPtr</span><span class="p">)</span> <span class="c1">// known to be a byte pointer</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 否则调用memmove函数，拷贝数据</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">memmove</span><span class="p">(</span><span class="nx">toPtr</span><span class="p">,</span> <span class="nx">fromPtr</span><span class="p">,</span> <span class="nx">size</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">n</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -658,11 +662,11 @@
 </span><span class="lnt">137
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 在append期间处理切片的增长
-</span></span></span><span class="line"><span class="cl"><span class="c1">// 请其参数: et: 切片的元素类型, old: 扩容前的slice, cap: 扩容后切片的容量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nf">growslice</span><span class="p">(</span><span class="nx">et</span> <span class="o">*</span><span class="nx">_type</span><span class="p">,</span> <span class="nx">old</span> <span class="nx">slice</span><span class="p">,</span> <span class="nx">cap</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">slice</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 开启竞争检测
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="nx">raceenabled</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-golang" data-lang="golang"><span class="line"><span class="cl"><span class="c1">// 在append期间处理切片的增长</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 请其参数: et: 切片的元素类型, old: 扩容前的slice, cap: 扩容后切片的容量</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">growslice</span><span class="p">(</span><span class="nx">et</span> <span class="o">*</span><span class="nx">_type</span><span class="p">,</span> <span class="nx">old</span> <span class="nx">slice</span><span class="p">,</span> <span class="nx">cap</span> <span class="kt">int</span><span class="p">)</span> <span class="nx">slice</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 开启竞争检测</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">raceenabled</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">callerpc</span> <span class="o">:=</span> <span class="nf">getcallerpc</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">		<span class="nf">racereadrangepc</span><span class="p">(</span><span class="nx">old</span><span class="p">.</span><span class="nx">array</span><span class="p">,</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">old</span><span class="p">.</span><span class="nx">len</span><span class="o">*</span><span class="nb">int</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">)),</span> <span class="nx">callerpc</span><span class="p">,</span> <span class="nx">abi</span><span class="p">.</span><span class="nf">FuncPCABIInternal</span><span class="p">(</span><span class="nx">growslice</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
@@ -674,40 +678,40 @@
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">cap</span> <span class="p">&lt;</span> <span class="nx">old</span><span class="p">.</span><span class="nx">cap</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// 如果扩容后的容量比扩容前还小，panic
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nb">panic</span><span class="p">(</span><span class="nf">errorString</span><span class="p">(</span><span class="s">&#34;growslice: cap out of range&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 如果扩容后的容量比扩容前还小，panic</span>
+</span></span><span class="line"><span class="cl">		<span class="nb">panic</span><span class="p">(</span><span class="nf">errorString</span><span class="p">(</span><span class="s">&#34;growslice: cap out of range&#34;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">et</span><span class="p">.</span><span class="nx">size</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// append should not create a slice with nil pointer but non-zero len.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// We assume that append doesn&#39;t need to preserve old.array in this case.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// 如果元素所占用内存的大小为0，则new一个slice返回，底层数组指向空的数组
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="k">return</span> <span class="nx">slice</span><span class="p">{</span><span class="nx">unsafe</span><span class="p">.</span><span class="nf">Pointer</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">zerobase</span><span class="p">),</span> <span class="nx">old</span><span class="p">.</span><span class="nx">len</span><span class="p">,</span> <span class="nx">cap</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// append should not create a slice with nil pointer but non-zero len.</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// We assume that append doesn&#39;t need to preserve old.array in this case.</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 如果元素所占用内存的大小为0，则new一个slice返回，底层数组指向空的数组</span>
+</span></span><span class="line"><span class="cl">		<span class="k">return</span> <span class="nx">slice</span><span class="p">{</span><span class="nx">unsafe</span><span class="p">.</span><span class="nf">Pointer</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">zerobase</span><span class="p">),</span> <span class="nx">old</span><span class="p">.</span><span class="nx">len</span><span class="p">,</span> <span class="nx">cap</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="nx">newcap</span> <span class="o">:=</span> <span class="nx">old</span><span class="p">.</span><span class="nx">cap</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">doublecap</span> <span class="o">:=</span> <span class="nx">newcap</span> <span class="o">+</span> <span class="nx">newcap</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">cap</span> <span class="p">&gt;</span> <span class="nx">doublecap</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// 如果新容量比旧容量的两倍还大，则按新容量扩容
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">newcap</span> <span class="p">=</span> <span class="nx">cap</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 如果新容量比旧容量的两倍还大，则按新容量扩容</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">newcap</span> <span class="p">=</span> <span class="nx">cap</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="kd">const</span> <span class="nx">threshold</span> <span class="p">=</span> <span class="mi">256</span>
 </span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">old</span><span class="p">.</span><span class="nx">cap</span> <span class="p">&lt;</span> <span class="nx">threshold</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="c1">// 旧容量比256小，则按两倍旧容量扩容
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nx">newcap</span> <span class="p">=</span> <span class="nx">doublecap</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 旧容量比256小，则按两倍旧容量扩容</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">newcap</span> <span class="p">=</span> <span class="nx">doublecap</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="c1">// Check 0 &lt; newcap to detect overflow
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// and prevent an infinite loop.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// 否则每次增长1.25倍容量，知道newcap大于等于cap才结束
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">for</span> <span class="mi">0</span> <span class="p">&lt;</span> <span class="nx">newcap</span> <span class="o">&amp;&amp;</span> <span class="nx">newcap</span> <span class="p">&lt;</span> <span class="nx">cap</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">				<span class="c1">// Transition from growing 2x for small slices
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="c1">// to growing 1.25x for large slices. This formula
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="c1">// gives a smooth-ish transition between the two.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>				<span class="nx">newcap</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">newcap</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="nx">threshold</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// Check 0 &lt; newcap to detect overflow</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// and prevent an infinite loop.</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// 否则每次增长1.25倍容量，知道newcap大于等于cap才结束</span>
+</span></span><span class="line"><span class="cl">			<span class="k">for</span> <span class="mi">0</span> <span class="p">&lt;</span> <span class="nx">newcap</span> <span class="o">&amp;&amp;</span> <span class="nx">newcap</span> <span class="p">&lt;</span> <span class="nx">cap</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				<span class="c1">// Transition from growing 2x for small slices</span>
+</span></span><span class="line"><span class="cl">				<span class="c1">// to growing 1.25x for large slices. This formula</span>
+</span></span><span class="line"><span class="cl">				<span class="c1">// gives a smooth-ish transition between the two.</span>
+</span></span><span class="line"><span class="cl">				<span class="nx">newcap</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">newcap</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="nx">threshold</span><span class="p">)</span> <span class="o">/</span> <span class="mi">4</span>
 </span></span><span class="line"><span class="cl">			<span class="p">}</span>
-</span></span><span class="line"><span class="cl">			<span class="c1">// Set newcap to the requested cap when
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// the newcap calculation overflowed.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="k">if</span> <span class="nx">newcap</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// Set newcap to the requested cap when</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// the newcap calculation overflowed.</span>
+</span></span><span class="line"><span class="cl">			<span class="k">if</span> <span class="nx">newcap</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">				<span class="nx">newcap</span> <span class="p">=</span> <span class="nx">cap</span>
 </span></span><span class="line"><span class="cl">			<span class="p">}</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
@@ -715,13 +719,13 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">overflow</span> <span class="kt">bool</span>
 </span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">lenmem</span><span class="p">,</span> <span class="nx">newlenmem</span><span class="p">,</span> <span class="nx">capmem</span> <span class="kt">uintptr</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// Specialize for common values of et.size.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// For 1 we don&#39;t need any division/multiplication.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// For goarch.PtrSize, compiler will optimize division/multiplication into a shift by a constant.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// For powers of 2, use a variable shift.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 根据切片元素类型所占用的大小，进行以下判断
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 计算新切片的容量和长度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">switch</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Specialize for common values of et.size.</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// For 1 we don&#39;t need any division/multiplication.</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// For goarch.PtrSize, compiler will optimize division/multiplication into a shift by a constant.</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// For powers of 2, use a variable shift.</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 根据切片元素类型所占用的大小，进行以下判断</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 计算新切片的容量和长度</span>
+</span></span><span class="line"><span class="cl">	<span class="k">switch</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="nx">et</span><span class="p">.</span><span class="nx">size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">lenmem</span> <span class="p">=</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">old</span><span class="p">.</span><span class="nx">len</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">newlenmem</span> <span class="p">=</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">cap</span><span class="p">)</span>
@@ -737,8 +741,8 @@
 </span></span><span class="line"><span class="cl">	<span class="k">case</span> <span class="nf">isPowerOfTwo</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">		<span class="kd">var</span> <span class="nx">shift</span> <span class="kt">uintptr</span>
 </span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">goarch</span><span class="p">.</span><span class="nx">PtrSize</span> <span class="o">==</span> <span class="mi">8</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="c1">// Mask shift for better code generation.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nx">shift</span> <span class="p">=</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">sys</span><span class="p">.</span><span class="nf">Ctz64</span><span class="p">(</span><span class="nb">uint64</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">)))</span> <span class="o">&amp;</span> <span class="mi">63</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// Mask shift for better code generation.</span>
+</span></span><span class="line"><span class="cl">			<span class="nx">shift</span> <span class="p">=</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">sys</span><span class="p">.</span><span class="nf">Ctz64</span><span class="p">(</span><span class="nb">uint64</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">)))</span> <span class="o">&amp;</span> <span class="mi">63</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="nx">shift</span> <span class="p">=</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">sys</span><span class="p">.</span><span class="nf">Ctz32</span><span class="p">(</span><span class="nb">uint32</span><span class="p">(</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">)))</span> <span class="o">&amp;</span> <span class="mi">31</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
@@ -755,43 +759,43 @@
 </span></span><span class="line"><span class="cl">		<span class="nx">newcap</span> <span class="p">=</span> <span class="nb">int</span><span class="p">(</span><span class="nx">capmem</span> <span class="o">/</span> <span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// The check of overflow in addition to capmem &gt; maxAlloc is needed
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// to prevent an overflow which can be used to trigger a segfault
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// on 32bit architectures with this example program:
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// type T [1&lt;&lt;27 + 1]int64
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// var d T
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// var s []T
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// func main() {
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//   s = append(s, d, d, d, d)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//   print(len(s), &#34;\n&#34;)
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// }
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">// 判断分配后是否溢出以及是否超出最大的可分配大小
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">if</span> <span class="nx">overflow</span> <span class="o">||</span> <span class="nx">capmem</span> <span class="p">&gt;</span> <span class="nx">maxAlloc</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// The check of overflow in addition to capmem &gt; maxAlloc is needed</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// to prevent an overflow which can be used to trigger a segfault</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// on 32bit architectures with this example program:</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// type T [1&lt;&lt;27 + 1]int64</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// var d T</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// var s []T</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// func main() {</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//   s = append(s, d, d, d, d)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//   print(len(s), &#34;\n&#34;)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// }</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 判断分配后是否溢出以及是否超出最大的可分配大小</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">overflow</span> <span class="o">||</span> <span class="nx">capmem</span> <span class="p">&gt;</span> <span class="nx">maxAlloc</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="nb">panic</span><span class="p">(</span><span class="nf">errorString</span><span class="p">(</span><span class="s">&#34;growslice: cap out of range&#34;</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">p</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span>
 </span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="nx">et</span><span class="p">.</span><span class="nx">ptrdata</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// 在原本的切片后扩充容量
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">p</span> <span class="p">=</span> <span class="nf">mallocgc</span><span class="p">(</span><span class="nx">capmem</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// The append() that calls growslice is going to overwrite from old.len to cap (which will be the new length).
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// Only clear the part that will not be overwritten.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nf">memclrNoHeapPointers</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">newlenmem</span><span class="p">),</span> <span class="nx">capmem</span><span class="o">-</span><span class="nx">newlenmem</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 在原本的切片后扩充容量</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">p</span> <span class="p">=</span> <span class="nf">mallocgc</span><span class="p">(</span><span class="nx">capmem</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="kc">false</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// The append() that calls growslice is going to overwrite from old.len to cap (which will be the new length).</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// Only clear the part that will not be overwritten.</span>
+</span></span><span class="line"><span class="cl">		<span class="nf">memclrNoHeapPointers</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">newlenmem</span><span class="p">),</span> <span class="nx">capmem</span><span class="o">-</span><span class="nx">newlenmem</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">		<span class="c1">// 重新申请
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="c1">// Note: can&#39;t use rawmem (which avoids zeroing of memory), because then GC can scan uninitialized memory.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">p</span> <span class="p">=</span> <span class="nf">mallocgc</span><span class="p">(</span><span class="nx">capmem</span><span class="p">,</span> <span class="nx">et</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// 重新申请</span>
+</span></span><span class="line"><span class="cl">		<span class="c1">// Note: can&#39;t use rawmem (which avoids zeroing of memory), because then GC can scan uninitialized memory.</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">p</span> <span class="p">=</span> <span class="nf">mallocgc</span><span class="p">(</span><span class="nx">capmem</span><span class="p">,</span> <span class="nx">et</span><span class="p">,</span> <span class="kc">true</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="k">if</span> <span class="nx">lenmem</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="o">&amp;&amp;</span> <span class="nx">writeBarrier</span><span class="p">.</span><span class="nx">enabled</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">			<span class="c1">// Only shade the pointers in old.array since we know the destination slice p
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="c1">// only contains nil pointers because it has been cleared during alloc.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>			<span class="nf">bulkBarrierPreWriteSrcOnly</span><span class="p">(</span><span class="nb">uintptr</span><span class="p">(</span><span class="nx">p</span><span class="p">),</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">old</span><span class="p">.</span><span class="nx">array</span><span class="p">),</span> <span class="nx">lenmem</span><span class="o">-</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="o">+</span><span class="nx">et</span><span class="p">.</span><span class="nx">ptrdata</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// Only shade the pointers in old.array since we know the destination slice p</span>
+</span></span><span class="line"><span class="cl">			<span class="c1">// only contains nil pointers because it has been cleared during alloc.</span>
+</span></span><span class="line"><span class="cl">			<span class="nf">bulkBarrierPreWriteSrcOnly</span><span class="p">(</span><span class="nb">uintptr</span><span class="p">(</span><span class="nx">p</span><span class="p">),</span> <span class="nb">uintptr</span><span class="p">(</span><span class="nx">old</span><span class="p">.</span><span class="nx">array</span><span class="p">),</span> <span class="nx">lenmem</span><span class="o">-</span><span class="nx">et</span><span class="p">.</span><span class="nx">size</span><span class="o">+</span><span class="nx">et</span><span class="p">.</span><span class="nx">ptrdata</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// 分配
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nf">memmove</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">old</span><span class="p">.</span><span class="nx">array</span><span class="p">,</span> <span class="nx">lenmem</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 分配</span>
+</span></span><span class="line"><span class="cl">	<span class="nf">memmove</span><span class="p">(</span><span class="nx">p</span><span class="p">,</span> <span class="nx">old</span><span class="p">.</span><span class="nx">array</span><span class="p">,</span> <span class="nx">lenmem</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">slice</span><span class="p">{</span><span class="nx">p</span><span class="p">,</span> <span class="nx">old</span><span class="p">.</span><span class="nx">len</span><span class="p">,</span> <span class="nx">newcap</span><span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -859,7 +863,7 @@
             
                 <div class="share-item linkedin">
                     
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;title=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;summary=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%20%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8er%e2%80%a6&amp;source=Leslie%27s%20Blog" title="Share on LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;title=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;summary=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%0a%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8eruntime/slice.go%0a%e2%80%a6&amp;source=Leslie%27s%20Blog" title="Share on LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
                 </div>
             
 
@@ -880,21 +884,21 @@
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;name=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;text=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%20%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8er%e2%80%a6" title="Share on Douban" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;name=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;text=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%0a%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8eruntime/slice.go%0a%e2%80%a6" title="Share on Douban" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qq">
                     
-                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;title=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;summary=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%20%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8er%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/apple-touch-icon.png&amp;site=Leslie%27s%20Blog" title="Share on QQ" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;title=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;summary=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%0a%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8eruntime/slice.go%0a%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/apple-touch-icon.png&amp;site=Leslie%27s%20Blog" title="Share on QQ" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qzone">
                     
-                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;title=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;summary=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%20%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8er%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/apple-touch-icon.png&amp;site=Leslie%27s%20Blog" title="Share on Qzone" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://here-Leslie-Lau.github.io/post/golang/source_code_slice/&amp;title=golang%e6%ba%90%e7%a0%81%e5%88%86%e6%9e%90-slice%e7%af%87&amp;summary=%e6%9c%ac%e6%96%87%e5%b0%86%e4%bb%8b%e7%bb%8dslice%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%81%e5%b8%b8%e7%94%a8%e6%93%8d%e4%bd%9c%e7%9a%84%e6%ba%90%e7%a0%81%e3%80%82%0a%e6%ba%90%e7%a0%81%e5%9f%ba%e4%ba%8egolang%201.18%ef%bc%8c%e4%bd%8d%e4%ba%8eruntime/slice.go%0a%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/apple-touch-icon.png&amp;site=Leslie%27s%20Blog" title="Share on Qzone" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
                 </div>
             
 

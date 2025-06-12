@@ -8,10 +8,10 @@
     <loc>https://here-Leslie-Lau.github.io/</loc>
     <lastmod>2025-06-07T15:01:37+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/others/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/others/</loc>
     <lastmod>2025-06-07T15:01:37+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/others/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/others/</loc>
     <lastmod>2025-06-07T15:01:37+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/</loc>
@@ -41,10 +41,10 @@
     <loc>https://here-Leslie-Lau.github.io/post/os/how_to_use_dnf/</loc>
     <lastmod>2025-01-24T14:37:28+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/os/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/os/</loc>
     <lastmod>2025-01-24T14:37:28+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/os/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/os/</loc>
     <lastmod>2025-01-24T14:37:28+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/tags/package-manager/</loc>
@@ -68,10 +68,10 @@
     <loc>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</loc>
     <lastmod>2024-10-08T22:21:07+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/golang/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/golang/</loc>
     <lastmod>2024-08-16T14:48:01+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/golang/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/golang/</loc>
     <lastmod>2024-08-16T14:48:01+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</loc>
@@ -98,10 +98,10 @@
     <loc>https://here-Leslie-Lau.github.io/post/mysql/b-and-b-plus-tree/</loc>
     <lastmod>2024-06-18T11:53:43+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/mysql/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/mysql/</loc>
     <lastmod>2024-06-18T11:53:43+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/mysql/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/mysql/</loc>
     <lastmod>2024-06-18T11:53:43+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/tags/memory/</loc>
@@ -140,10 +140,10 @@
     <loc>https://here-Leslie-Lau.github.io/post/os/byte_order/</loc>
     <lastmod>2024-01-25T14:49:43+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/network/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/network/</loc>
     <lastmod>2024-01-08T14:47:44+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/network/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/network/</loc>
     <lastmod>2024-01-08T14:47:44+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/</loc>
@@ -155,19 +155,19 @@
     <loc>https://here-Leslie-Lau.github.io/post/network/what_is_socket/</loc>
     <lastmod>2023-11-17T16:00:40+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/algorithm/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/algorithm/</loc>
     <lastmod>2023-10-20T22:09:52+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/algorithm/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/algorithm/</loc>
     <lastmod>2023-10-20T22:09:52+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</loc>
     <lastmod>2023-10-20T22:09:52+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/git/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/git/</loc>
     <lastmod>2023-09-30T14:56:48+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/git/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/git/</loc>
     <lastmod>2023-09-30T14:56:48+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/git/commit_standard/</loc>
@@ -179,10 +179,10 @@
     <loc>https://here-Leslie-Lau.github.io/tags/%E5%88%86%E4%BA%AB/</loc>
     <lastmod>2023-08-02T11:51:35+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/vim/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/vim/</loc>
     <lastmod>2023-08-01T17:31:03+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/vim/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/vim/</loc>
     <lastmod>2023-08-01T17:31:03+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/vim/neovim_config/</loc>
@@ -218,10 +218,10 @@
     <loc>https://here-Leslie-Lau.github.io/post/mysql/update_lock_table/</loc>
     <lastmod>2023-05-11T11:22:57+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/tags/operating-system/</loc>
+    <loc>https://here-Leslie-Lau.github.io/categories/operating-system/</loc>
     <lastmod>2023-05-11T11:22:57+08:00</lastmod>
   </url><url>
-    <loc>https://here-Leslie-Lau.github.io/categories/operating-system/</loc>
+    <loc>https://here-Leslie-Lau.github.io/tags/operating-system/</loc>
     <lastmod>2023-05-11T11:22:57+08:00</lastmod>
   </url><url>
     <loc>https://here-Leslie-Lau.github.io/post/pcb/</loc>

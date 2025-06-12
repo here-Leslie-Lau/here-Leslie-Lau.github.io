@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.124.0"><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.147.8"><meta name="theme-color" content="#16171d" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>Leslie&#39;s Blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5bc8ad779f98303deeab915e22bbf21fc82e81bc2753c66a06b85a93b0f488c4.css"/>
+    <link rel="stylesheet" href="/css/meme.min.1421b7a9fea585b8c5ae1b66bd3acbfe130f5ce2286ddeb3a9e84515724d11fe.css"/>
 
     
     
-        <script src="/js/meme.min.a673f70254da0b736ecc71bed491cfc798c2469379678ee4908f4c0cabbe3b80.js"></script>
+        <script src="/js/meme.min.c9f957c8c969c043d1d7a14322657eecee4c6b1d56632ede69fb92bddbcce713.js"></script>
 
     
 
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2023-05-09T00:00:00+00:00",
+        "datePublished": "2025-06-07T14:30:03+08:00",
         "dateModified": "2025-06-07T15:01:37+08:00",
         "url": "https://here-Leslie-Lau.github.io/",
         "description": "leslie的杂谈",
@@ -252,7 +252,9 @@
 
                 
                 <summary class="summary p-summary">
-                    本文代码使用golang实现 前言 这篇文章主要记录下如何实现大数相乘。讲道理作为一个正…
+                    <p><em>本文代码使用golang实现</em></p>
+<h2 id="前言">前言</h2>
+<p>这篇文章主要记录下如何实现大数相乘。讲道理作为一个正式工作两年的程序员，不应该对这一块不了解，可能是因为工作中基本没有这个场景，所以也没考虑到。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -324,7 +326,8 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 git作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的git commit m…
+                    <h2 id="前言">前言</h2>
+<p><code>git</code>作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的<code>git commit message</code>尤其重要，经常看到commit信息内有<code>fix bug, change XXX</code>等各种千奇百怪的描述，会气的一口老血上来。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -396,7 +399,8 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 写这篇文章是因为看golang源码的时候，经常会出现位运算。有时看着有点懵，所以…
+                    <h2 id="前言">前言</h2>
+<p>写这篇文章是因为看<code>golang</code>源码的时候，经常会出现位运算。有时看着有点懵，所以写篇文章记录下。同时该文章也会探讨我们在生产中的哪些场景可以使用位运算。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -468,7 +472,9 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 这篇文章的目的是为了分享下我自己的Neovim配置。 本人是Golang程序员，最…
+                    <h2 id="前言">前言</h2>
+<p>这篇文章的目的是为了分享下我自己的<code>Neovim</code>配置。</p>
+<p>本人是Golang程序员，最开始使用的IDE是<code>JetBrains Goland</code>。有一说一这个ide适配度很高，认识的很多人都使用这个。但是它也有几个对我来说的缺点：</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -540,7 +546,11 @@
 
                 
                 <summary class="summary p-summary">
-                    编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。 乐观锁/悲观锁 这一对锁名字…
+                    <p>编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。</p>
+<h2 id="乐观锁悲观锁">乐观锁/悲观锁</h2>
+<p>这一对锁名字比较形象。</p>
+<h3 id="悲观锁">悲观锁</h3>
+<p>先说悲观锁，把锁比作人的话。这位小伙子遇事会比较“悲观”。它会先把资源给锁住再进行操作，这样其他线程请求该资源的时候就会被阻塞，直到悲观锁把资源释放为止。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -612,7 +622,8 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 平时写代码或者阅读代码的时候，经常会在方法内看到ctx context.Conte…
+                    <h2 id="前言">前言</h2>
+<p>平时写代码或者阅读代码的时候，经常会在方法内看到<code>ctx context.Context</code>这样的参数。本文就记录一下有关于<code>context.Context</code>的知识。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -684,7 +695,8 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 本文将介绍下golang源码里经常出现的东西: unsafe.Pointer和ui…
+                    <h2 id="前言">前言</h2>
+<p>本文将介绍下golang源码里经常出现的东西: <code>unsafe.Pointer</code>和<code>uintptr</code></p>…
                 </summary>
                 
                     <div class="read-more-container">

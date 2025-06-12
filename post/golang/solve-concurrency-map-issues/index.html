@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.124.0"><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.147.8"><meta name="theme-color" content="#16171d" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>golang map并发问题解决方案汇总 | Leslie&#39;s Blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5bc8ad779f98303deeab915e22bbf21fc82e81bc2753c66a06b85a93b0f488c4.css"/>
+    <link rel="stylesheet" href="/css/meme.min.1421b7a9fea585b8c5ae1b66bd3acbfe130f5ce2286ddeb3a9e84515724d11fe.css"/>
 
     
     
-        <script src="/js/meme.min.a673f70254da0b736ecc71bed491cfc798c2469379678ee4908f4c0cabbe3b80.js"></script>
+        <script src="/js/meme.min.c9f957c8c969c043d1d7a14322657eecee4c6b1d56632ede69fb92bddbcce713.js"></script>
 
     
 
@@ -30,7 +30,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB&#43;Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Serif&#43;SC:wght@400;500;700&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="here-Leslie-Lau" /><meta name="description" content="问题描述 在golang中，map是一种非常常用的数据结构。但是在并发环境下，map是…" />
+    <meta name="author" content="here-Leslie-Lau" /><meta name="description" content="问题描述 在golang中，map是一种非常常用的数据结构。但是在并发环境下，map是不安全的，会出现并发问题。
+…" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -60,7 +61,7 @@
         "dateModified": "2024-08-16T14:48:01+08:00",
         "url": "https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/",
         "headline": "golang map并发问题解决方案汇总",
-        "description": "问题描述 在golang中，map是一种非常常用的数据结构。但是在并发环境下，map是…",
+        "description": "问题描述 在golang中，map是一种非常常用的数据结构。但是在并发环境下，map是不安全的，会出现并发问题。\n…",
         "inLanguage" : "en",
         "articleSection": "post",
         "wordCount":  2273 ,
@@ -98,7 +99,8 @@
 
 
 <meta property="og:title" content="golang map并发问题解决方案汇总" />
-<meta property="og:description" content="问题描述 在golang中，map是一种非常常用的数据结构。但是在并发环境下，map是…" />
+<meta property="og:description" content="问题描述 在golang中，map是一种非常常用的数据结构。但是在并发环境下，map是不安全的，会出现并发问题。
+…" />
 <meta property="og:url" content="https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/" />
 <meta property="og:site_name" content="Leslie&#39;s Blog" />
 <meta property="og:locale" content="en" /><meta property="og:image" content="https://here-Leslie-Lau.github.io/icons/concurrency_map_issues_01.png" />
@@ -317,15 +319,15 @@
 <pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">m</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="kt">int</span><span class="p">]</span><span class="kt">bool</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="c1">// write goroutine
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// write goroutine</span>
+</span></span><span class="line"><span class="cl">	<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="nx">m</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">=</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// read goroutine
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// read goroutine</span>
+</span></span><span class="line"><span class="cl">	<span class="k">go</span> <span class="kd">func</span><span class="p">()</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="k">for</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="nx">_</span> <span class="p">=</span> <span class="nx">m</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">		<span class="p">}</span>
@@ -384,8 +386,7 @@
 <h3 id="源码分析"><a href="#源码分析" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:源码分析" class="headings">源码分析</a></h3>
 <p><code>golang</code>官方是这么说的:</p>
 <blockquote>
-<p>Map access is unsafe only when updates are occurring. As long as all goroutines are only reading—looking up elements in the map, including iterating through it using a for range loop—and not changing the map by assigning to elements or doing deletions, it is safe for them to access the map concurrently without synchronization.</p>
-</blockquote>
+<p>Map access is unsafe only when updates are occurring. As long as all goroutines are only reading—looking up elements in the map, including iterating through it using a for range loop—and not changing the map by assigning to elements or doing deletions, it is safe for them to access the map concurrently without synchronization.</p></blockquote>
 <p>考虑到有性能损失，官方没有将<code>map</code>设计成原子操作。在并发读写时会有问题。</p>
 <p>关于<code>map</code>的源码，在<code>runtime/map.go</code>中有，这里只截取并发检测的部分:</p>
 <div class="highlight"><div class="chroma">
@@ -415,25 +416,25 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">const</span> <span class="p">(</span>
-</span></span><span class="line"><span class="cl">    <span class="nx">hashWriting</span>  <span class="p">=</span> <span class="mi">4</span> <span class="c1">// a goroutine is writing to the map
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">hashWriting</span>  <span class="p">=</span> <span class="mi">4</span> <span class="c1">// a goroutine is writing to the map</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// A header for a Go map.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">type</span> <span class="nx">hmap</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// A header for a Go map.</span>
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">hmap</span> <span class="kd">struct</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nx">flags</span>     <span class="kt">uint8</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nf">mapassign</span><span class="p">(</span><span class="nx">t</span> <span class="o">*</span><span class="nx">maptype</span><span class="p">,</span> <span class="nx">h</span> <span class="o">*</span><span class="nx">hmap</span><span class="p">,</span> <span class="nx">key</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span><span class="p">)</span> <span class="nx">unsafe</span><span class="p">.</span><span class="nx">Pointer</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 往map写数据时，会将flags的hashWriting位置为1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">h</span><span class="p">.</span><span class="nx">flags</span> <span class="p">^=</span> <span class="nx">hashWriting</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// ...
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// 最后清掉hashWriting位的1
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">h</span><span class="p">.</span><span class="nx">flags</span> <span class="o">&amp;^=</span> <span class="nx">hashWriting</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 往map写数据时，会将flags的hashWriting位置为1</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">h</span><span class="p">.</span><span class="nx">flags</span> <span class="p">^=</span> <span class="nx">hashWriting</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// ...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 最后清掉hashWriting位的1</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">h</span><span class="p">.</span><span class="nx">flags</span> <span class="o">&amp;^=</span> <span class="nx">hashWriting</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 各个读取的地方
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span> <span class="nx">h</span><span class="p">.</span><span class="nx">flags</span><span class="o">&amp;</span><span class="nx">hashWriting</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 各个读取的地方</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="nx">h</span><span class="p">.</span><span class="nx">flags</span><span class="o">&amp;</span><span class="nx">hashWriting</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">fatal</span><span class="p">(</span><span class="s">&#34;concurrent map read and map write&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table></div>
@@ -497,37 +498,37 @@
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">RWMap</span><span class="p">)</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">key</span> <span class="kt">string</span><span class="p">)</span> <span class="p">(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">m</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">defer</span> <span class="nx">m</span><span class="p">.</span><span class="nf">RUnlock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">val</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">m</span><span class="p">.</span><span class="nx">m</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">ok</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">RWMap</span><span class="p">)</span> <span class="nf">Set</span><span class="p">(</span><span class="nx">key</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">val</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 写锁保护
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 写锁保护</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">m</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">defer</span> <span class="nx">m</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">m</span><span class="p">.</span><span class="nx">m</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">val</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">RWMap</span><span class="p">)</span> <span class="nf">Del</span><span class="p">(</span><span class="nx">key</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 写锁保护
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 写锁保护</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">m</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">defer</span> <span class="nx">m</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="nb">delete</span><span class="p">(</span><span class="nx">m</span><span class="p">.</span><span class="nx">m</span><span class="p">,</span> <span class="nx">key</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">RWMap</span><span class="p">)</span> <span class="nf">Len</span><span class="p">()</span> <span class="kt">int</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">m</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">defer</span> <span class="nx">m</span><span class="p">.</span><span class="nf">RUnlock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nx">m</span><span class="p">.</span><span class="nx">m</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="o">*</span><span class="nx">RWMap</span><span class="p">)</span> <span class="nf">Range</span><span class="p">(</span><span class="nx">f</span> <span class="kd">func</span><span class="p">(</span><span class="nx">key</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">val</span> <span class="kt">int</span><span class="p">)</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">m</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">m</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">defer</span> <span class="nx">m</span><span class="p">.</span><span class="nf">RUnlock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">k</span><span class="p">,</span> <span class="nx">v</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">m</span><span class="p">.</span><span class="nx">m</span> <span class="p">{</span>
@@ -597,8 +598,8 @@
 </span></span><span class="line"><span class="cl">	<span class="nx">sm</span> <span class="o">:=</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">Map</span><span class="p">{}</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">wg</span> <span class="o">:=</span> <span class="nx">sync</span><span class="p">.</span><span class="nx">WaitGroup</span><span class="p">{}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 100个goroutine并发写入sync.Map
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 100个goroutine并发写入sync.Map</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="k">go</span> <span class="kd">func</span><span class="p">(</span><span class="nx">i</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="k">defer</span> <span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span>
@@ -606,8 +607,8 @@
 </span></span><span class="line"><span class="cl">		<span class="p">}(</span><span class="nx">i</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">	<span class="c1">// 100个goroutine并发读取sync.Map
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 100个goroutine并发读取sync.Map</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">100</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">wg</span><span class="p">.</span><span class="nf">Add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">		<span class="k">go</span> <span class="kd">func</span><span class="p">(</span><span class="nx">i</span> <span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">			<span class="k">defer</span> <span class="nx">wg</span><span class="p">.</span><span class="nf">Done</span><span class="p">()</span>
@@ -626,8 +627,7 @@
 <p>加个读写锁很简单，但是在高并发的情况下，读写锁很可能会成为性能瓶颈。而<code>sync.Map</code>虽然并发安全，但是它的适用场景有限。只适合读多写少的场景。</p>
 <p>参考官方<a href="https://go.dev/doc/faq#atomic_maps" target="_blank" rel="noopener">faq</a>:</p>
 <blockquote>
-<p>As an aid to correct map use, some implementations of the language contain a special check that automatically reports at run time when a map is modified unsafely by concurrent execution. Also there is a type in the sync library called sync.Map that works well for certain usage patterns such as static caches, although it is not suitable as a general replacement for the builtin map type.</p>
-</blockquote>
+<p>As an aid to correct map use, some implementations of the language contain a special check that automatically reports at run time when a map is modified unsafely by concurrent execution. Also there is a type in the sync library called sync.Map that works well for certain usage patterns such as static caches, although it is not suitable as a general replacement for the builtin map type.</p></blockquote>
 <p>可见如果对性能敏感的话，<code>sync.Map</code>也不是很好的选择。</p>
 <p>让我们思考下，想实现并发安全的话，要么加锁，要么不加锁(类似<code>redis</code>的单线程的思路)。但是在<code>golang</code>中，必定会有大量并发请求，所以还是要考虑锁。如何提高锁的效率呢？</p>
 <ol>
@@ -702,58 +702,58 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="kd">var</span> <span class="nx">SHARD_COUNT</span> <span class="p">=</span> <span class="mi">32</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// 最多有SHARD_COUNT个shard
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">type</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span> <span class="nx">comparable</span><span class="p">,</span> <span class="nx">V</span> <span class="nx">any</span><span class="p">]</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// 最多有SHARD_COUNT个shard</span>
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span> <span class="nx">comparable</span><span class="p">,</span> <span class="nx">V</span> <span class="kt">any</span><span class="p">]</span> <span class="kd">struct</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">shards</span>   <span class="p">[]</span><span class="o">*</span><span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// sharding, 我理解为shards下标的算法
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">sharding</span> <span class="kd">func</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="kt">uint32</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// sharding, 我理解为shards下标的算法</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">sharding</span> <span class="kd">func</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="kt">uint32</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span> <span class="nx">comparable</span><span class="p">,</span> <span class="nx">V</span> <span class="nx">any</span><span class="p">]</span> <span class="kd">struct</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">type</span> <span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span> <span class="nx">comparable</span><span class="p">,</span> <span class="nx">V</span> <span class="kt">any</span><span class="p">]</span> <span class="kd">struct</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">items</span>        <span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span>
-</span></span><span class="line"><span class="cl">	<span class="nx">sync</span><span class="p">.</span><span class="nx">RWMutex</span> <span class="c1">// Read Write mutex, guards access to internal map.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">sync</span><span class="p">.</span><span class="nx">RWMutex</span> <span class="c1">// Read Write mutex, guards access to internal map.</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nx">create</span><span class="p">[</span><span class="nx">K</span> <span class="nx">comparable</span><span class="p">,</span> <span class="nx">V</span> <span class="nx">any</span><span class="p">](</span><span class="nx">sharding</span> <span class="kd">func</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="kt">uint32</span><span class="p">)</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nx">create</span><span class="p">[</span><span class="nx">K</span> <span class="nx">comparable</span><span class="p">,</span> <span class="nx">V</span> <span class="kt">any</span><span class="p">](</span><span class="nx">sharding</span> <span class="kd">func</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="kt">uint32</span><span class="p">)</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">m</span> <span class="o">:=</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]{</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">sharding</span><span class="p">:</span> <span class="nx">sharding</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">		<span class="nx">shards</span><span class="p">:</span>   <span class="nb">make</span><span class="p">([]</span><span class="o">*</span><span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">],</span> <span class="nx">SHARD_COUNT</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nx">SHARD_COUNT</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="c1">// 对每个shard初始化
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>		<span class="nx">m</span><span class="p">.</span><span class="nx">shards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]{</span><span class="nx">items</span><span class="p">:</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)}</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">// 对每个shard初始化</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">m</span><span class="p">.</span><span class="nx">shards</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="p">=</span> <span class="o">&amp;</span><span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]{</span><span class="nx">items</span><span class="p">:</span> <span class="nb">make</span><span class="p">(</span><span class="kd">map</span><span class="p">[</span><span class="nx">K</span><span class="p">]</span><span class="nx">V</span><span class="p">)}</span>
 </span></span><span class="line"><span class="cl">	<span class="p">}</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">m</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Creates a new concurrent map.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="nx">New</span><span class="p">[</span><span class="nx">V</span> <span class="nx">any</span><span class="p">]()</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="kt">string</span><span class="p">,</span> <span class="nx">V</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Creates a new concurrent map.</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="nx">New</span><span class="p">[</span><span class="nx">V</span> <span class="kt">any</span><span class="p">]()</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="kt">string</span><span class="p">,</span> <span class="nx">V</span><span class="p">]</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">create</span><span class="p">[</span><span class="kt">string</span><span class="p">,</span> <span class="nx">V</span><span class="p">](</span><span class="nx">fnv32</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// GetShard returns shard under given key
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">])</span> <span class="nf">GetShard</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="o">*</span><span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 根据key计算出shard的下标
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="k">return</span> <span class="nx">m</span><span class="p">.</span><span class="nx">shards</span><span class="p">[</span><span class="nb">uint</span><span class="p">(</span><span class="nx">m</span><span class="p">.</span><span class="nf">sharding</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="o">%</span><span class="nb">uint</span><span class="p">(</span><span class="nx">SHARD_COUNT</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// GetShard returns shard under given key</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">])</span> <span class="nf">GetShard</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="o">*</span><span class="nx">ConcurrentMapShared</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 根据key计算出shard的下标</span>
+</span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">m</span><span class="p">.</span><span class="nx">shards</span><span class="p">[</span><span class="nb">uint</span><span class="p">(</span><span class="nx">m</span><span class="p">.</span><span class="nf">sharding</span><span class="p">(</span><span class="nx">key</span><span class="p">))</span><span class="o">%</span><span class="nb">uint</span><span class="p">(</span><span class="nx">SHARD_COUNT</span><span class="p">)]</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Sets the given value under the specified key.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">])</span> <span class="nf">Set</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">,</span> <span class="nx">value</span> <span class="nx">V</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// Get map shard.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">shard</span> <span class="o">:=</span> <span class="nx">m</span><span class="p">.</span><span class="nf">GetShard</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Sets the given value under the specified key.</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">])</span> <span class="nf">Set</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">,</span> <span class="nx">value</span> <span class="nx">V</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Get map shard.</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">shard</span> <span class="o">:=</span> <span class="nx">m</span><span class="p">.</span><span class="nf">GetShard</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">shard</span><span class="p">.</span><span class="nf">Lock</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 通过写锁保护shard中的数据, 对shard中的items进行写操作
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">shard</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 通过写锁保护shard中的数据, 对shard中的items进行写操作</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">shard</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span> <span class="p">=</span> <span class="nx">value</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">shard</span><span class="p">.</span><span class="nf">Unlock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">// Get retrieves an element from map under given key.
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">])</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="p">(</span><span class="nx">V</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">	<span class="c1">// Get shard
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">shard</span> <span class="o">:=</span> <span class="nx">m</span><span class="p">.</span><span class="nf">GetShard</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">// Get retrieves an element from map under given key.</span>
+</span></span><span class="line"><span class="cl"><span class="kd">func</span> <span class="p">(</span><span class="nx">m</span> <span class="nx">ConcurrentMap</span><span class="p">[</span><span class="nx">K</span><span class="p">,</span> <span class="nx">V</span><span class="p">])</span> <span class="nf">Get</span><span class="p">(</span><span class="nx">key</span> <span class="nx">K</span><span class="p">)</span> <span class="p">(</span><span class="nx">V</span><span class="p">,</span> <span class="kt">bool</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// Get shard</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">shard</span> <span class="o">:=</span> <span class="nx">m</span><span class="p">.</span><span class="nf">GetShard</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">shard</span><span class="p">.</span><span class="nf">RLock</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护, 读取shard中的数据
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="nx">val</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">shard</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// 读锁保护, 读取shard中的数据</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">val</span><span class="p">,</span> <span class="nx">ok</span> <span class="o">:=</span> <span class="nx">shard</span><span class="p">.</span><span class="nx">items</span><span class="p">[</span><span class="nx">key</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">	<span class="nx">shard</span><span class="p">.</span><span class="nf">RUnlock</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">ok</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
@@ -817,7 +817,7 @@
             
                 <div class="share-item linkedin">
                     
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;title=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;summary=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e2%80%a6&amp;source=Leslie%27s%20Blog" title="Share on LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;title=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;summary=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e4%b8%8d%e5%ae%89%e5%85%a8%e7%9a%84%ef%bc%8c%e4%bc%9a%e5%87%ba%e7%8e%b0%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e3%80%82%0a%e2%80%a6&amp;source=Leslie%27s%20Blog" title="Share on LinkedIn" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
                 </div>
             
 
@@ -838,21 +838,21 @@
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;name=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;text=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e2%80%a6" title="Share on Douban" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;name=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;text=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e4%b8%8d%e5%ae%89%e5%85%a8%e7%9a%84%ef%bc%8c%e4%bc%9a%e5%87%ba%e7%8e%b0%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e3%80%82%0a%e2%80%a6" title="Share on Douban" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qq">
                     
-                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;title=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;summary=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/concurrency_map_issues_01.png&amp;site=Leslie%27s%20Blog" title="Share on QQ" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
+                    <a href="https://connect.qq.com/widget/shareqq/index.html?url=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;title=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;summary=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e4%b8%8d%e5%ae%89%e5%85%a8%e7%9a%84%ef%bc%8c%e4%bc%9a%e5%87%ba%e7%8e%b0%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e3%80%82%0a%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/concurrency_map_issues_01.png&amp;site=Leslie%27s%20Blog" title="Share on QQ" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qq-icon"><path d="M433.754 420.445c-11.526 1.393-44.86-52.741-44.86-52.741 0 31.345-16.136 72.247-51.051 101.786 16.842 5.192 54.843 19.167 45.803 34.421-7.316 12.343-125.51 7.881-159.632 4.037-34.122 3.844-152.316 8.306-159.632-4.037-9.045-15.25 28.918-29.214 45.783-34.415-34.92-29.539-51.059-70.445-51.059-101.792 0 0-33.334 54.134-44.859 52.741-5.37-.65-12.424-29.644 9.347-99.704 10.261-33.024 21.995-60.478 40.144-105.779C60.683 98.063 108.982.006 224 0c113.737.006 163.156 96.133 160.264 214.963 18.118 45.223 29.912 72.85 40.144 105.778 21.768 70.06 14.716 99.053 9.346 99.704z"/></svg></a>
                 </div>
             
 
             
                 <div class="share-item qzone">
                     
-                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;title=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;summary=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/concurrency_map_issues_01.png&amp;site=Leslie%27s%20Blog" title="Share on Qzone" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
+                    <a href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/&amp;title=golang%20map%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%e6%b1%87%e6%80%bb&amp;summary=%e9%97%ae%e9%a2%98%e6%8f%8f%e8%bf%b0%20%e5%9c%a8golang%e4%b8%ad%ef%bc%8cmap%e6%98%af%e4%b8%80%e7%a7%8d%e9%9d%9e%e5%b8%b8%e5%b8%b8%e7%94%a8%e7%9a%84%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84%e3%80%82%e4%bd%86%e6%98%af%e5%9c%a8%e5%b9%b6%e5%8f%91%e7%8e%af%e5%a2%83%e4%b8%8b%ef%bc%8cmap%e6%98%af%e4%b8%8d%e5%ae%89%e5%85%a8%e7%9a%84%ef%bc%8c%e4%bc%9a%e5%87%ba%e7%8e%b0%e5%b9%b6%e5%8f%91%e9%97%ae%e9%a2%98%e3%80%82%0a%e2%80%a6&amp;pics=https://here-Leslie-Lau.github.io/icons/concurrency_map_issues_01.png&amp;site=Leslie%27s%20Blog" title="Share on Qzone" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon qzone-icon"><path d="M23.985 9.202c-.032-.099-.127-.223-.334-.258-.207-.036-7.351-1.406-7.351-1.406s-.105-.022-.198-.07c-.092-.047-.127-.167-.127-.167S12.447.956 12.349.77C12.25.583 12.104.532 12 .532c-.104 0-.251.051-.349.238-.098.186-3.626 6.531-3.626 6.531s-.035.12-.128.167c-.092.047-.197.07-.197.07S.556 8.908.348 8.943c-.208.036-.302.16-.333.258a.477.477 0 0 0 .125.449l5.362 5.49s.072.08.119.172c.016.104.005.21.005.21s-1.189 7.242-1.22 7.45.075.369.159.43c.083.062.233.106.421.013.189-.093 6.812-3.261 6.812-3.261s.098-.044.201-.061c.103-.017.201.061.201.061s6.623 3.168 6.812 3.261c.188.094.338.049.421-.013a.463.463 0 0 0 .159-.43c-.021-.14-.93-5.677-.93-5.677.876-.54 1.425-1.039 1.849-1.747-2.594.969-6.006 1.717-9.415 1.866-.915.041-2.41.097-3.473-.015-.678-.071-1.17-.144-1.243-.438-.053-.215.054-.46.545-.831a2640.5 2640.5 0 0 1 2.861-2.155c1.285-.968 3.559-2.47 3.559-2.731 0-.285-2.144-.781-4.037-.781-1.945 0-2.275.132-2.811.168-.488.034-.769.005-.804-.138-.06-.248.183-.389.588-.568.709-.314 1.86-.594 1.984-.626.194-.052 3.082-.805 5.618-.535 1.318.14 3.244.668 3.244 1.276 0 .342-1.721 1.494-3.225 2.597-1.149.843-2.217 1.561-2.217 1.688 0 .342 3.533 1.241 6.689 1.01l.003-.022c.048-.092.119-.172.119-.172l5.362-5.49a.477.477 0 0 0 .127-.449z"/></svg></a>
                 </div>
             
 

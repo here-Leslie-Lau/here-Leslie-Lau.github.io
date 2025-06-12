@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.124.0"><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.147.8"><meta name="theme-color" content="#16171d" />
     <meta name="color-scheme" content="light dark">
 
     
@@ -17,11 +17,11 @@
 
     <title>Leslie&#39;s Blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.5bc8ad779f98303deeab915e22bbf21fc82e81bc2753c66a06b85a93b0f488c4.css"/>
+    <link rel="stylesheet" href="/css/meme.min.1421b7a9fea585b8c5ae1b66bd3acbfe130f5ce2286ddeb3a9e84515724d11fe.css"/>
 
     
     
-        <script src="/js/meme.min.a673f70254da0b736ecc71bed491cfc798c2469379678ee4908f4c0cabbe3b80.js"></script>
+        <script src="/js/meme.min.c9f957c8c969c043d1d7a14322657eecee4c6b1d56632ede69fb92bddbcce713.js"></script>
 
     
 
@@ -58,7 +58,7 @@
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "datePublished": "2023-05-09T00:00:00+00:00",
+        "datePublished": "2025-06-07T14:30:03+08:00",
         "dateModified": "2025-06-07T15:01:37+08:00",
         "url": "https://here-Leslie-Lau.github.io/",
         "description": "leslie的杂谈",
@@ -252,7 +252,8 @@
 
                 
                 <summary class="summary p-summary">
-                    前言 本文将从golang的源码方面分析：如何启动http服务，这个服务是怎么对外提供…
+                    <h2 id="前言">前言</h2>
+<p>本文将从golang的源码方面分析：如何启动http服务，这个服务是怎么对外提供服务的，以及为什么可以保证高性能。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -324,7 +325,8 @@
 
                 
                 <summary class="summary p-summary">
-                    本文将介绍slice的数据结构、常用操作的源码。 源码基于golang 1.18，位于r…
+                    <p>本文将介绍slice的数据结构、常用操作的源码。</p>
+<p>源码基于golang 1.18，位于<code>runtime/slice.go</code></p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -396,7 +398,23 @@
 
                 
                 <summary class="summary p-summary">
-                    git submodules介绍 来自git官方的介绍 1 2 3 4 $ git help submodules NAME git-submodule - Initialize, update or inspect submodules 这个命…
+                    <h2 id="git-submodules介绍">git submodules介绍</h2>
+<p>来自git官方的介绍</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ git <span class="nb">help</span> submodules
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">NAME
+</span></span><span class="line"><span class="cl">       git-submodule - Initialize, update or inspect submodules
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这个命令可以用于初始化、更新、检查子模块。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -468,7 +486,105 @@
 
                 
                 <summary class="summary p-summary">
-                    切片使用 仅记录一些常用操作 创建切片: 1 2 3 4 // 创建切片 slice := make([]int, 1, 3) // 使用make可以创…
+                    <h2 id="切片使用">切片使用</h2>
+<p>仅记录一些常用操作</p>
+<ul>
+<li><strong>创建切片:</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="c1">// 创建切片</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">slice</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// 使用make可以创建切片的引用，第二个参数代表切片长度，第三个代表切片的容量，使用该种方法生成具有空值</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 创建切片</span>
+</span></span><span class="line"><span class="cl">	<span class="kd">var</span> <span class="nx">slice</span> <span class="p">[]</span><span class="kt">int</span> <span class="c1">// 直接对切片进行初始化操作</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>切片遍历:</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="c1">// 使用foreach遍历</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">slice</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">_</span><span class="p">,</span> <span class="nx">val</span> <span class="o">:=</span> <span class="k">range</span> <span class="nx">slice</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">val</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">// 直接使用索引进行遍历</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">slice</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="nx">slice</span><span class="p">);</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">slice</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>使用append追加切片元素:</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="nx">slice</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">for</span> <span class="nx">i</span> <span class="o">:=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="p">&lt;</span> <span class="mi">3</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="nx">slice</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="nx">slice</span><span class="p">,</span> <span class="nx">i</span><span class="p">)</span>	<span class="c1">// 该方式会在切片的末尾追加元素</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>切片拷贝:</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="nx">slice1</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">slice2</span> <span class="o">:=</span> <span class="nb">make</span><span class="p">([]</span><span class="kt">int</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="nb">copy</span><span class="p">(</span><span class="nx">slice2</span><span class="p">,</span> <span class="nx">slice1</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><strong>切片索引取值:</strong></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl">	<span class="nx">slice</span> <span class="o">:=</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">slice</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>	<span class="c1">// 输出内容:[1 2], slice[0:2]代表去slice第[0]个元素，一直取到第[2]元素(不包括[2])</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="nx">slice</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="c1">// 输出内容:[1], slice[0:1:2]第三个数字表示新切片容量为(2-0=2)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h2 id="切片的数据结构">切片的数据结构</h2>
+<p>刚刚在<strong>切片特性</strong>内介绍到了golang中切片其实是值拷贝。
+这里其实有一个疑问，如果切片元素内过多，那么每次传值不会特别特别慢吗？毕竟每次都要拷贝一个数组。别急，接下来介绍一下切片的数据结构。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -540,7 +656,8 @@
 
                 
                 <summary class="summary p-summary">
-                    事发情况 当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个…
+                    <h2 id="事发情况">事发情况</h2>
+<p>当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个服务接口都耗时，对外表现为整个服务不可用。</p>…
                 </summary>
                 
                     <div class="read-more-container">
@@ -608,7 +725,7 @@
 
                 
                 <summary class="summary p-summary">
-                    大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control blo…
+                    <p>大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。</p>…
                 </summary>
                 
                     <div class="read-more-container">
