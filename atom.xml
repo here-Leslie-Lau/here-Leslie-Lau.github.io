@@ -4,13 +4,80 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2025-06-12T03:39:11&#43;00:00</updated>
+    <updated>2025-06-13T04:09:36&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
     
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.147.8">Hugo</generator>
+        <entry>
+            <title type="text">拜拜拖延症</title>
+            <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/reading/action-leads-to-motivation/" />
+            <id>https://here-Leslie-Lau.github.io/post/reading/action-leads-to-motivation/</id>
+            <updated>2025-06-13T12:08:57&#43;08:00</updated>
+            <published>2025-06-13T11:43:04&#43;08:00</published>
+            <author>
+                    <uri>https://here-Leslie-Lau.github.io/</uri>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;工作这几年，我经常与“拖延症”进行斗争。有时可以成功，有时（大部分时间）都会被它打败。&lt;/p&gt;…</summary>
+            
+                <content type="html">&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;工作这几年，我经常与“拖延症”进行斗争。有时可以成功，有时（大部分时间）都会被它打败。&lt;/p&gt;
+&lt;p&gt;最近一段时间看了一篇文章，里面提到一个观点：&lt;strong&gt;行动带来动力。&lt;/strong&gt; 道理我都懂，就像是互联网所说的“先行动起来”，之后我们就可以慢慢投入进去，从而完成预定的任务。&lt;/p&gt;
+&lt;p&gt;至于为什么，我们大家都明白那些大道理，但就是无法做到，这就是另外一个话题了。我认为是没有及时整理那些“道理”并输出，同时之后的执行也没有落实。于是写了这篇文章，来记录一下我对这个观点的理解。&lt;/p&gt;
+&lt;h2 id=&#34;行动带来动力&#34;&gt;行动带来动力&lt;/h2&gt;
+&lt;p&gt;在工作中，我经常会被分配一个重要项目，但就是无法开始。分心的原因多种多样——有时会想着刷下知乎、看看gmail、逛逛博客等等。但结果都是一样的：我感到深深的恐惧，因为没有在重要的事情上取得进展。&lt;/p&gt;
+&lt;p&gt;归根结底，时间是唯一重要的资源。每一分钟，你都在决定如何度过自己的人生。大多数人花时间的方式都不够有效。尤其是在科技领域，我们的任务和工具不断变化，所以必须具备适应能力。优秀工程师与其他人的区别在于，他们创建了能够持续保持高效的系统。&lt;/p&gt;
+&lt;p&gt;以下是改变我对生产力看法的核心理念：&lt;strong&gt;行动带来动力&lt;/strong&gt;，而不是相反。在等待动力“降临”时，不要检查邮件或刷知乎。相反，开始做一些事情，任何能让你朝目标迈进的事情，你会发现动力会随之而来。&lt;/p&gt;
+&lt;p&gt;例如，如果我在工作中遇到一个优先级高且复杂的错误修复挑战，我的做法是将问题分解为更简单的部分。比如，我可以添加一个日志语句，打印相关变量的值吗？此时我的目标不是解决错误，而是向前迈出一小步。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这会形成一个强大的良性循环：你很高效 =&amp;gt; 感觉良好 =&amp;gt; 更高效。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;不幸的是，许多工程师陷入了相反的境地，一个拖延的恶性循环：效率低 → 感觉糟糕 → 继续低效。&lt;/p&gt;
+&lt;p&gt;进步自然带来动力的理念让我们能够降低做成一件事所需要的精力。作家兼励志演讲者托尼·罗宾斯谈到一个相关概念：“行动创造情绪。”我们采取的行动，甚至身体的动作，都会影响我们的感受。一旦意识到可以控制自己的动力，就能实现无压力的高效。&lt;/p&gt;
+&lt;p&gt;再举一个例子：最近我想把我的主力os替换为&lt;code&gt;nixos&lt;/code&gt;。但是因为它的理念和使用方式与传统的&lt;code&gt;linux&lt;/code&gt;发行板块太过不同了，有比较高的学习成本。所以一直拖着，或者空闲时间在各大社交媒体上找相关的文章。但无论如何，我就是没有实打实的行动起来。&lt;/p&gt;
+&lt;p&gt;后面我突然意识到，先从最小的mvp版本行动起来(比如配置好&lt;code&gt;neovim&lt;/code&gt;或&lt;code&gt;shell&lt;/code&gt;等常用的工具)。于是我开始在虚拟机内上手操作，了解了&lt;code&gt;nix-package, flake, home-manager&lt;/code&gt;等概念和使用。现在我的nix配置已经&lt;em&gt;基本可用&lt;/em&gt;了。过程肯定会有点坎坷，但我已经开始了，这就够了。&lt;/p&gt;
+&lt;h2 id=&#34;the-end&#34;&gt;The End&lt;/h2&gt;
+&lt;p&gt;“行动带来动力”比我尝试过的任何生产力技巧都更有效。这个心理转变——从等待准备好到从微小的事情开始——或许能够节省你很多时间，同时解决你的焦虑问题。&lt;/p&gt;
+</content>
+            
+            
+            
+                
+                
+                
+                    
+                    
+                    
+                        
+                            <category scheme="https://here-Leslie-Lau.github.io/post/" term="post" label="post" />
+                        
+                    
+                
+                    
+                    
+                    
+                
+            
+            
+            
+                
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://here-Leslie-Lau.github.io/tags/reading/" term="Reading" label="Reading" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">高考回忆</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/my_gaokao_memory/" />
