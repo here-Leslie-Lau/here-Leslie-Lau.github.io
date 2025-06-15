@@ -19,10 +19,79 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 15 Jun 2025 07:15:59 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sun, 15 Jun 2025 07:48:04 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
+        
+            <item>
+                <title>从非功利的角度看开源的意义</title>
+                <link>https://here-Leslie-Lau.github.io/post/reading/the-meanning-of-open-source/</link>
+                <guid isPermaLink="true">https://here-Leslie-Lau.github.io/post/reading/the-meanning-of-open-source/</guid>
+                <pubDate>Sun, 15 Jun 2025 15:16:15 &#43;0800</pubDate>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;昨天女朋友问我为什么&lt;strong&gt;程序员愿意把自己写的代码公布到互联网上&lt;/strong&gt;，让大家都能看到。&lt;/p&gt;
+&lt;p&gt;针对这个问题，我先是回答说：把自己写的代码公布到互联网上（比如github），可以提升自己的知名度，增加自己的影响力。大家看到你的代码后，如果觉得不错的话，他们会给你star（类似于小红书上的点赞）。以后面试时可以拿上开源的项目来展示自己的能力。&lt;/p&gt;
+&lt;p&gt;接着她回复：原来大部分程序员都是为了提升自己的知名度和影响力啊。&lt;/p&gt;
+&lt;p&gt;我愣了一下，觉得好像是，但是开源最开始的初衷可不是这样的。&lt;/p&gt;
+&lt;h2 id=&#34;开源的初衷&#34;&gt;开源的初衷&lt;/h2&gt;
+&lt;p&gt;在厕所蹲坑的10分钟内，我重新回想着地球上最接近共产主义的开源运动。&lt;/p&gt;
+&lt;p&gt;以下为ai生成的内容：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开源的初衷是&lt;strong&gt;非功利的&lt;/strong&gt;，它的核心价值观是&lt;strong&gt;分享和协作&lt;/strong&gt;。开源运动的起源可以追溯到20世纪80年代，当时Richard Stallman发起了GNU项目，旨在创建一个自由软件操作系统。他认为软件应该是自由的，用户应该有权利使用、修改和分发软件，而不是被限制在某个特定的商业产品中。&lt;/p&gt;
+&lt;p&gt;开源运动的核心理念是&lt;strong&gt;开放性&lt;/strong&gt;，即任何人都可以查看、使用、修改和分发源代码。这种开放性促进了软件的创新和改进，因为它允许开发者在已有的基础上进行创新，而不必从头开始。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;各位看到了不，开源最开始的初衷是想让用户可以自由地查看代码，基于开放的代码，用户想做啥就做啥。如果你想做某个功能，而这个功能在社区内已经有源代码了，你就可以直接拿来用，甚至可以修改源代码来使功能更加完善。&lt;/p&gt;
+&lt;h2 id=&#34;如果没有开源&#34;&gt;如果没有开源&lt;/h2&gt;
+&lt;p&gt;最开始&lt;code&gt;linus&lt;/code&gt;开放第一版&lt;code&gt;linux&lt;/code&gt;内核代码时，或许他也没有想到，一个迄今为止，最棒的操作系统诞生了。&lt;/p&gt;
+&lt;p&gt;小到平时我们用的微信、知乎、油管、twitter等互联网应用，它们的服务器部署的操作系统都是基于&lt;code&gt;linux&lt;/code&gt;内核的。这些服务器为全球几十亿人提供着服务。&lt;/p&gt;
+&lt;p&gt;范围在大一点，全球手机系统，用户使用最多的肯定是安卓吧，它就是基于&lt;code&gt;linux&lt;/code&gt;内核改的。&lt;/p&gt;
+&lt;p&gt;范围在大那么“一点点”，目前宇宙上离我们最远的人造物“旅行者一号”，就是快飞出太阳系的那个。它里面的操作系统也是&lt;code&gt;linux&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;小到我们平时用的手机、电脑。大到地球上空飞着的卫星、火箭、太空站。我们都能看见&lt;code&gt;linux&lt;/code&gt;的身影。&lt;/p&gt;
+&lt;p&gt;或许我们可以换个浪漫的说法：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;开源如何影响我们？小到日常生活的点点滴滴，大到星辰大海。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;我有时在想，如果&lt;code&gt;linux&lt;/code&gt;没有开放源代码，这个世界还会蓬勃发展吗？&lt;/p&gt;
+&lt;p&gt;而最初&lt;code&gt;linus&lt;/code&gt;开放&lt;code&gt;linux&lt;/code&gt;时，他想着则是&lt;strong&gt;just for fun&lt;/strong&gt;.&lt;/p&gt;
+</description>
+                
+                
+                
+                    
+                    
+                    
+                        
+                        
+                        
+                            
+                                <category domain="https://here-Leslie-Lau.github.io/post/">post</category>
+                            
+                        
+                    
+                        
+                        
+                        
+                    
+                
+                
+                
+                    
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://here-Leslie-Lau.github.io/tags/reading/">Reading</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>拜拜拖延症</title>
