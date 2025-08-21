@@ -19,7 +19,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 18 Jul 2025 08:08:07 &#43;0000</lastBuildDate>
+        <lastBuildDate>Thu, 21 Aug 2025 05:30:31 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -2545,12 +2545,11 @@ mouse_hide_wait 3.0
 &lt;/div&gt;&lt;h2 id=&#34;common-software&#34;&gt;Common Software&lt;/h2&gt;
 &lt;p&gt;常用软件(可能会有遗漏):&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;chrome浏览器&lt;/li&gt;
+&lt;li&gt;google-chrome浏览器&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/dbcli/mycli&#34;&gt;mycli&lt;/a&gt;: 终端mysql连接工具, 提供命令补全和高亮&lt;/li&gt;
-&lt;li&gt;mongodb compass: mongodb可视化工具, mongodb官网找即可&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.mongodb.com/zh-cn/docs/mongodb-shell/&#34;&gt;mongosh&lt;/a&gt;: mongodb的终端连接工具&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/charmbracelet/glow&#34;&gt;glow&lt;/a&gt;: 终端markdown预览工具&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/koodo-reader/koodo-reader&#34;&gt;koodo-reader&lt;/a&gt;: 一款开源的阅读器&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/web1n/wechat-universal-flatpak&#34;&gt;wechat&lt;/a&gt;: Flatpak 打包微信 Linux Universal 版&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt; 终端分屏工具(利器)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.mitmproxy.org/stable/&#34;&gt;mitmproxy&lt;/a&gt; 一款开源的抓包工具&lt;/li&gt;
 &lt;/ul&gt;
