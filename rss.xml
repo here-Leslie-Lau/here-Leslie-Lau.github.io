@@ -19,7 +19,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 28 Aug 2025 06:44:28 &#43;0000</lastBuildDate>
+        <lastBuildDate>Sun, 31 Aug 2025 08:21:54 &#43;0000</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://here-Leslie-Lau.github.io/rss.xml" />
         
@@ -2739,8 +2739,7 @@ mouse_hide_wait 3.0
 &lt;li&gt;google-chrome浏览器&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/dbcli/mycli&#34;&gt;mycli&lt;/a&gt;: 终端mysql连接工具, 提供命令补全和高亮&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.mongodb.com/zh-cn/docs/mongodb-shell/&#34;&gt;mongosh&lt;/a&gt;: mongodb的终端连接工具&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/charmbracelet/glow&#34;&gt;glow&lt;/a&gt;: 终端markdown预览工具&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/koodo-reader/koodo-reader&#34;&gt;koodo-reader&lt;/a&gt;: 一款开源的阅读器&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://httpie.io/docs&#34;&gt;httpie&lt;/a&gt;: 更加好用的http请求工具&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/tmux/tmux&#34;&gt;tmux&lt;/a&gt; 终端分屏工具(利器)&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://docs.mitmproxy.org/stable/&#34;&gt;mitmproxy&lt;/a&gt; 一款开源的抓包工具&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/anthropics/claude-code&#34;&gt;claude code&lt;/a&gt;: Claude Code 是一个驻留在终端内的代理编码工具，能够理解你的代码库，并通过执行日常任务、解释复杂代码和处理 Git 工作流来帮助你更快地完成编码——仅需用自然语言下达命令&lt;/li&gt;
