@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Leslie&#39;s Blog</title>
     <subtitle type="html">leslie的杂谈</subtitle>
-    <updated>2025-09-08T15:27:11&#43;00:00</updated>
+    <updated>2025-09-10T07:08:00&#43;00:00</updated>
     <id>https://here-Leslie-Lau.github.io/</id>
     <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/" />
     <link rel="self" type="application/atom&#43;xml" href="https://here-Leslie-Lau.github.io/atom.xml" />
@@ -2086,7 +2086,7 @@
             <title type="text">My Workflow</title>
             <link rel="alternate" type="text/html" href="https://here-Leslie-Lau.github.io/post/others/workflow/" />
             <id>https://here-Leslie-Lau.github.io/post/others/workflow/</id>
-            <updated>2025-08-31T16:21:37&#43;08:00</updated>
+            <updated>2025-09-10T15:07:36&#43;08:00</updated>
             <published>2024-07-08T20:50:56&#43;08:00</published>
             <author>
                     <uri>https://here-Leslie-Lau.github.io/</uri>
@@ -2115,7 +2115,7 @@ background_opacity 1
 # font_family
 font_family Hack Nerd Font
 # font-family JetBrains Mono Nerd Font
-font_size 9.0
+font_size 12.2
 font_features FiraCodeNerdFontCompleteM-Retina +ss02 +ss03 +ss04 +ss05 +ss07 +zero
 
 # cursor
@@ -2128,9 +2128,23 @@ cursor_blink_interval -1
 tab_bar_edge top
 tab_bar_style powerline
 tab_bar_align left
+tab_powerline_style round
+tab_title_template &amp;#34;{index}:{title}&amp;#34;
 
 copy_on_select yes
 mouse_hide_wait 3.0
+
+# keymaps
+map ctrl+1 goto_tab 1
+map ctrl+2 goto_tab 2
+map ctrl+3 goto_tab 3
+map ctrl+4 goto_tab 4
+map ctrl+5 goto_tab 5
+map ctrl+6 goto_tab 6
+map ctrl+7 goto_tab 7
+map ctrl+8 goto_tab 8
+map ctrl+9 goto_tab 9
+map ctrl+0 goto_tab 10
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Shell使用&lt;a href=&#34;https://github.com/fish-shell/fish-shell&#34;&gt;fish&lt;/a&gt;，搭配自己编写的&lt;a href=&#34;https://github.com/here-Leslie-Lau/clearance&#34;&gt;prompt&lt;/a&gt;使用&lt;/p&gt;
 &lt;h2 id=&#34;editor&#34;&gt;Editor&lt;/h2&gt;
 &lt;p&gt;编辑器用的是&lt;code&gt;Neovim&lt;/code&gt;，配置文件已经开源了: &lt;a href=&#34;https://github.com/here-Leslie-Lau/my-nvim&#34;&gt;here-Leslie-Lau/my-nvim&lt;/a&gt;, 欢迎star~&lt;/p&gt;
@@ -2866,6 +2880,7 @@ mouse_hide_wait 3.0
 &lt;/div&gt;&lt;h2 id=&#34;common-software&#34;&gt;Common Software&lt;/h2&gt;
 &lt;p&gt;常用软件(可能会有遗漏):&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://rime.im/&#34;&gt;rime&lt;/a&gt;: 输入法，极度注重隐私，确保你的数据不会上云。搭配&lt;code&gt;oh my rime&lt;/code&gt;使用&lt;/li&gt;
 &lt;li&gt;google-chrome浏览器&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/dbcli/mycli&#34;&gt;mycli&lt;/a&gt;: 终端mysql连接工具, 提供命令补全和高亮&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.mongodb.com/zh-cn/docs/mongodb-shell/&#34;&gt;mongosh&lt;/a&gt;: mongodb的终端连接工具&lt;/li&gt;
