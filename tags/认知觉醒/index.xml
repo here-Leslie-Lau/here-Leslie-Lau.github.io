@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>认知觉醒 on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92/</link>
-    <description>Recent content in 认知觉醒 on Terminal</description>
+    <title>认知觉醒 on Leslie&#39;s Blog</title>
+    <link>/tags/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92/</link>
+    <description>Recent content in 认知觉醒 on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Sun, 08 Dec 2024 22:16:39 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/%E8%AE%A4%E7%9F%A5%E8%A7%89%E9%86%92/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>触动学习法</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/</link>
+      <link>/post/reading/touching_learning_meth/</link>
       <pubDate>Sun, 08 Dec 2024 22:16:39 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/</guid>
+      <guid>/post/reading/touching_learning_meth/</guid>
       <description>&lt;h2 id=&#34;何为触动学习法&#34;&gt;何为触动学习法&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;即通过在阅读时找到「最触动」自身的点并与自己已有的知识体系相关联起来，转化并运用。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;简单来说就是读一本书我们可以没必要完全读完，而是阅读下来发现自己被触动点，通过触动点来引发自己的思考，从而达到学习的目的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>《认知觉醒-大脑》阅读笔记</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</link>
+      <link>/post/reading/awakening_brain/</link>
       <pubDate>Tue, 01 Oct 2024 22:37:18 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</guid>
+      <guid>/post/reading/awakening_brain/</guid>
       <description>&lt;h2 id=&#34;本书的大脑理论&#34;&gt;本书的大脑理论&lt;/h2&gt;&#xA;&lt;p&gt;本书作者：周岭在开篇时就介绍了人的大脑大致分为三个部分，分别为本能脑、情绪脑、理智脑&lt;/p&gt;</description>
     </item>
   </channel>

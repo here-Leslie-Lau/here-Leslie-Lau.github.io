@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Others on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/others/</link>
-    <description>Recent content in Others on Terminal</description>
+    <title>Others on Leslie&#39;s Blog</title>
+    <link>/tags/others/</link>
+    <description>Recent content in Others on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Sun, 07 Sep 2025 22:57:49 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/others/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/others/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学校时代那些印象深刻的老师</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/remember_teacher/</link>
+      <link>/post/others/remember_teacher/</link>
       <pubDate>Sun, 07 Sep 2025 22:57:49 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/remember_teacher/</guid>
+      <guid>/post/others/remember_teacher/</guid>
       <description>&lt;p&gt;最近一周在看季羡林的《要把读书当回事》，里面提到他在学校时代遇到的几位老师，印象非常深刻。让我不禁回想起自己在学校时代也遇到过一些让我难以忘怀的老师。&lt;/p&gt;</description>
     </item>
     <item>
       <title>高考回忆</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/my_gaokao_memory/</link>
+      <link>/post/others/my_gaokao_memory/</link>
       <pubDate>Sat, 07 Jun 2025 14:30:03 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/my_gaokao_memory/</guid>
+      <guid>/post/others/my_gaokao_memory/</guid>
       <description>&lt;p&gt;简单的流水文，写于2025-06-07，今天起床时女朋友问我高考完多久了。我还仔细算了下，已经过去八年了。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Faker不死者</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/faker_no_death/</link>
+      <link>/post/others/faker_no_death/</link>
       <pubDate>Sat, 02 Nov 2024 15:51:27 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/faker_no_death/</guid>
+      <guid>/post/others/faker_no_death/</guid>
       <description>&lt;p&gt;Faker不死者原文:&lt;/p&gt;&#xA;&lt;p&gt;我的名字是李相赫。美国的粉丝们称我为“神”。韩国的粉丝们则叫我“杀不死的大魔王”。事实上，我更喜爱“神”这个称呼——那听起来要更炫一些。而在游戏中，我就是Faker。今年20岁，世界上最好的《英雄联盟》选手。&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Workflow</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/workflow/</link>
+      <link>/post/others/workflow/</link>
       <pubDate>Mon, 08 Jul 2024 20:50:56 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/workflow/</guid>
+      <guid>/post/others/workflow/</guid>
       <description>&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;&#xA;&lt;p&gt;最早开始用&lt;code&gt;macOS&lt;/code&gt;，之后转到了Redhat系的&lt;code&gt;Fedora&lt;/code&gt;，再到现在转到了&lt;code&gt;Arch Linux&lt;/code&gt;。目前比较爱折腾，所以感觉还好(说不定有一天会入坑&lt;code&gt;Gentoo&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
   </channel>

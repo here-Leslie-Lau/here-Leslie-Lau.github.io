@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Algorithm on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/categories/algorithm/</link>
-    <description>Recent content in Algorithm on Terminal</description>
+    <title>Algorithm on Leslie&#39;s Blog</title>
+    <link>/categories/algorithm/</link>
+    <description>Recent content in Algorithm on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Sat, 14 Oct 2023 13:12:12 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>算法记录-大数相乘</title>
-      <link>https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</link>
+      <link>/post/algorithm/multiplication_large_number/</link>
       <pubDate>Sat, 14 Oct 2023 13:12:12 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</guid>
+      <guid>/post/algorithm/multiplication_large_number/</guid>
       <description>&lt;p&gt;&lt;em&gt;本文代码使用golang实现&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;这篇文章主要记录下如何实现大数相乘。讲道理作为一个正式工作两年的程序员，不应该对这一块不了解，可能是因为工作中基本没有这个场景，所以也没考虑到。&lt;/p&gt;</description>
     </item>
   </channel>

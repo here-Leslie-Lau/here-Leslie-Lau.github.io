@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Operating System on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/categories/operating-system/</link>
-    <description>Recent content in Operating System on Terminal</description>
+    <title>Operating System on Leslie&#39;s Blog</title>
+    <link>/categories/operating-system/</link>
+    <description>Recent content in Operating System on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Tue, 09 May 2023 09:34:53 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/categories/operating-system/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/operating-system/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>进程控制块的作用</title>
-      <link>https://here-Leslie-Lau.github.io/post/pcb/</link>
+      <link>/post/pcb/</link>
       <pubDate>Tue, 09 May 2023 09:34:53 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/pcb/</guid>
+      <guid>/post/pcb/</guid>
       <description>&lt;p&gt;大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。&lt;/p&gt;</description>
     </item>
   </channel>

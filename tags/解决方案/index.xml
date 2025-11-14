@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>解决方案 on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
-    <description>Recent content in 解决方案 on Terminal</description>
+    <title>解决方案 on Leslie&#39;s Blog</title>
+    <link>/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+    <description>Recent content in 解决方案 on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Thu, 15 Aug 2024 20:06:01 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>golang map并发问题解决方案汇总</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</link>
+      <link>/post/golang/solve-concurrency-map-issues/</link>
       <pubDate>Thu, 15 Aug 2024 20:06:01 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</guid>
+      <guid>/post/golang/solve-concurrency-map-issues/</guid>
       <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;&#xA;&lt;p&gt;在&lt;code&gt;golang&lt;/code&gt;中，&lt;code&gt;map&lt;/code&gt;是一种非常常用的数据结构。但是在并发环境下，&lt;code&gt;map&lt;/code&gt;是不安全的，会出现并发问题。&lt;/p&gt;</description>
     </item>
   </channel>

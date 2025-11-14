@@ -1,61 +1,61 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Reading on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/reading/</link>
-    <description>Recent content in Reading on Terminal</description>
+    <title>Reading on Leslie&#39;s Blog</title>
+    <link>/tags/reading/</link>
+    <description>Recent content in Reading on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Sun, 15 Jun 2025 15:16:15 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/reading/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/reading/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从非功利的角度看开源的意义</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/the-meanning-of-open-source/</link>
+      <link>/post/reading/the-meanning-of-open-source/</link>
       <pubDate>Sun, 15 Jun 2025 15:16:15 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/the-meanning-of-open-source/</guid>
+      <guid>/post/reading/the-meanning-of-open-source/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;昨天女朋友问我为什么&lt;strong&gt;程序员愿意把自己写的代码公布到互联网上&lt;/strong&gt;，让大家都能看到。&lt;/p&gt;&#xA;&lt;p&gt;针对这个问题，我先是回答说：把自己写的代码公布到互联网上（比如github），可以提升自己的知名度，增加自己的影响力。大家看到你的代码后，如果觉得不错的话，他们会给你star（类似于小红书上的点赞）。以后面试时可以拿上开源的项目来展示自己的能力。&lt;/p&gt;</description>
     </item>
     <item>
       <title>拜拜拖延症</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/action-leads-to-motivation/</link>
+      <link>/post/reading/action-leads-to-motivation/</link>
       <pubDate>Fri, 13 Jun 2025 11:43:04 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/action-leads-to-motivation/</guid>
+      <guid>/post/reading/action-leads-to-motivation/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;工作这几年，我经常与“拖延症”进行斗争。有时可以成功，有时（大部分时间）都会被它打败。&lt;/p&gt;</description>
     </item>
     <item>
       <title>鲁迅语录：此后如竟没有炬火，我便是唯一的光</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/to_be_lighter/</link>
+      <link>/post/reading/to_be_lighter/</link>
       <pubDate>Tue, 06 May 2025 22:25:05 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/to_be_lighter/</guid>
+      <guid>/post/reading/to_be_lighter/</guid>
       <description>&lt;p&gt;&lt;strong&gt;所以我时常害怕，愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>带点主动，去读书吧</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/active_reading/</link>
+      <link>/post/reading/active_reading/</link>
       <pubDate>Tue, 04 Feb 2025 13:48:24 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/active_reading/</guid>
+      <guid>/post/reading/active_reading/</guid>
       <description>&lt;h2 id=&#34;为什么我们需要阅读&#34;&gt;为什么我们需要阅读&lt;/h2&gt;&#xA;&lt;p&gt;很多人说这是一个好的时代（主要是中老年人），因为他们觉得这个时代获取信息相比他们那个年代来说太方便了。我们需要什么信息或资源，只需要打开手机查一下就可以了。特别是现在还有 ai 工具的加持，我们只需要输入一个关键词，就可以得到很多相关的信息。&lt;/p&gt;</description>
     </item>
     <item>
       <title>何为SMART法则</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/smart_rule/</link>
+      <link>/post/reading/smart_rule/</link>
       <pubDate>Sun, 22 Dec 2024 19:55:41 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/smart_rule/</guid>
+      <guid>/post/reading/smart_rule/</guid>
       <description>&lt;p&gt;SMART（聪明）原则将目标一共分为五个维度，即：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;目标必须是具体的（Specific）&lt;/li&gt;&#xA;&lt;li&gt;目标必须是可以衡量的（Measurable）&lt;/li&gt;&#xA;&lt;li&gt;目标必须是可以达到的（Attainable）&lt;/li&gt;&#xA;&lt;li&gt;目标必须和其他目标具有相关性（Relevant）&lt;/li&gt;&#xA;&lt;li&gt;目标必须具有明确的截止期限（Time-based）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;下面举一些例子帮助大家理解 SMART 原则：&lt;/p&gt;</description>
     </item>
     <item>
       <title>触动学习法</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/</link>
+      <link>/post/reading/touching_learning_meth/</link>
       <pubDate>Sun, 08 Dec 2024 22:16:39 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/</guid>
+      <guid>/post/reading/touching_learning_meth/</guid>
       <description>&lt;h2 id=&#34;何为触动学习法&#34;&gt;何为触动学习法&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;即通过在阅读时找到「最触动」自身的点并与自己已有的知识体系相关联起来，转化并运用。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;简单来说就是读一本书我们可以没必要完全读完，而是阅读下来发现自己被触动点，通过触动点来引发自己的思考，从而达到学习的目的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>《认知觉醒-大脑》阅读笔记</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</link>
+      <link>/post/reading/awakening_brain/</link>
       <pubDate>Tue, 01 Oct 2024 22:37:18 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</guid>
+      <guid>/post/reading/awakening_brain/</guid>
       <description>&lt;h2 id=&#34;本书的大脑理论&#34;&gt;本书的大脑理论&lt;/h2&gt;&#xA;&lt;p&gt;本书作者：周岭在开篇时就介绍了人的大脑大致分为三个部分，分别为本能脑、情绪脑、理智脑&lt;/p&gt;</description>
     </item>
   </channel>

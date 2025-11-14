@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Memory on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/memory/</link>
-    <description>Recent content in Memory on Terminal</description>
+    <title>Memory on Leslie&#39;s Blog</title>
+    <link>/tags/memory/</link>
+    <description>Recent content in Memory on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Tue, 21 May 2024 10:22:48 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/memory/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/memory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>关于内存对齐</title>
-      <link>https://here-Leslie-Lau.github.io/post/os/memory_alignment/</link>
+      <link>/post/os/memory_alignment/</link>
       <pubDate>Tue, 21 May 2024 10:22:48 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/os/memory_alignment/</guid>
+      <guid>/post/os/memory_alignment/</guid>
       <description>&lt;h2 id=&#34;什么是内存对齐&#34;&gt;什么是内存对齐&lt;/h2&gt;&#xA;&lt;p&gt;我们时常会以为一个变量在内存中可以任意存放(假设内存空间足够, 不考虑占用情况)。但实际上并不是这样。&lt;/p&gt;</description>
     </item>
   </channel>

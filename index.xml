@@ -1,278 +1,278 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/</link>
-    <description>Recent content on Terminal</description>
+    <title>Leslie&#39;s Blog</title>
+    <link>/</link>
+    <description>Recent content on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Sun, 07 Sep 2025 22:57:49 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>学校时代那些印象深刻的老师</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/remember_teacher/</link>
+      <link>/post/others/remember_teacher/</link>
       <pubDate>Sun, 07 Sep 2025 22:57:49 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/remember_teacher/</guid>
+      <guid>/post/others/remember_teacher/</guid>
       <description>&lt;p&gt;最近一周在看季羡林的《要把读书当回事》，里面提到他在学校时代遇到的几位老师，印象非常深刻。让我不禁回想起自己在学校时代也遇到过一些让我难以忘怀的老师。&lt;/p&gt;</description>
     </item>
     <item>
       <title>超好用的命令行调试接口工具 HTTPie</title>
-      <link>https://here-Leslie-Lau.github.io/post/tools/httpie/</link>
+      <link>/post/tools/httpie/</link>
       <pubDate>Thu, 28 Aug 2025 14:03:58 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/tools/httpie/</guid>
+      <guid>/post/tools/httpie/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;老实说，最开始我是个坚定的图形化界面的支持者。觉得命令行太过复杂而GUI界面更直观易用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>从非功利的角度看开源的意义</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/the-meanning-of-open-source/</link>
+      <link>/post/reading/the-meanning-of-open-source/</link>
       <pubDate>Sun, 15 Jun 2025 15:16:15 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/the-meanning-of-open-source/</guid>
+      <guid>/post/reading/the-meanning-of-open-source/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;昨天女朋友问我为什么&lt;strong&gt;程序员愿意把自己写的代码公布到互联网上&lt;/strong&gt;，让大家都能看到。&lt;/p&gt;&#xA;&lt;p&gt;针对这个问题，我先是回答说：把自己写的代码公布到互联网上（比如github），可以提升自己的知名度，增加自己的影响力。大家看到你的代码后，如果觉得不错的话，他们会给你star（类似于小红书上的点赞）。以后面试时可以拿上开源的项目来展示自己的能力。&lt;/p&gt;</description>
     </item>
     <item>
       <title>拜拜拖延症</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/action-leads-to-motivation/</link>
+      <link>/post/reading/action-leads-to-motivation/</link>
       <pubDate>Fri, 13 Jun 2025 11:43:04 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/action-leads-to-motivation/</guid>
+      <guid>/post/reading/action-leads-to-motivation/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;工作这几年，我经常与“拖延症”进行斗争。有时可以成功，有时（大部分时间）都会被它打败。&lt;/p&gt;</description>
     </item>
     <item>
       <title>高考回忆</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/my_gaokao_memory/</link>
+      <link>/post/others/my_gaokao_memory/</link>
       <pubDate>Sat, 07 Jun 2025 14:30:03 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/my_gaokao_memory/</guid>
+      <guid>/post/others/my_gaokao_memory/</guid>
       <description>&lt;p&gt;简单的流水文，写于2025-06-07，今天起床时女朋友问我高考完多久了。我还仔细算了下，已经过去八年了。&lt;/p&gt;</description>
     </item>
     <item>
       <title>鲁迅语录：此后如竟没有炬火，我便是唯一的光</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/to_be_lighter/</link>
+      <link>/post/reading/to_be_lighter/</link>
       <pubDate>Tue, 06 May 2025 22:25:05 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/to_be_lighter/</guid>
+      <guid>/post/reading/to_be_lighter/</guid>
       <description>&lt;p&gt;&lt;strong&gt;所以我时常害怕，愿中国青年都摆脱冷气，只是向上走，不必听自暴自弃者流的话。能做事的做事，能发声的发声。有一分热，发一分光，就令萤火一般，也可以在黑暗里发一点光，不必等候炬火。&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>带点主动，去读书吧</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/active_reading/</link>
+      <link>/post/reading/active_reading/</link>
       <pubDate>Tue, 04 Feb 2025 13:48:24 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/active_reading/</guid>
+      <guid>/post/reading/active_reading/</guid>
       <description>&lt;h2 id=&#34;为什么我们需要阅读&#34;&gt;为什么我们需要阅读&lt;/h2&gt;&#xA;&lt;p&gt;很多人说这是一个好的时代（主要是中老年人），因为他们觉得这个时代获取信息相比他们那个年代来说太方便了。我们需要什么信息或资源，只需要打开手机查一下就可以了。特别是现在还有 ai 工具的加持，我们只需要输入一个关键词，就可以得到很多相关的信息。&lt;/p&gt;</description>
     </item>
     <item>
       <title>dnf包管理工具指北</title>
-      <link>https://here-Leslie-Lau.github.io/post/os/how_to_use_dnf/</link>
+      <link>/post/os/how_to_use_dnf/</link>
       <pubDate>Fri, 17 Jan 2025 16:37:15 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/os/how_to_use_dnf/</guid>
+      <guid>/post/os/how_to_use_dnf/</guid>
       <description>&lt;p&gt;包管理工具是一种用于安装、升级、配置和删除软件包的工具。它可以自动处理软件包之间的依赖关系，使得软件包的安装和升级变得更加容易。&lt;/p&gt;</description>
     </item>
     <item>
       <title>何为SMART法则</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/smart_rule/</link>
+      <link>/post/reading/smart_rule/</link>
       <pubDate>Sun, 22 Dec 2024 19:55:41 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/smart_rule/</guid>
+      <guid>/post/reading/smart_rule/</guid>
       <description>&lt;p&gt;SMART（聪明）原则将目标一共分为五个维度，即：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;目标必须是具体的（Specific）&lt;/li&gt;&#xA;&lt;li&gt;目标必须是可以衡量的（Measurable）&lt;/li&gt;&#xA;&lt;li&gt;目标必须是可以达到的（Attainable）&lt;/li&gt;&#xA;&lt;li&gt;目标必须和其他目标具有相关性（Relevant）&lt;/li&gt;&#xA;&lt;li&gt;目标必须具有明确的截止期限（Time-based）&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;下面举一些例子帮助大家理解 SMART 原则：&lt;/p&gt;</description>
     </item>
     <item>
       <title>触动学习法</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/</link>
+      <link>/post/reading/touching_learning_meth/</link>
       <pubDate>Sun, 08 Dec 2024 22:16:39 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/touching_learning_meth/</guid>
+      <guid>/post/reading/touching_learning_meth/</guid>
       <description>&lt;h2 id=&#34;何为触动学习法&#34;&gt;何为触动学习法&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;即通过在阅读时找到「最触动」自身的点并与自己已有的知识体系相关联起来，转化并运用。&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;简单来说就是读一本书我们可以没必要完全读完，而是阅读下来发现自己被触动点，通过触动点来引发自己的思考，从而达到学习的目的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Faker不死者</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/faker_no_death/</link>
+      <link>/post/others/faker_no_death/</link>
       <pubDate>Sat, 02 Nov 2024 15:51:27 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/faker_no_death/</guid>
+      <guid>/post/others/faker_no_death/</guid>
       <description>&lt;p&gt;Faker不死者原文:&lt;/p&gt;&#xA;&lt;p&gt;我的名字是李相赫。美国的粉丝们称我为“神”。韩国的粉丝们则叫我“杀不死的大魔王”。事实上，我更喜爱“神”这个称呼——那听起来要更炫一些。而在游戏中，我就是Faker。今年20岁，世界上最好的《英雄联盟》选手。&lt;/p&gt;</description>
     </item>
     <item>
       <title>《认知觉醒-大脑》阅读笔记</title>
-      <link>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</link>
+      <link>/post/reading/awakening_brain/</link>
       <pubDate>Tue, 01 Oct 2024 22:37:18 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/reading/awakening_brain/</guid>
+      <guid>/post/reading/awakening_brain/</guid>
       <description>&lt;h2 id=&#34;本书的大脑理论&#34;&gt;本书的大脑理论&lt;/h2&gt;&#xA;&lt;p&gt;本书作者：周岭在开篇时就介绍了人的大脑大致分为三个部分，分别为本能脑、情绪脑、理智脑&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang map并发问题解决方案汇总</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</link>
+      <link>/post/golang/solve-concurrency-map-issues/</link>
       <pubDate>Thu, 15 Aug 2024 20:06:01 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</guid>
+      <guid>/post/golang/solve-concurrency-map-issues/</guid>
       <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;&#xA;&lt;p&gt;在&lt;code&gt;golang&lt;/code&gt;中，&lt;code&gt;map&lt;/code&gt;是一种非常常用的数据结构。但是在并发环境下，&lt;code&gt;map&lt;/code&gt;是不安全的，会出现并发问题。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-Once</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/once/</link>
+      <link>/post/golang/once/</link>
       <pubDate>Tue, 09 Jul 2024 16:50:13 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/once/</guid>
+      <guid>/post/golang/once/</guid>
       <description>&lt;h2 id=&#34;once介绍&#34;&gt;Once介绍&lt;/h2&gt;&#xA;&lt;p&gt;在项目开发中，我们经常会需要调用其他服务或初始化一些资源。此时就需要用到单例模式，通过一个全局变量，在资源首次被使用时服务会去初始化它，其他地方需要使用资源时就用这个全局变量。但是在多线程环境下，这个全局变量可能会被多个线程同时初始化，这时就需要用到&lt;code&gt;sync.Once&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Workflow</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/workflow/</link>
+      <link>/post/others/workflow/</link>
       <pubDate>Mon, 08 Jul 2024 20:50:56 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/workflow/</guid>
+      <guid>/post/others/workflow/</guid>
       <description>&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;&#xA;&lt;p&gt;最早开始用&lt;code&gt;macOS&lt;/code&gt;，之后转到了Redhat系的&lt;code&gt;Fedora&lt;/code&gt;，再到现在转到了&lt;code&gt;Arch Linux&lt;/code&gt;。目前比较爱折腾，所以感觉还好(说不定有一天会入坑&lt;code&gt;Gentoo&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-深入理解WaitGroup</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/waitgroup/</link>
+      <link>/post/golang/waitgroup/</link>
       <pubDate>Fri, 21 Jun 2024 10:21:29 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/waitgroup/</guid>
+      <guid>/post/golang/waitgroup/</guid>
       <description>&lt;h2 id=&#34;waitgroup介绍&#34;&gt;WaitGroup介绍&lt;/h2&gt;&#xA;&lt;p&gt;实际开发中经常会碰到一种情况：一个聚合信息的接口(如app首页/用户信息等)，需要查询一大堆数据，而这些数据都是分散在各个服务中。同步去一个一个查询会导致接口响应过长。于是很自然而然想到了并发查询。&lt;/p&gt;</description>
     </item>
     <item>
       <title>b树与b&#43;树总结</title>
-      <link>https://here-Leslie-Lau.github.io/post/mysql/b-and-b-plus-tree/</link>
+      <link>/post/mysql/b-and-b-plus-tree/</link>
       <pubDate>Tue, 11 Jun 2024 18:26:31 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/mysql/b-and-b-plus-tree/</guid>
+      <guid>/post/mysql/b-and-b-plus-tree/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;最近工作中涉及到了挺多的索引的问题，仔细梳理下来发现自己掌握的并不深入，所以记录一下。&lt;/p&gt;</description>
     </item>
     <item>
       <title>关于内存对齐</title>
-      <link>https://here-Leslie-Lau.github.io/post/os/memory_alignment/</link>
+      <link>/post/os/memory_alignment/</link>
       <pubDate>Tue, 21 May 2024 10:22:48 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/os/memory_alignment/</guid>
+      <guid>/post/os/memory_alignment/</guid>
       <description>&lt;h2 id=&#34;什么是内存对齐&#34;&gt;什么是内存对齐&lt;/h2&gt;&#xA;&lt;p&gt;我们时常会以为一个变量在内存中可以任意存放(假设内存空间足够, 不考虑占用情况)。但实际上并不是这样。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Golang函数式编程</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/functional_options/</link>
+      <link>/post/golang/functional_options/</link>
       <pubDate>Mon, 29 Apr 2024 16:35:06 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/functional_options/</guid>
+      <guid>/post/golang/functional_options/</guid>
       <description>&lt;h2 id=&#34;什么是函数式编程&#34;&gt;什么是函数式编程&lt;/h2&gt;&#xA;&lt;p&gt;这边文章没有很复杂的概念，单纯介绍下函数式编程的概念，以及在Golang中如何实现函数式编程。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-RWMutex</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/rw_mutex/</link>
+      <link>/post/golang/rw_mutex/</link>
       <pubDate>Mon, 25 Mar 2024 11:57:42 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/rw_mutex/</guid>
+      <guid>/post/golang/rw_mutex/</guid>
       <description>&lt;p&gt;&lt;em&gt;本文代码基于go 1.22, 其他版本大差不差&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;上篇博客分析了&lt;code&gt;sync.Mutex&lt;/code&gt;的源码，我们在碰到共享资源问题的时候可以使用&lt;code&gt;sync.Mutex&lt;/code&gt;来解决。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-深入理解Mutex</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/mutex/</link>
+      <link>/post/golang/mutex/</link>
       <pubDate>Mon, 26 Feb 2024 10:15:06 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/mutex/</guid>
+      <guid>/post/golang/mutex/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;刚刚开始接触golang时，觉得&lt;code&gt;mutex&lt;/code&gt;锁简单易用。到下个阶段自己觉得这种是悲观锁，效率很低。直到学习和了解它的原理才明白&lt;code&gt;mutex&lt;/code&gt;是一个兼顾性能和公平的精妙设计。&lt;/p&gt;</description>
     </item>
     <item>
       <title>fish shell环境变量的坑</title>
-      <link>https://here-Leslie-Lau.github.io/post/os/fish_path_variable/</link>
+      <link>/post/os/fish_path_variable/</link>
       <pubDate>Sun, 28 Jan 2024 11:03:31 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/os/fish_path_variable/</guid>
+      <guid>/post/os/fish_path_variable/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;前段时间入了&lt;a href=&#34;https://fishshell.com/&#34;&gt;fish-shell&lt;/a&gt;的坑，将其作为默认的shell，发现很多环境变量都失效了，比如&lt;code&gt;$PATH&lt;/code&gt;，&lt;code&gt;$GOPATH&lt;/code&gt;等等，这里记录一下解决方案。&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;标题党一下，互联网上很多文章写的都是垃圾。要么互相复制，要么没有彻底解决问题。&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>字节序</title>
-      <link>https://here-Leslie-Lau.github.io/post/os/byte_order/</link>
+      <link>/post/os/byte_order/</link>
       <pubDate>Thu, 11 Jan 2024 19:51:17 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/os/byte_order/</guid>
+      <guid>/post/os/byte_order/</guid>
       <description>&lt;h2 id=&#34;什么是字节序&#34;&gt;什么是字节序&lt;/h2&gt;&#xA;&lt;p&gt;最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所以就想着整理一下字节序的相关知识。&lt;/p&gt;</description>
     </item>
     <item>
       <title>常见提高Api性能的方法</title>
-      <link>https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/</link>
+      <link>/post/network/familiar_improve_api_perf/</link>
       <pubDate>Sun, 07 Jan 2024 19:26:53 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/</guid>
+      <guid>/post/network/familiar_improve_api_perf/</guid>
       <description>&lt;h2 id=&#34;分页pagination&#34;&gt;分页(Pagination)&lt;/h2&gt;&#xA;&lt;p&gt;分页这个优化方式特别常见。目前有两种方式：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;客户端指定每页的数量和当前第几页，服务端返回总页数和当前页的数据。&lt;/p&gt;</description>
     </item>
     <item>
       <title>socket是什么</title>
-      <link>https://here-Leslie-Lau.github.io/post/network/what_is_socket/</link>
+      <link>/post/network/what_is_socket/</link>
       <pubDate>Mon, 13 Nov 2023 18:40:49 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/network/what_is_socket/</guid>
+      <guid>/post/network/what_is_socket/</guid>
       <description>&lt;h2 id=&#34;socket介绍&#34;&gt;Socket介绍&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;不知道大家有没有想过网络通信到底是什么东西，为什么两个计算机之间可以通信？&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;其实本质上就是两个计算机之间的数据交换，而这个数据交换的过程就是通过&lt;code&gt;socket&lt;/code&gt;来完成的。&lt;/p&gt;</description>
     </item>
     <item>
       <title>算法记录-大数相乘</title>
-      <link>https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</link>
+      <link>/post/algorithm/multiplication_large_number/</link>
       <pubDate>Sat, 14 Oct 2023 13:12:12 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/algorithm/multiplication_large_number/</guid>
+      <guid>/post/algorithm/multiplication_large_number/</guid>
       <description>&lt;p&gt;&lt;em&gt;本文代码使用golang实现&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;这篇文章主要记录下如何实现大数相乘。讲道理作为一个正式工作两年的程序员，不应该对这一块不了解，可能是因为工作中基本没有这个场景，所以也没考虑到。&lt;/p&gt;</description>
     </item>
     <item>
       <title>git commit规范</title>
-      <link>https://here-Leslie-Lau.github.io/post/git/commit_standard/</link>
+      <link>/post/git/commit_standard/</link>
       <pubDate>Tue, 12 Sep 2023 20:52:25 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/git/commit_standard/</guid>
+      <guid>/post/git/commit_standard/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;git&lt;/code&gt;作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的&lt;code&gt;git commit message&lt;/code&gt;尤其重要，经常看到commit信息内有&lt;code&gt;fix bug, change XXX&lt;/code&gt;等各种千奇百怪的描述，会气的一口老血上来。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang位运算那些事</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/bit_operation/</link>
+      <link>/post/golang/bit_operation/</link>
       <pubDate>Wed, 02 Aug 2023 10:56:54 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/bit_operation/</guid>
+      <guid>/post/golang/bit_operation/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;写这篇文章是因为看&lt;code&gt;golang&lt;/code&gt;源码的时候，经常会出现位运算。有时看着有点懵，所以写篇文章记录下。同时该文章也会探讨我们在生产中的哪些场景可以使用位运算。&lt;/p&gt;</description>
     </item>
     <item>
       <title>我的Neovim配置分享</title>
-      <link>https://here-Leslie-Lau.github.io/post/vim/neovim_config/</link>
+      <link>/post/vim/neovim_config/</link>
       <pubDate>Fri, 28 Jul 2023 15:20:58 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/vim/neovim_config/</guid>
+      <guid>/post/vim/neovim_config/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;这篇文章的目的是为了分享下我自己的&lt;code&gt;Neovim&lt;/code&gt;配置。&lt;/p&gt;&#xA;&lt;p&gt;本人是Golang程序员，最开始使用的IDE是&lt;code&gt;JetBrains Goland&lt;/code&gt;。有一说一这个ide适配度很高，认识的很多人都使用这个。但是它也有几个对我来说的缺点：&lt;/p&gt;</description>
     </item>
     <item>
       <title>Lock Category</title>
-      <link>https://here-Leslie-Lau.github.io/post/os/lock_category/</link>
+      <link>/post/os/lock_category/</link>
       <pubDate>Mon, 17 Jul 2023 19:06:51 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/os/lock_category/</guid>
+      <guid>/post/os/lock_category/</guid>
       <description>&lt;p&gt;编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。&lt;/p&gt;&#xA;&lt;h2 id=&#34;乐观锁悲观锁&#34;&gt;乐观锁/悲观锁&lt;/h2&gt;&#xA;&lt;p&gt;这一对锁名字比较形象。&lt;/p&gt;&#xA;&lt;h3 id=&#34;悲观锁&#34;&gt;悲观锁&lt;/h3&gt;&#xA;&lt;p&gt;先说悲观锁，把锁比作人的话。这位小伙子遇事会比较“悲观”。它会先把资源给锁住再进行操作，这样其他线程请求该资源的时候就会被阻塞，直到悲观锁把资源释放为止。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-Context</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/context/</link>
+      <link>/post/golang/context/</link>
       <pubDate>Sat, 20 May 2023 16:24:27 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/context/</guid>
+      <guid>/post/golang/context/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;平时写代码或者阅读代码的时候，经常会在方法内看到&lt;code&gt;ctx context.Context&lt;/code&gt;这样的参数。本文就记录一下有关于&lt;code&gt;context.Context&lt;/code&gt;的知识。&lt;/p&gt;</description>
     </item>
     <item>
       <title>unsafe.Pointer&amp;uintptr</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/unsafe_pointer_uintptr/</link>
+      <link>/post/golang/unsafe_pointer_uintptr/</link>
       <pubDate>Thu, 18 May 2023 14:34:08 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/unsafe_pointer_uintptr/</guid>
+      <guid>/post/golang/unsafe_pointer_uintptr/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;本文将介绍下golang源码里经常出现的东西: &lt;code&gt;unsafe.Pointer&lt;/code&gt;和&lt;code&gt;uintptr&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-启动一个http服务到底发生了什么？</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/http_server/</link>
+      <link>/post/golang/http_server/</link>
       <pubDate>Tue, 16 May 2023 11:20:01 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/http_server/</guid>
+      <guid>/post/golang/http_server/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;本文将从golang的源码方面分析：如何启动http服务，这个服务是怎么对外提供服务的，以及为什么可以保证高性能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-slice篇</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/source_code_slice/</link>
+      <link>/post/golang/source_code_slice/</link>
       <pubDate>Sun, 14 May 2023 15:39:15 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/source_code_slice/</guid>
+      <guid>/post/golang/source_code_slice/</guid>
       <description>&lt;p&gt;本文将介绍slice的数据结构、常用操作的源码。&lt;/p&gt;&#xA;&lt;p&gt;源码基于golang 1.18，位于&lt;code&gt;runtime/slice.go&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>git submodules</title>
-      <link>https://here-Leslie-Lau.github.io/post/git/submodules/</link>
+      <link>/post/git/submodules/</link>
       <pubDate>Sat, 13 May 2023 14:17:49 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/git/submodules/</guid>
+      <guid>/post/git/submodules/</guid>
       <description>&lt;h2 id=&#34;git-submodules介绍&#34;&gt;git submodules介绍&lt;/h2&gt;&#xA;&lt;p&gt;来自git官方的介绍&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; submodules&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       git-submodule - Initialize, update or inspect submodules&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个命令可以用于初始化、更新、检查子模块。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang slice原理</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/slice/</link>
+      <link>/post/golang/slice/</link>
       <pubDate>Thu, 11 May 2023 18:27:56 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/slice/</guid>
+      <guid>/post/golang/slice/</guid>
       <description>&lt;h2 id=&#34;切片使用&#34;&gt;切片使用&lt;/h2&gt;&#xA;&lt;p&gt;仅记录一些常用操作&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;创建切片:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 创建切片&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 使用make可以创建切片的引用，第二个参数代表切片长度，第三个代表切片的容量，使用该种方法生成具有空值&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 创建切片&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 直接对切片进行初始化操作&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;切片遍历:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 使用foreach遍历&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 直接使用索引进行遍历&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;使用append追加切片元素:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 该方式会在切片的末尾追加元素&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;切片拷贝:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nb&#34;&gt;copy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;切片索引取值:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 输出内容:[1 2], slice[0:2]代表去slice第[0]个元素，一直取到第[2]元素(不包括[2])&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 输出内容:[1], slice[0:1:2]第三个数字表示新切片容量为(2-0=2)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;切片的数据结构&#34;&gt;切片的数据结构&lt;/h2&gt;&#xA;&lt;p&gt;刚刚在&lt;strong&gt;切片特性&lt;/strong&gt;内介绍到了golang中切片其实是值拷贝。&#xA;这里其实有一个疑问，如果切片元素内过多，那么每次传值不会特别特别慢吗？毕竟每次都要拷贝一个数组。别急，接下来介绍一下切片的数据结构。&lt;/p&gt;</description>
     </item>
     <item>
       <title>记录一次mysql update导致的锁表问题</title>
-      <link>https://here-Leslie-Lau.github.io/post/mysql/update_lock_table/</link>
+      <link>/post/mysql/update_lock_table/</link>
       <pubDate>Thu, 11 May 2023 11:11:39 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/mysql/update_lock_table/</guid>
+      <guid>/post/mysql/update_lock_table/</guid>
       <description>&lt;h2 id=&#34;事发情况&#34;&gt;事发情况&lt;/h2&gt;&#xA;&lt;p&gt;当天晚上生产服务一直在告警，刚刚开始只是一个数据保存接口耗时过长，紧接着整个服务接口都耗时，对外表现为整个服务不可用。&lt;/p&gt;</description>
     </item>
     <item>
       <title>进程控制块的作用</title>
-      <link>https://here-Leslie-Lau.github.io/post/pcb/</link>
+      <link>/post/pcb/</link>
       <pubDate>Tue, 09 May 2023 09:34:53 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/pcb/</guid>
+      <guid>/post/pcb/</guid>
       <description>&lt;p&gt;大学时操作系统课程里面就介绍过，每个进程都会有一个进程控制块(Process control block)，他们之间是一一对应的关系。&lt;/p&gt;</description>
     </item>
   </channel>

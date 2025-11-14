@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Workflow on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/workflow/</link>
-    <description>Recent content in Workflow on Terminal</description>
+    <title>Workflow on Leslie&#39;s Blog</title>
+    <link>/tags/workflow/</link>
+    <description>Recent content in Workflow on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Mon, 08 Jul 2024 20:50:56 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/workflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My Workflow</title>
-      <link>https://here-Leslie-Lau.github.io/post/others/workflow/</link>
+      <link>/post/others/workflow/</link>
       <pubDate>Mon, 08 Jul 2024 20:50:56 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/others/workflow/</guid>
+      <guid>/post/others/workflow/</guid>
       <description>&lt;h2 id=&#34;os&#34;&gt;OS&lt;/h2&gt;&#xA;&lt;p&gt;最早开始用&lt;code&gt;macOS&lt;/code&gt;，之后转到了Redhat系的&lt;code&gt;Fedora&lt;/code&gt;，再到现在转到了&lt;code&gt;Arch Linux&lt;/code&gt;。目前比较爱折腾，所以感觉还好(说不定有一天会入坑&lt;code&gt;Gentoo&lt;/code&gt;)&lt;/p&gt;</description>
     </item>
   </channel>

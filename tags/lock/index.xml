@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lock on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/lock/</link>
-    <description>Recent content in Lock on Terminal</description>
+    <title>Lock on Leslie&#39;s Blog</title>
+    <link>/tags/lock/</link>
+    <description>Recent content in Lock on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Mon, 17 Jul 2023 19:06:51 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/lock/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/lock/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lock Category</title>
-      <link>https://here-Leslie-Lau.github.io/post/os/lock_category/</link>
+      <link>/post/os/lock_category/</link>
       <pubDate>Mon, 17 Jul 2023 19:06:51 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/os/lock_category/</guid>
+      <guid>/post/os/lock_category/</guid>
       <description>&lt;p&gt;编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。&lt;/p&gt;&#xA;&lt;h2 id=&#34;乐观锁悲观锁&#34;&gt;乐观锁/悲观锁&lt;/h2&gt;&#xA;&lt;p&gt;这一对锁名字比较形象。&lt;/p&gt;&#xA;&lt;h3 id=&#34;悲观锁&#34;&gt;悲观锁&lt;/h3&gt;&#xA;&lt;p&gt;先说悲观锁，把锁比作人的话。这位小伙子遇事会比较“悲观”。它会先把资源给锁住再进行操作，这样其他线程请求该资源的时候就会被阻塞，直到悲观锁把资源释放为止。&lt;/p&gt;</description>
     </item>
   </channel>

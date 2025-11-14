@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Golang on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/golang/</link>
-    <description>Recent content in Golang on Terminal</description>
+    <title>Golang on Leslie&#39;s Blog</title>
+    <link>/tags/golang/</link>
+    <description>Recent content in Golang on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Thu, 15 Aug 2024 20:06:01 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>golang map并发问题解决方案汇总</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</link>
+      <link>/post/golang/solve-concurrency-map-issues/</link>
       <pubDate>Thu, 15 Aug 2024 20:06:01 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/solve-concurrency-map-issues/</guid>
+      <guid>/post/golang/solve-concurrency-map-issues/</guid>
       <description>&lt;h2 id=&#34;问题描述&#34;&gt;问题描述&lt;/h2&gt;&#xA;&lt;p&gt;在&lt;code&gt;golang&lt;/code&gt;中，&lt;code&gt;map&lt;/code&gt;是一种非常常用的数据结构。但是在并发环境下，&lt;code&gt;map&lt;/code&gt;是不安全的，会出现并发问题。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-Once</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/once/</link>
+      <link>/post/golang/once/</link>
       <pubDate>Tue, 09 Jul 2024 16:50:13 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/once/</guid>
+      <guid>/post/golang/once/</guid>
       <description>&lt;h2 id=&#34;once介绍&#34;&gt;Once介绍&lt;/h2&gt;&#xA;&lt;p&gt;在项目开发中，我们经常会需要调用其他服务或初始化一些资源。此时就需要用到单例模式，通过一个全局变量，在资源首次被使用时服务会去初始化它，其他地方需要使用资源时就用这个全局变量。但是在多线程环境下，这个全局变量可能会被多个线程同时初始化，这时就需要用到&lt;code&gt;sync.Once&lt;/code&gt;。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-深入理解WaitGroup</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/waitgroup/</link>
+      <link>/post/golang/waitgroup/</link>
       <pubDate>Fri, 21 Jun 2024 10:21:29 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/waitgroup/</guid>
+      <guid>/post/golang/waitgroup/</guid>
       <description>&lt;h2 id=&#34;waitgroup介绍&#34;&gt;WaitGroup介绍&lt;/h2&gt;&#xA;&lt;p&gt;实际开发中经常会碰到一种情况：一个聚合信息的接口(如app首页/用户信息等)，需要查询一大堆数据，而这些数据都是分散在各个服务中。同步去一个一个查询会导致接口响应过长。于是很自然而然想到了并发查询。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Golang函数式编程</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/functional_options/</link>
+      <link>/post/golang/functional_options/</link>
       <pubDate>Mon, 29 Apr 2024 16:35:06 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/functional_options/</guid>
+      <guid>/post/golang/functional_options/</guid>
       <description>&lt;h2 id=&#34;什么是函数式编程&#34;&gt;什么是函数式编程&lt;/h2&gt;&#xA;&lt;p&gt;这边文章没有很复杂的概念，单纯介绍下函数式编程的概念，以及在Golang中如何实现函数式编程。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-RWMutex</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/rw_mutex/</link>
+      <link>/post/golang/rw_mutex/</link>
       <pubDate>Mon, 25 Mar 2024 11:57:42 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/rw_mutex/</guid>
+      <guid>/post/golang/rw_mutex/</guid>
       <description>&lt;p&gt;&lt;em&gt;本文代码基于go 1.22, 其他版本大差不差&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;上篇博客分析了&lt;code&gt;sync.Mutex&lt;/code&gt;的源码，我们在碰到共享资源问题的时候可以使用&lt;code&gt;sync.Mutex&lt;/code&gt;来解决。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-深入理解Mutex</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/mutex/</link>
+      <link>/post/golang/mutex/</link>
       <pubDate>Mon, 26 Feb 2024 10:15:06 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/mutex/</guid>
+      <guid>/post/golang/mutex/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;刚刚开始接触golang时，觉得&lt;code&gt;mutex&lt;/code&gt;锁简单易用。到下个阶段自己觉得这种是悲观锁，效率很低。直到学习和了解它的原理才明白&lt;code&gt;mutex&lt;/code&gt;是一个兼顾性能和公平的精妙设计。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang位运算那些事</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/bit_operation/</link>
+      <link>/post/golang/bit_operation/</link>
       <pubDate>Wed, 02 Aug 2023 10:56:54 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/bit_operation/</guid>
+      <guid>/post/golang/bit_operation/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;写这篇文章是因为看&lt;code&gt;golang&lt;/code&gt;源码的时候，经常会出现位运算。有时看着有点懵，所以写篇文章记录下。同时该文章也会探讨我们在生产中的哪些场景可以使用位运算。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-Context</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/context/</link>
+      <link>/post/golang/context/</link>
       <pubDate>Sat, 20 May 2023 16:24:27 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/context/</guid>
+      <guid>/post/golang/context/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;平时写代码或者阅读代码的时候，经常会在方法内看到&lt;code&gt;ctx context.Context&lt;/code&gt;这样的参数。本文就记录一下有关于&lt;code&gt;context.Context&lt;/code&gt;的知识。&lt;/p&gt;</description>
     </item>
     <item>
       <title>unsafe.Pointer&amp;uintptr</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/unsafe_pointer_uintptr/</link>
+      <link>/post/golang/unsafe_pointer_uintptr/</link>
       <pubDate>Thu, 18 May 2023 14:34:08 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/unsafe_pointer_uintptr/</guid>
+      <guid>/post/golang/unsafe_pointer_uintptr/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;本文将介绍下golang源码里经常出现的东西: &lt;code&gt;unsafe.Pointer&lt;/code&gt;和&lt;code&gt;uintptr&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-启动一个http服务到底发生了什么？</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/http_server/</link>
+      <link>/post/golang/http_server/</link>
       <pubDate>Tue, 16 May 2023 11:20:01 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/http_server/</guid>
+      <guid>/post/golang/http_server/</guid>
       <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;本文将从golang的源码方面分析：如何启动http服务，这个服务是怎么对外提供服务的，以及为什么可以保证高性能。&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang源码分析-slice篇</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/source_code_slice/</link>
+      <link>/post/golang/source_code_slice/</link>
       <pubDate>Sun, 14 May 2023 15:39:15 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/source_code_slice/</guid>
+      <guid>/post/golang/source_code_slice/</guid>
       <description>&lt;p&gt;本文将介绍slice的数据结构、常用操作的源码。&lt;/p&gt;&#xA;&lt;p&gt;源码基于golang 1.18，位于&lt;code&gt;runtime/slice.go&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>golang slice原理</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/slice/</link>
+      <link>/post/golang/slice/</link>
       <pubDate>Thu, 11 May 2023 18:27:56 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/slice/</guid>
+      <guid>/post/golang/slice/</guid>
       <description>&lt;h2 id=&#34;切片使用&#34;&gt;切片使用&lt;/h2&gt;&#xA;&lt;p&gt;仅记录一些常用操作&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;创建切片:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 创建切片&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 使用make可以创建切片的引用，第二个参数代表切片长度，第三个代表切片的容量，使用该种方法生成具有空值&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 创建切片&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;kd&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 直接对切片进行初始化操作&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;切片遍历:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 使用foreach遍历&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;range&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;val&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 直接使用索引进行遍历&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;使用append追加切片元素:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;append&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 该方式会在切片的末尾追加元素&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;切片拷贝:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;make&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nb&#34;&gt;copy&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;slice1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;切片索引取值:&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[]&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;&#x9;&lt;span class=&#34;c1&#34;&gt;// 输出内容:[1 2], slice[0:2]代表去slice第[0]个元素，一直取到第[2]元素(不包括[2])&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#x9;&lt;span class=&#34;nx&#34;&gt;fmt&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;Println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;slice&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// 输出内容:[1], slice[0:1:2]第三个数字表示新切片容量为(2-0=2)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;切片的数据结构&#34;&gt;切片的数据结构&lt;/h2&gt;&#xA;&lt;p&gt;刚刚在&lt;strong&gt;切片特性&lt;/strong&gt;内介绍到了golang中切片其实是值拷贝。&#xA;这里其实有一个疑问，如果切片元素内过多，那么每次传值不会特别特别慢吗？毕竟每次都要拷贝一个数组。别急，接下来介绍一下切片的数据结构。&lt;/p&gt;</description>
     </item>
   </channel>

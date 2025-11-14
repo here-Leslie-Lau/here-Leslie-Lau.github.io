@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/categories/</link>
-    <description>Recent content in Categories on Terminal</description>
+    <title>Categories on Leslie&#39;s Blog</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Sun, 07 Sep 2025 22:57:49 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Others</title>
-      <link>https://here-Leslie-Lau.github.io/categories/others/</link>
+      <link>/categories/others/</link>
       <pubDate>Sun, 07 Sep 2025 22:57:49 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/others/</guid>
+      <guid>/categories/others/</guid>
       <description></description>
     </item>
     <item>
       <title>工具</title>
-      <link>https://here-Leslie-Lau.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+      <link>/categories/%E5%B7%A5%E5%85%B7/</link>
       <pubDate>Thu, 28 Aug 2025 14:03:58 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/%E5%B7%A5%E5%85%B7/</guid>
+      <guid>/categories/%E5%B7%A5%E5%85%B7/</guid>
       <description></description>
     </item>
     <item>
       <title>Os</title>
-      <link>https://here-Leslie-Lau.github.io/categories/os/</link>
+      <link>/categories/os/</link>
       <pubDate>Fri, 17 Jan 2025 16:37:15 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/os/</guid>
+      <guid>/categories/os/</guid>
       <description></description>
     </item>
     <item>
       <title>Golang</title>
-      <link>https://here-Leslie-Lau.github.io/categories/golang/</link>
+      <link>/categories/golang/</link>
       <pubDate>Thu, 15 Aug 2024 20:06:01 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/golang/</guid>
+      <guid>/categories/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>Mysql</title>
-      <link>https://here-Leslie-Lau.github.io/categories/mysql/</link>
+      <link>/categories/mysql/</link>
       <pubDate>Tue, 11 Jun 2024 18:26:31 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/mysql/</guid>
+      <guid>/categories/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>Network</title>
-      <link>https://here-Leslie-Lau.github.io/categories/network/</link>
+      <link>/categories/network/</link>
       <pubDate>Sun, 07 Jan 2024 19:26:53 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/network/</guid>
+      <guid>/categories/network/</guid>
       <description></description>
     </item>
     <item>
       <title>Algorithm</title>
-      <link>https://here-Leslie-Lau.github.io/categories/algorithm/</link>
+      <link>/categories/algorithm/</link>
       <pubDate>Sat, 14 Oct 2023 13:12:12 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/algorithm/</guid>
+      <guid>/categories/algorithm/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://here-Leslie-Lau.github.io/categories/git/</link>
+      <link>/categories/git/</link>
       <pubDate>Tue, 12 Sep 2023 20:52:25 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/git/</guid>
+      <guid>/categories/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Vim</title>
-      <link>https://here-Leslie-Lau.github.io/categories/vim/</link>
+      <link>/categories/vim/</link>
       <pubDate>Fri, 28 Jul 2023 15:20:58 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/vim/</guid>
+      <guid>/categories/vim/</guid>
       <description></description>
     </item>
     <item>
       <title>Operating System</title>
-      <link>https://here-Leslie-Lau.github.io/categories/operating-system/</link>
+      <link>/categories/operating-system/</link>
       <pubDate>Tue, 09 May 2023 09:34:53 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/categories/operating-system/</guid>
+      <guid>/categories/operating-system/</guid>
       <description></description>
     </item>
   </channel>

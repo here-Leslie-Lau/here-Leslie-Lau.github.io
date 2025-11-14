@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>设计模式 on Terminal</title>
-    <link>https://here-Leslie-Lau.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
-    <description>Recent content in 设计模式 on Terminal</description>
+    <title>设计模式 on Leslie&#39;s Blog</title>
+    <link>/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+    <description>Recent content in 设计模式 on Leslie&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
     <lastBuildDate>Mon, 29 Apr 2024 16:35:06 +0800</lastBuildDate>
-    <atom:link href="https://here-Leslie-Lau.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang函数式编程</title>
-      <link>https://here-Leslie-Lau.github.io/post/golang/functional_options/</link>
+      <link>/post/golang/functional_options/</link>
       <pubDate>Mon, 29 Apr 2024 16:35:06 +0800</pubDate>
-      <guid>https://here-Leslie-Lau.github.io/post/golang/functional_options/</guid>
+      <guid>/post/golang/functional_options/</guid>
       <description>&lt;h2 id=&#34;什么是函数式编程&#34;&gt;什么是函数式编程&lt;/h2&gt;&#xA;&lt;p&gt;这边文章没有很复杂的概念，单纯介绍下函数式编程的概念，以及在Golang中如何实现函数式编程。&lt;/p&gt;</description>
     </item>
   </channel>
