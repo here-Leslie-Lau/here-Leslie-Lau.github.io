@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Network on Terminal</title>
+    <link>https://here-Leslie-Lau.github.io/categories/network/</link>
+    <description>Recent content in Network on Terminal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
+    <lastBuildDate>Sun, 07 Jan 2024 19:26:53 +0800</lastBuildDate>
+    <atom:link href="https://here-Leslie-Lau.github.io/categories/network/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>常见提高Api性能的方法</title>
+      <link>https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/</link>
+      <pubDate>Sun, 07 Jan 2024 19:26:53 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/network/familiar_improve_api_perf/</guid>
+      <description>&lt;h2 id=&#34;分页pagination&#34;&gt;分页(Pagination)&lt;/h2&gt;&#xA;&lt;p&gt;分页这个优化方式特别常见。目前有两种方式：&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;客户端指定每页的数量和当前第几页，服务端返回总页数和当前页的数据。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>socket是什么</title>
+      <link>https://here-Leslie-Lau.github.io/post/network/what_is_socket/</link>
+      <pubDate>Mon, 13 Nov 2023 18:40:49 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/network/what_is_socket/</guid>
+      <description>&lt;h2 id=&#34;socket介绍&#34;&gt;Socket介绍&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;不知道大家有没有想过网络通信到底是什么东西，为什么两个计算机之间可以通信？&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;其实本质上就是两个计算机之间的数据交换，而这个数据交换的过程就是通过&lt;code&gt;socket&lt;/code&gt;来完成的。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

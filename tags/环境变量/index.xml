@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>环境变量 on Terminal</title>
+    <link>https://here-Leslie-Lau.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</link>
+    <description>Recent content in 环境变量 on Terminal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
+    <lastBuildDate>Sun, 28 Jan 2024 11:03:31 +0800</lastBuildDate>
+    <atom:link href="https://here-Leslie-Lau.github.io/tags/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>fish shell环境变量的坑</title>
+      <link>https://here-Leslie-Lau.github.io/post/os/fish_path_variable/</link>
+      <pubDate>Sun, 28 Jan 2024 11:03:31 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/os/fish_path_variable/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;前段时间入了&lt;a href=&#34;https://fishshell.com/&#34;&gt;fish-shell&lt;/a&gt;的坑，将其作为默认的shell，发现很多环境变量都失效了，比如&lt;code&gt;$PATH&lt;/code&gt;，&lt;code&gt;$GOPATH&lt;/code&gt;等等，这里记录一下解决方案。&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;标题党一下，互联网上很多文章写的都是垃圾。要么互相复制，要么没有彻底解决问题。&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

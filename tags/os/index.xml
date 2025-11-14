@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Os on Terminal</title>
+    <link>https://here-Leslie-Lau.github.io/tags/os/</link>
+    <description>Recent content in Os on Terminal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
+    <lastBuildDate>Fri, 17 Jan 2025 16:37:15 +0800</lastBuildDate>
+    <atom:link href="https://here-Leslie-Lau.github.io/tags/os/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>dnf包管理工具指北</title>
+      <link>https://here-Leslie-Lau.github.io/post/os/how_to_use_dnf/</link>
+      <pubDate>Fri, 17 Jan 2025 16:37:15 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/os/how_to_use_dnf/</guid>
+      <description>&lt;p&gt;包管理工具是一种用于安装、升级、配置和删除软件包的工具。它可以自动处理软件包之间的依赖关系，使得软件包的安装和升级变得更加容易。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>关于内存对齐</title>
+      <link>https://here-Leslie-Lau.github.io/post/os/memory_alignment/</link>
+      <pubDate>Tue, 21 May 2024 10:22:48 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/os/memory_alignment/</guid>
+      <description>&lt;h2 id=&#34;什么是内存对齐&#34;&gt;什么是内存对齐&lt;/h2&gt;&#xA;&lt;p&gt;我们时常会以为一个变量在内存中可以任意存放(假设内存空间足够, 不考虑占用情况)。但实际上并不是这样。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>字节序</title>
+      <link>https://here-Leslie-Lau.github.io/post/os/byte_order/</link>
+      <pubDate>Thu, 11 Jan 2024 19:51:17 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/os/byte_order/</guid>
+      <description>&lt;h2 id=&#34;什么是字节序&#34;&gt;什么是字节序&lt;/h2&gt;&#xA;&lt;p&gt;最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所以就想着整理一下字节序的相关知识。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lock Category</title>
+      <link>https://here-Leslie-Lau.github.io/post/os/lock_category/</link>
+      <pubDate>Mon, 17 Jul 2023 19:06:51 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/os/lock_category/</guid>
+      <description>&lt;p&gt;编程中的锁可以根据维度不同，而对锁进行分类，以下一一介绍。&lt;/p&gt;&#xA;&lt;h2 id=&#34;乐观锁悲观锁&#34;&gt;乐观锁/悲观锁&lt;/h2&gt;&#xA;&lt;p&gt;这一对锁名字比较形象。&lt;/p&gt;&#xA;&lt;h3 id=&#34;悲观锁&#34;&gt;悲观锁&lt;/h3&gt;&#xA;&lt;p&gt;先说悲观锁，把锁比作人的话。这位小伙子遇事会比较“悲观”。它会先把资源给锁住再进行操作，这样其他线程请求该资源的时候就会被阻塞，直到悲观锁把资源释放为止。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

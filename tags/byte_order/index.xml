@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Byte_order on Terminal</title>
+    <link>https://here-Leslie-Lau.github.io/tags/byte_order/</link>
+    <description>Recent content in Byte_order on Terminal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
+    <lastBuildDate>Thu, 11 Jan 2024 19:51:17 +0800</lastBuildDate>
+    <atom:link href="https://here-Leslie-Lau.github.io/tags/byte_order/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>字节序</title>
+      <link>https://here-Leslie-Lau.github.io/post/os/byte_order/</link>
+      <pubDate>Thu, 11 Jan 2024 19:51:17 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/os/byte_order/</guid>
+      <description>&lt;h2 id=&#34;什么是字节序&#34;&gt;什么是字节序&lt;/h2&gt;&#xA;&lt;p&gt;最近在看tcp通信相关的知识，期间看了好几个仓库都出现了字节序的概念，所以就想着整理一下字节序的相关知识。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on Terminal</title>
+    <link>https://here-Leslie-Lau.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on Terminal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
+    <lastBuildDate>Thu, 28 Aug 2025 14:03:58 +0800</lastBuildDate>
+    <atom:link href="https://here-Leslie-Lau.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>超好用的命令行调试接口工具 HTTPie</title>
+      <link>https://here-Leslie-Lau.github.io/post/tools/httpie/</link>
+      <pubDate>Thu, 28 Aug 2025 14:03:58 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/tools/httpie/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;老实说，最开始我是个坚定的图形化界面的支持者。觉得命令行太过复杂而GUI界面更直观易用。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

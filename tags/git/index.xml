@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Terminal</title>
+    <link>https://here-Leslie-Lau.github.io/tags/git/</link>
+    <description>Recent content in Git on Terminal</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
+    <lastBuildDate>Tue, 12 Sep 2023 20:52:25 +0800</lastBuildDate>
+    <atom:link href="https://here-Leslie-Lau.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>git commit规范</title>
+      <link>https://here-Leslie-Lau.github.io/post/git/commit_standard/</link>
+      <pubDate>Tue, 12 Sep 2023 20:52:25 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/git/commit_standard/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;git&lt;/code&gt;作为一个代码管理工具，现在几乎成为一个程序员的必备技能了。其中的&lt;code&gt;git commit message&lt;/code&gt;尤其重要，经常看到commit信息内有&lt;code&gt;fix bug, change XXX&lt;/code&gt;等各种千奇百怪的描述，会气的一口老血上来。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>git submodules</title>
+      <link>https://here-Leslie-Lau.github.io/post/git/submodules/</link>
+      <pubDate>Sat, 13 May 2023 14:17:49 +0800</pubDate>
+      <guid>https://here-Leslie-Lau.github.io/post/git/submodules/</guid>
+      <description>&lt;h2 id=&#34;git-submodules介绍&#34;&gt;git submodules介绍&lt;/h2&gt;&#xA;&lt;p&gt;来自git官方的介绍&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ git &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt; submodules&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;NAME&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       git-submodule - Initialize, update or inspect submodules&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;这个命令可以用于初始化、更新、检查子模块。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
