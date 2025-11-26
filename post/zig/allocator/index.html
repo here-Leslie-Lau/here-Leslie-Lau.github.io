@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>一文理清Zig中的Allocator :: Leslie&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="What is Allocator 分配器是zig中非常重要的概念。zig在编程语言中的定位与C类似。这意味手动管理内存（准确点说，基本是堆内存）是非常重要。
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="/post/zig/allocator/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="/css/terminal.min.fc24a2ba377236b213ad9dc657b53908a87eee2a32413a890db0dd1138479a4e.css">
+
+  
+  <link rel="stylesheet" href="/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="here-Leslie-Lau" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="一文理清Zig中的Allocator">
+<meta property="og:description" content="What is Allocator 分配器是zig中非常重要的概念。zig在编程语言中的定位与C类似。这意味手动管理内存（准确点说，基本是堆内存）是非常重要。
+" />
+<meta property="og:url" content="/post/zig/allocator/" />
+<meta property="og:site_name" content="Leslie&#39;s Blog" />
+
+  <meta property="og:image" content="/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="zig" />
+
+
+  <meta property="article:published_time" content="2025-11-26 20:27:21 &#43;0800 &#43;0800" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/post">
+  <div class="logo">
+    Leslie&#39;s Blog
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/categories">Categories</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/categories" >Categories</a></li>
+        
+      
+        
+          <li><a href="/tags" >Tags</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="/post/zig/allocator/">一文理清Zig中的Allocator</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-11-26</time><span class="post-author">here-Leslie-Lau</span><span class="post-reading-time">6 min read (2535 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="/tags/zig/">zig</a>&nbsp;
+      
+      #<a href="/tags/allocator/">allocator</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        TOC
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-allocator">What is Allocator</a></li>
+    <li><a href="#why-allocator">Why Allocator</a></li>
+    <li><a href="#the-different-allocators-in-zig">The different Allocators in Zig</a>
+      <ul>
+        <li><a href="#general-purpose-allocator">General Purpose Allocator</a></li>
+        <li><a href="#page-allocator">Page Allocator</a></li>
+        <li><a href="#buffer-allocator">Buffer Allocator</a></li>
+        <li><a href="#arena-allocator">Arena Allocator</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-methods-of-allocator">The methods of Allocator</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="what-is-allocator">What is Allocator<a href="#what-is-allocator" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>分配器是<code>zig</code>中非常重要的概念。<code>zig</code>在编程语言中的定位与<code>C</code>类似。这意味手动管理内存（准确点说，基本是堆内存）是非常重要。</p>
+<p>我看<code>zig</code>的官方文档有这样一句话：</p>
+<blockquote>
+<p>no hidden-memory allocations</p></blockquote>
+<p>没有任何隐藏的内存分配。这意味这门语言不会偷偷摸摸在标准库或者某些运算中帮你分配内存，“所见即所得”。如何某些方法确实需要分配内存，那么它会让你传入一个<code>Allocator</code>实例。这意味着该方法会进行某些内存操作。</p>
+<p><code>Allocator</code>就是分配内存的工具。把它想象成一个结构体，带上了类似<code>malloc</code>, <code>free</code>等方法即可。</p>
+<p><code>zig</code>中所有的内存分配都是通过<code>Allocator</code>来完成的。</p>
+<h2 id="why-allocator">Why Allocator<a href="#why-allocator" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>每次在Zig中调用函数时，都会在栈中为该函数调用预留一个空间。但栈有一个关键限制：存储在栈中的每个对象都必须具有已知的固定长度。</p>
+<p>然而现实中，有两种非常常见的情况会让栈的这种“固定长度限制”成为致命问题：</p>
+<ol>
+<li>函数内部创建的对象可能在函数执行期间增大尺寸。</li>
+<li>有时无法预先知道将接收多少输入，或这些输入会有多大。</li>
+</ol>
+<p>此外，还有另一种情况您可能需要使用分配器，即当您希望编写一个返回指向局部对象指针的函数时。若该局部对象存储在栈中，则无法实现这一操作。但若该对象存储在堆中，您便可以在函数结束时返回指向该对象的指针。因为作为程序员，您掌控着所分配堆内存的生命周期，由其决定该内存何时被销毁或释放。</p>
+<p>以下是栈不适用的一些常见情况。正因为如此，你需要一种不同的内存管理策略来在函数中存储这些对象。你需要使用一种可以随着对象增长而扩展的内存类型，或者能够控制其生命周期的内存。堆内存正好符合这一描述。</p>
+<p>在堆上分配内存通常被称为动态内存管理。当你创建的对象在程序运行期间不断增大时，你可以通过在堆中分配更多内存来扩展可用内存空间，以存储这些对象。在 Zig 语言中，你可以通过分配器（allocator）对象来实现这一点。</p>
+<h2 id="the-different-allocators-in-zig">The different Allocators in Zig<a href="#the-different-allocators-in-zig" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>正如我前面所说，&ldquo;把它想象成一个结构体，带上了类似<code>malloc</code>, <code>free</code>等方法即可。&rdquo;</p>
+<p>在<code>zig</code>中，<code>Allocator</code>是一个接口（interface）。它定义了一组方法，用于分配和释放内存。有接口就意味着可以有不同的实现。<code>zig</code>标准库中提供了几种不同的<code>Allocator</code>实现，适用于不同的使用场景。</p>
+<p>简单介绍下几种常见的<code>Allocator</code>实现。</p>
+<h3 id="general-purpose-allocator">General Purpose Allocator<a href="#general-purpose-allocator" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>顾名思义，GeneralPurposeAllocator()是一个“通用”分配器。你可以将其用于任何类型的任务。主要是开发或调试阶段使用。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&#34;std&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">!</span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="nf">GeneralPurposeAllocator</span><span class="p">(.{}){};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">allocator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gpa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">allocator</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="kt">u32</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="n">allocator</span><span class="p">.</span><span class="nf">destroy</span><span class="p">(</span><span class="n">num</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">num</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">std</span><span class="p">.</span><span class="n">debug</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;{d}</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">num</span><span class="p">.</span><span class="o">*</span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>上面代码中，我们创建了一个<code>GeneralPurposeAllocator</code>实例，并使用它来分配和释放一个<code>u32</code>类型的内存。</p>
+<p>这里提一嘴，分配器实例通常是通过<code>std.heap</code>模块创建的。<strong>申请内存后记得释放。</strong></p>
+<h3 id="page-allocator">Page Allocator<a href="#page-allocator" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>page_allocator() 是一个在堆内存中分配完整内存页的分配器。换句话说，每次使用 page_allocator() 分配内存时，都会在堆中分配一整页内存，而不仅仅是其中的一小部分。</p>
+<p>该内存页的大小取决于您所使用的系统。大多数系统在堆中使用 4KB 的内存页大小，因此 page_allocator() 在每次调用时通常会分配这么多内存。正因如此，page_allocator() 在 Zig 中被认为是一个快速但“浪费”的分配器。因为它在每次调用时都会分配大量内存，而您的程序很可能并不需要这么多内存。</p>
+<h3 id="buffer-allocator">Buffer Allocator<a href="#buffer-allocator" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>Buffer Allocator</code> 有两个实现，分别是 <code>FixedBufferAllocator</code> 和 <code>ThreadSafeFixedBufferAllocator</code>。</p>
+<p>后者故名思议，是线程安全的版本。这里我们只拿前者举例。<code>Buffer Allocator</code>这种分配器需要你先提供一个固定大小的缓冲区。然后它会在这个缓冲区内进行内存分配。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&#34;std&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">!</span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">buffer</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="kt">u8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">undefined</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 初始化缓冲区, 都为0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="nb">@memset</span><span class="p">(</span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 使用FixedBufferAllocator
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">fba</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="n">FixedBufferAllocator</span><span class="p">.</span><span class="nf">init</span><span class="p">(</span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">allocator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fba</span><span class="p">.</span><span class="nf">allocator</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">allocator</span><span class="p">.</span><span class="nf">alloc</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="n">allocator</span><span class="p">.</span><span class="nf">free</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>上面代码中，我们创建了一个大小为5的缓冲区，并使用<code>FixedBufferAllocator</code>在这个缓冲区内进行内存分配。</p>
+<p>对了，你还记得我再上面讲过大部分分配器都是在堆上分配内存的吗？ <strong><code>Buffer Allocator</code>是个例外。它是基于你提供的缓冲区来分配的，如果提供的缓冲区在栈上，那么它分配的内存也是在栈上。</strong></p>
+<p>上面的例子中，我们提供的缓冲区<code>buffer</code>是在栈上分配的(因为它是main函数的局部变量，main跑完里面所有的东西都会被释放)，因此<code>FixedBufferAllocator</code>分配的内存也是在栈上。</p>
+<p>如果你想要<code>Buffer Allocator</code>在堆上分配内存，那么你需要提供一个在堆上分配的缓冲区。比如你可以先用别的分配器申请一段内存，然后把它当成缓冲区再传入<code>FixedBufferAllocator</code>。</p>
+<h3 id="arena-allocator">Arena Allocator<a href="#arena-allocator" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p><code>Arena Allocator</code>需要你先传入一个分配器，然后<code>Arena Allocator</code>会持有你传入的分配器，并在其上进行内存分配。(做了一层封装)</p>
+<p>它最大的特点就是你可以使用其分配多次内存，最后一次性释放掉所有分配的内存。不用每申请一段就调用下<code>defer xxx.free(...)</code>。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&#34;std&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">!</span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="nf">GeneralPurposeAllocator</span><span class="p">(.{}){};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">aa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="n">ArenaAllocator</span><span class="p">.</span><span class="nf">init</span><span class="p">(</span><span class="n">gpa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 这里调用deinit来一次性释放所有通过ArenaAllocator分配的内存
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="n">aa</span><span class="p">.</span><span class="nf">deinit</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">aa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">().</span><span class="nf">alloc</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">aa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">().</span><span class="nf">alloc</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">arr3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">aa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">().</span><span class="nf">alloc</span><span class="p">(</span><span class="kt">u8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr2</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr3</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>通过统一调用<code>deinit()</code>方法，我们一次性释放了所有通过<code>ArenaAllocator</code>分配的内存。</p>
+<p>有个生动的例子：<code>Arena Allocator</code>本质上就是一个包工头，它承包了一个工地（传入的分配器）。你可以让它多次分配材料（内存），等到工程完工时，你只需要一次性结算（释放内存）即可。</p>
+<h2 id="the-methods-of-allocator">The methods of Allocator<a href="#the-methods-of-allocator" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p><code>Allocator</code>接口有4个方法：<code>alloc</code>, <code>free</code>, <code>create</code>, <code>destroy</code>。</p>
+<p>长话短说(写累了o_K)：</p>
+<ol>
+<li>你要分配一段连续的内存，就用<code>alloc</code>方法。然后用<code>free</code>释放。</li>
+<li>你要分配一个单独的对象，就用<code>create</code>方法。然后用<code>destroy</code>释放。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">const</span><span class="w"> </span><span class="n">std</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@import</span><span class="p">(</span><span class="s">&#34;std&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">const</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">id</span><span class="o">:</span><span class="w"> </span><span class="kt">i64</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kr">const</span><span class="w"> </span><span class="kt">u8</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 构造函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">init</span><span class="p">(</span><span class="n">id</span><span class="o">:</span><span class="w"> </span><span class="kt">i64</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="kr">const</span><span class="w"> </span><span class="kt">u8</span><span class="p">)</span><span class="w"> </span><span class="n">User</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">.{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">print</span><span class="p">(</span><span class="n">self</span><span class="o">:</span><span class="w"> </span><span class="o">*</span><span class="kr">const</span><span class="w"> </span><span class="n">User</span><span class="p">)</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">std</span><span class="p">.</span><span class="n">debug</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;User id: {d}, name: {s}</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="o">!</span><span class="kt">void</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="nf">GeneralPurposeAllocator</span><span class="p">(.{}){};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">allocator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gpa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 这里调用create分配好User实例所需的内存
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">allocator</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">User</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="n">allocator</span><span class="p">.</span><span class="nf">destroy</span><span class="p">(</span><span class="n">u</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 给u这个指针赋值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="o">*</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="nf">init</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Leslie&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="nf">print</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></div><p>这里我们使用<code>create</code>方法分配了一个<code>User</code>实例所需的内存，然后使用<code>destroy</code>释放。</p>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>© <a href='https://github.com/here-Leslie-Lau' target='_blank' rel='noopener'>here-Leslie-Lau</a> || <a href='mailto:i.leslie.lau@gmail.com' target='_blank' rel='noopener'>Contact My Email</a'></span>
+    
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
