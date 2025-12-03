@@ -1,14 +1,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Leslie&#39;s Blog</title>
-    <link>/tags/mysql/</link>
+    <link>/tags/project/</link>
     <description>Leslie&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
-    <lastBuildDate>Tue, 11 Jun 2024 18:26:31 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Dec 2025 22:51:51 +0800</lastBuildDate>
     
-	  <atom:link href="/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/tags/project/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
