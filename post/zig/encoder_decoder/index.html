@@ -6,7 +6,8 @@
   
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Base64算法介绍 Base64本质上是一种将二进制数据转换为文本格式的编码方式。通过将每三个字节的数据转换为四个可打印字符来实现这一点。
+<meta name="description" content="本文代码基于zig 0.15.2
+Base64算法介绍 Base64本质上是一种将二进制数据转换为文本格式的编码方式。通过将每三个字节的数据转换为四个可打印字符来实现这一点。
 " />
 <meta name="keywords" content="" />
 
@@ -79,7 +80,8 @@
 <meta property="og:locale" content="en" />
 <meta property="og:type" content="article" />
 <meta property="og:title" content="使用Zig实现base64编码和解码">
-<meta property="og:description" content="Base64算法介绍 Base64本质上是一种将二进制数据转换为文本格式的编码方式。通过将每三个字节的数据转换为四个可打印字符来实现这一点。
+<meta property="og:description" content="本文代码基于zig 0.15.2
+Base64算法介绍 Base64本质上是一种将二进制数据转换为文本格式的编码方式。通过将每三个字节的数据转换为四个可打印字符来实现这一点。
 " />
 <meta property="og:url" content="/post/zig/encoder_decoder/" />
 <meta property="og:site_name" content="Leslie&#39;s Blog" />
@@ -179,7 +181,7 @@
   <h1 class="post-title">
     <a href="/post/zig/encoder_decoder/">使用Zig实现base64编码和解码</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2025-12-01</time><span class="post-author">here-Leslie-Lau</span><span class="post-reading-time">8 min read (3684 words)</span></div>
+  <div class="post-meta"><time class="post-date">2025-12-01</time><span class="post-author">here-Leslie-Lau</span><span class="post-reading-time">8 min read (3694 words)</span></div>
 
   
     <span class="post-tags">
@@ -218,7 +220,8 @@
   
 
   <div class="post-content"><div>
-        <h2 id="base64算法介绍">Base64算法介绍<a href="#base64算法介绍" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+        <p><strong>本文代码基于zig 0.15.2</strong></p>
+<h2 id="base64算法介绍">Base64算法介绍<a href="#base64算法介绍" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p><code>Base64</code>本质上是一种将二进制数据转换为文本格式的编码方式。通过将每三个字节的数据转换为四个可打印字符来实现这一点。</p>
 <p>为啥需要它呢？因为在一些系统传输中，它只能接受文本数据，比如邮件系统(smtp)和某些网络协议(http)。通过Base64编码，我们可以确保二进制数据在这些系统中能够安全传输。我们将二进制数据转换为文本格式后，接收端再根据Base64规则将其还原为原始的二进制数据。因此，如果出于任何原因，你需要在邮件中以附件形式发送二进制文件（例如PDF或Excel文件），这些二进制文件在纳入SMTP消息前通常会被转换为base64。所以base64编码在这些邮件系统中被广泛用于将二进制数据嵌入SMTP消息。</p>
 <p><code>Base64</code>通过将每三个字节的数据转换为四个可打印字符来实现这一点。</p>

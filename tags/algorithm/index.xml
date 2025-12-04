@@ -17,7 +17,8 @@
       <pubDate>Mon, 01 Dec 2025 22:51:51 +0800</pubDate>
       
       <guid>/post/zig/encoder_decoder/</guid>
-      <description>&lt;h2 id=&#34;base64算法介绍&#34;&gt;Base64算法介绍&lt;/h2&gt;
+      <description>&lt;p&gt;&lt;strong&gt;本文代码基于zig 0.15.2&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;base64算法介绍&#34;&gt;Base64算法介绍&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Base64&lt;/code&gt;本质上是一种将二进制数据转换为文本格式的编码方式。通过将每三个字节的数据转换为四个可打印字符来实现这一点。&lt;/p&gt;
 &lt;p&gt;为啥需要它呢？因为在一些系统传输中，它只能接受文本数据，比如邮件系统(smtp)和某些网络协议(http)。通过Base64编码，我们可以确保二进制数据在这些系统中能够安全传输。我们将二进制数据转换为文本格式后，接收端再根据Base64规则将其还原为原始的二进制数据。因此，如果出于任何原因，你需要在邮件中以附件形式发送二进制文件（例如PDF或Excel文件），这些二进制文件在纳入SMTP消息前通常会被转换为base64。所以base64编码在这些邮件系统中被广泛用于将二进制数据嵌入SMTP消息。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Base64&lt;/code&gt;通过将每三个字节的数据转换为四个可打印字符来实现这一点。&lt;/p&gt;
@@ -261,7 +262,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Encoded: &lt;span class=&#34;nv&#34;&gt;SGVsbG8&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Decoded: Hello
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-      <content:encoded>&lt;h2 id=&#34;base64算法介绍&#34;&gt;Base64算法介绍&lt;/h2&gt;
+      <content:encoded>&lt;p&gt;&lt;strong&gt;本文代码基于zig 0.15.2&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;base64算法介绍&#34;&gt;Base64算法介绍&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Base64&lt;/code&gt;本质上是一种将二进制数据转换为文本格式的编码方式。通过将每三个字节的数据转换为四个可打印字符来实现这一点。&lt;/p&gt;
 &lt;p&gt;为啥需要它呢？因为在一些系统传输中，它只能接受文本数据，比如邮件系统(smtp)和某些网络协议(http)。通过Base64编码，我们可以确保二进制数据在这些系统中能够安全传输。我们将二进制数据转换为文本格式后，接收端再根据Base64规则将其还原为原始的二进制数据。因此，如果出于任何原因，你需要在邮件中以附件形式发送二进制文件（例如PDF或Excel文件），这些二进制文件在纳入SMTP消息前通常会被转换为base64。所以base64编码在这些邮件系统中被广泛用于将二进制数据嵌入SMTP消息。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Base64&lt;/code&gt;通过将每三个字节的数据转换为四个可打印字符来实现这一点。&lt;/p&gt;
