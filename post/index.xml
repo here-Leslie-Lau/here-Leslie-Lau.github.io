@@ -6,10 +6,94 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© &lt;a href=&#39;https://github.com/here-Leslie-Lau&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;here-Leslie-Lau&lt;/a&gt; || &lt;a href=&#39;mailto:i.leslie.lau@gmail.com&#39; target=&#39;_blank&#39; rel=&#39;noopener&#39;&gt;Contact My Email&lt;/a&#39;&gt;</copyright>
-    <lastBuildDate>Mon, 01 Dec 2025 22:51:51 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 15 Dec 2025 21:20:58 +0800</lastBuildDate>
     
 	  <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>What is buckets in Programming?</title>
+      <link>/post/others/buckets/</link>
+      <pubDate>Mon, 15 Dec 2025 21:20:58 +0800</pubDate>
+      
+      <guid>/post/others/buckets/</guid>
+      <description>&lt;h2 id=&#34;what-is-buckets-in-programming&#34;&gt;What is buckets in Programming?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“桶”（Bucket）在编程里，就像生活中分类收纳的储物箱。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;为了让你一听就懂，我们别用代码，用生活例子来打比方：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;通俗理解：从“乱堆”到“分类”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想象你有一大堆乐高积木，散落在地板上（这叫无序数据）。&lt;/p&gt;
+&lt;p&gt;如果你要找一块红色的积木，你得在那一大堆里从头翻到尾（这叫遍历，效率很低）。
+现在，你拿来了几个桶：&lt;/p&gt;
+&lt;p&gt;1号桶： 装红色的。
+2号桶： 装蓝色的。
+3号桶： 装黄色的。
+你把积木按颜色扔进对应的桶里。下次你想找“红色积木”，你根本不需要看那一地乱七八糟的积木，直接去1号桶里拿就行了。&lt;/p&gt;
+&lt;p&gt;这就是编程里“桶”的核心作用：把杂乱的数据，按照某种规则（比如颜色、首字母、数值范围），分装到不同的小容器里，为了以后处理起来更快。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;usage-of-buckets&#34;&gt;Usage of buckets&lt;/h2&gt;
+&lt;p&gt;在编程中，桶主要用来解决两个问题：排序和查找（哈希）。&lt;/p&gt;
+&lt;h3 id=&#34;场景一桶排序-bucket-sort&#34;&gt;场景一：桶排序 (Bucket Sort)&lt;/h3&gt;
+&lt;p&gt;假设你是老师，改了100张卷子，分数从0到100分。你要把卷子按分数从低到高排好序。&lt;/p&gt;
+&lt;p&gt;笨办法（普通排序）： 拿一张卷子，就在手里那叠卷子里插来插去比大小。&lt;/p&gt;
+&lt;p&gt;桶办法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;你在讲台上放10个桶。&lt;/li&gt;
+&lt;li&gt;第一个桶贴标签“0-9分”，第二个“10-19分”……最后一个“90-100分”。&lt;/li&gt;
+&lt;li&gt;拿起一张卷子看一眼，85分？扔进“80-89分”那个桶。&lt;/li&gt;
+&lt;li&gt;分完后，只需要把每个桶里的一小叠卷子理理顺，最后按顺序拼起来，全班就排好了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;好处： 快！因为你把一个大任务拆成了10个小任务。&lt;/p&gt;
+&lt;h3 id=&#34;场景二哈希表-hash-table&#34;&gt;场景二：哈希表 (Hash Table)&lt;/h3&gt;
+&lt;p&gt;这是“桶”用得最多的地方。你知道“键值对（Key-Value）”吗？（比如字典里的单词是Key，解释是Value）。&lt;/p&gt;
+&lt;p&gt;假设你要在内存里存一万个人的名字和电话。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;哈希函数 = 分桶规则： 计算机有一套算法算出一个人的名字属于哪个桶。比如算出“张三”属于5号桶，“李四”属于42号桶。&lt;/li&gt;
+&lt;li&gt;存数据： 只有当我们算出来“张三”对应5号桶，才会把他的电话放进5号桶。&lt;/li&gt;
+&lt;li&gt;找数据： 当你要查“张三”的电话，计算机一算，哦，张三在5号桶！直接去5号桶拎出来就行，根本不用看其他几千个桶。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;甚至，有时候桶里还会发生“撞车”（哈希冲突）：&lt;/p&gt;
+&lt;p&gt;如果“王五”一算，也属于5号桶怎么办？没事，5号桶里可以挂一个小链表（像糖葫芦一样），先把张三串上去，再把王五串在张三后面。也是八股文中经常出现的“拉链法”。&lt;/p&gt;
+</description>
+      <content:encoded>&lt;h2 id=&#34;what-is-buckets-in-programming&#34;&gt;What is buckets in Programming?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“桶”（Bucket）在编程里，就像生活中分类收纳的储物箱。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;为了让你一听就懂，我们别用代码，用生活例子来打比方：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;通俗理解：从“乱堆”到“分类”&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想象你有一大堆乐高积木，散落在地板上（这叫无序数据）。&lt;/p&gt;
+&lt;p&gt;如果你要找一块红色的积木，你得在那一大堆里从头翻到尾（这叫遍历，效率很低）。
+现在，你拿来了几个桶：&lt;/p&gt;
+&lt;p&gt;1号桶： 装红色的。
+2号桶： 装蓝色的。
+3号桶： 装黄色的。
+你把积木按颜色扔进对应的桶里。下次你想找“红色积木”，你根本不需要看那一地乱七八糟的积木，直接去1号桶里拿就行了。&lt;/p&gt;
+&lt;p&gt;这就是编程里“桶”的核心作用：把杂乱的数据，按照某种规则（比如颜色、首字母、数值范围），分装到不同的小容器里，为了以后处理起来更快。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;usage-of-buckets&#34;&gt;Usage of buckets&lt;/h2&gt;
+&lt;p&gt;在编程中，桶主要用来解决两个问题：排序和查找（哈希）。&lt;/p&gt;
+&lt;h3 id=&#34;场景一桶排序-bucket-sort&#34;&gt;场景一：桶排序 (Bucket Sort)&lt;/h3&gt;
+&lt;p&gt;假设你是老师，改了100张卷子，分数从0到100分。你要把卷子按分数从低到高排好序。&lt;/p&gt;
+&lt;p&gt;笨办法（普通排序）： 拿一张卷子，就在手里那叠卷子里插来插去比大小。&lt;/p&gt;
+&lt;p&gt;桶办法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;你在讲台上放10个桶。&lt;/li&gt;
+&lt;li&gt;第一个桶贴标签“0-9分”，第二个“10-19分”……最后一个“90-100分”。&lt;/li&gt;
+&lt;li&gt;拿起一张卷子看一眼，85分？扔进“80-89分”那个桶。&lt;/li&gt;
+&lt;li&gt;分完后，只需要把每个桶里的一小叠卷子理理顺，最后按顺序拼起来，全班就排好了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;好处： 快！因为你把一个大任务拆成了10个小任务。&lt;/p&gt;
+&lt;h3 id=&#34;场景二哈希表-hash-table&#34;&gt;场景二：哈希表 (Hash Table)&lt;/h3&gt;
+&lt;p&gt;这是“桶”用得最多的地方。你知道“键值对（Key-Value）”吗？（比如字典里的单词是Key，解释是Value）。&lt;/p&gt;
+&lt;p&gt;假设你要在内存里存一万个人的名字和电话。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;哈希函数 = 分桶规则： 计算机有一套算法算出一个人的名字属于哪个桶。比如算出“张三”属于5号桶，“李四”属于42号桶。&lt;/li&gt;
+&lt;li&gt;存数据： 只有当我们算出来“张三”对应5号桶，才会把他的电话放进5号桶。&lt;/li&gt;
+&lt;li&gt;找数据： 当你要查“张三”的电话，计算机一算，哦，张三在5号桶！直接去5号桶拎出来就行，根本不用看其他几千个桶。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;甚至，有时候桶里还会发生“撞车”（哈希冲突）：&lt;/p&gt;
+&lt;p&gt;如果“王五”一算，也属于5号桶怎么办？没事，5号桶里可以挂一个小链表（像糖葫芦一样），先把张三串上去，再把王五串在张三后面。也是八股文中经常出现的“拉链法”。&lt;/p&gt;
+</content:encoded>
+    </item>
     
     <item>
       <title>使用Zig实现base64编码和解码</title>
