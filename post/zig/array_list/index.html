@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Introduce Array List in Zig :: Leslie&#39;s Blog</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="What is Array List? 在高级语言中，数组通常是动态的。它们可以轻松根据需要增长大小，而你无需担心这一点。相比之下，低层次语言中的数组默认通常是静态的。这是C、C&#43;&#43;、Rust以及Zig的现实情况。
+" />
+<meta name="keywords" content="" />
+
+  <meta name="robots" content="noodp" />
+
+<link rel="canonical" href="/post/zig/array_list/" />
+
+
+
+
+
+  
+  <link rel="stylesheet" href="/css/terminal.min.fc24a2ba377236b213ad9dc657b53908a87eee2a32413a890db0dd1138479a4e.css">
+
+  
+  <link rel="stylesheet" href="/css/buttons.min.86f6b4c106b6c6eb690ae5203d36b442c1f66f718ff4e8164fa86cf6c61ad641.css">
+
+  
+  <link rel="stylesheet" href="/css/code.min.d529ea4b2fb8d34328d7d31afc5466d5f7bc2f0bc9abdd98b69385335d7baee4.css">
+
+  
+  <link rel="stylesheet" href="/css/fonts.min.5bb7ed13e1d00d8ff39ea84af26737007eb5051b157b86fc24487c94f3dc8bbe.css">
+
+  
+  <link rel="stylesheet" href="/css/footer.min.eb8dfc2c6a7eafa36cd3ba92d63e69e849e2200e0002a228d137f236b09ecd75.css">
+
+  
+  <link rel="stylesheet" href="/css/gist.min.a751e8b0abe1ba8bc53ced52a38b19d8950fe78ca29454ea8c2595cf26aad5c0.css">
+
+  
+  <link rel="stylesheet" href="/css/header.min.75c7eb0e2872d95ff48109c6647d0223a38db52e2561dd87966eb5fc7c6bdac6.css">
+
+  
+  <link rel="stylesheet" href="/css/main.min.775ac2af004d44c22a6d000fbd1d9af529642f5cef27399d0280d180af2c2e9b.css">
+
+  
+  <link rel="stylesheet" href="/css/menu.min.310d32205bdedd6f43144e3c3273c9deecd238eba5f9108db5ea96ca0cfbe377.css">
+
+  
+  <link rel="stylesheet" href="/css/pagination.min.bbb986dbce00a5ce5aca0504b7925fc1c581992a4bf57f163e5d69cc1db7d836.css">
+
+  
+  <link rel="stylesheet" href="/css/post.min.ad50c7f4d00e7975918f37fc74c6029e1959a40d66fb5b2c6564a8715e985573.css">
+
+  
+  <link rel="stylesheet" href="/css/syntax.min.e9ab635cf918bc84b901eb65c0b2caa74c9544245e3647c1af5c129896ef276e.css">
+
+  
+  <link rel="stylesheet" href="/css/terms.min.b81791663c3790e738e571cdbf802312390d30e4b1d8dc9d814a5b5454d0ac11.css">
+
+
+
+
+
+
+
+<link rel="shortcut icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+<meta name="twitter:card" content="summary" />
+
+  
+    <meta name="twitter:site" content="" />
+  
+    <meta name="twitter:creator" content="here-Leslie-Lau" />
+
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Introduce Array List in Zig">
+<meta property="og:description" content="What is Array List? 在高级语言中，数组通常是动态的。它们可以轻松根据需要增长大小，而你无需担心这一点。相比之下，低层次语言中的数组默认通常是静态的。这是C、C&#43;&#43;、Rust以及Zig的现实情况。
+" />
+<meta property="og:url" content="/post/zig/array_list/" />
+<meta property="og:site_name" content="Leslie&#39;s Blog" />
+
+  <meta property="og:image" content="/og-image.png">
+
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="627">
+
+  <meta property="article:section" content="zig" />
+
+
+  <meta property="article:published_time" content="2025-12-21 17:49:52 &#43;0800 &#43;0800" />
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/post">
+  <div class="logo">
+    Leslie&#39;s Blog
+  </div>
+</a>
+
+    </div>
+    
+      <ul class="menu menu--mobile">
+  <li class="menu__trigger">Menu&nbsp;▾</li>
+  <li>
+    <ul class="menu__dropdown">
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/categories">Categories</a></li>
+        
+      
+        
+          <li><a href="/tags">Tags</a></li>
+        
+      
+      
+    </ul>
+  </li>
+</ul>
+
+    
+    
+  </div>
+  
+    <nav class="navigation-menu">
+  <ul class="navigation-menu__inner menu--desktop">
+    
+      
+        
+          <li><a href="/about" >About</a></li>
+        
+      
+        
+          <li><a href="/categories" >Categories</a></li>
+        
+      
+        
+          <li><a href="/tags" >Tags</a></li>
+        
+      
+      
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<article class="post">
+  <h1 class="post-title">
+    <a href="/post/zig/array_list/">Introduce Array List in Zig</a>
+  </h1>
+  <div class="post-meta"><time class="post-date">2025-12-21</time><span class="post-author">here-Leslie-Lau</span><span class="post-reading-time">4 min read (1528 words)</span></div>
+
+  
+    <span class="post-tags">
+      
+      #<a href="/tags/zig/">zig</a>&nbsp;
+      
+      #<a href="/tags/data-structures/">data structures</a>&nbsp;
+      
+    </span>
+  
+  
+
+
+  
+    <div class="table-of-contents">
+      <h2>
+        TOC
+      </h2>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-array-list">What is Array List?</a></li>
+    <li><a href="#capacity-vs-length">Capacity vs Length</a></li>
+    <li><a href="#basic-operations">Basic Operations</a>
+      <ul>
+        <li><a href="#create-an-array-list">Create An Array List</a></li>
+        <li><a href="#adding-elements">Adding Elements</a></li>
+        <li><a href="#removing-elements">Removing Elements</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+    </div>
+  
+
+  <div class="post-content"><div>
+        <h2 id="what-is-array-list">What is Array List?<a href="#what-is-array-list" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>在高级语言中，数组通常是动态的。它们可以轻松根据需要增长大小，而你无需担心这一点。相比之下，低层次语言中的数组默认通常是静态的。这是C、C++、Rust以及Zig的现实情况。</p>
+<p>动态数组简单来说就是在程序运行时可以增长大小的数组。大多数低层次语言在其标准库中都有动态数组的某种实现。C++有std::vector，Rust有Vec，而Zig有std.ArrayList。</p>
+<p>std.ArrayList结构体为您提供了一个连续且可增长的数组。它的工作方式与其他动态数组类似：它会分配一块连续的内存空间，当这块空间耗尽时，ArrayList会分配另一块更大且连续的内存空间，将元素复制到这个新位置，并释放之前的内存块。</p>
+<h2 id="capacity-vs-length">Capacity vs Length<a href="#capacity-vs-length" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>这里直接截个网图：</p>
+<p><img src="/icons/array_list_01.png" alt="01"></p>
+<p>简单来说，Capacity是ArrayList当前可以容纳的最大元素数量，而Length是ArrayList当前实际包含的元素数量。</p>
+<p>当长度和容量相等时，意味着数组已经没有剩余空间了。我们已经达到了容量的上限，因此，如果我们想在这个数组中存储更多的值，就需要扩展它。我们需要获得一个更大的空间，能够容纳比当前更多的值。</p>
+<p>动态数组的工作原理是，每当长度等于数组容量时，就会扩展底层数组。它基本上是分配一个比之前更大的连续内存块，然后将当前存储的所有值复制到这个新位置（即这个新的内存块），接着释放之前的内存块。在这个过程的最后，新的底层数组拥有了更大的容量，因此，长度再次小于数组的容量。</p>
+<p>这是动态数组的一个循环。请注意，在整个循环过程中，数组的容量始终等于或大于其长度。如果你有一个 ArrayList 对象（假设你将其命名为 buffer），可以通过访问 ArrayList 对象的 capacity 属性来检查数组的当前容量，而当前长度可以通过 items.len 属性获取。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="c1">// Check capacity
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">buffer</span><span class="p">.</span><span class="n">capacity</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// Check length
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">buffer</span><span class="p">.</span><span class="n">items</span><span class="p">.</span><span class="n">len</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></div><h2 id="basic-operations">Basic Operations<a href="#basic-operations" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<h3 id="create-an-array-list">Create An Array List<a href="#create-an-array-list" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>可以使用<code>std.ArrayList.initCapacity</code>函数创建一个Array List实例。该函数需要两个参数：一个分配器和初始容量。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="nf">GeneralPurposeAllocator</span><span class="p">(.{}){};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">allocator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gpa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">var</span><span class="w"> </span><span class="n">buf</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="nf">ArrayList</span><span class="p">(</span><span class="kt">u8</span><span class="p">).</span><span class="nf">initCapacity</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">deinit</span><span class="p">(</span><span class="n">allocator</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p><code>std.ArrayList</code>后面跟上数组具体的类型。在上面的例子中，我们创建了一个可以存储<code>u8</code>类型元素的Array List。初始容量设置为100，这意味着该Array List在创建时可以容纳最多100个<code>u8</code>元素而无需扩展。</p>
+<h3 id="adding-elements">Adding Elements<a href="#adding-elements" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>使用<code>append</code>方法可以向Array List添加单个元素，使用<code>appendSlice</code>方法可以添加一个切片。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;H&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;e&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;l&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;l&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;o&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">appendSlice</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="s">&#34; World!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></div><p>当你需要在数组中间插入值，而不仅仅是追加到数组末尾时，你需要使用<code>insert</code>和<code>insertSlice</code>方法，而不是<code>append</code>和<code>appendSlice</code>方法。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">var</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="nf">GeneralPurposeAllocator</span><span class="p">(.{}){};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">const</span><span class="w"> </span><span class="n">allocator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gpa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">var</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="nf">ArrayList</span><span class="p">(</span><span class="kt">u8</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="nf">initCapacity</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">defer</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">deinit</span><span class="p">(</span><span class="n">allocator</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">appendSlice</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;My Pedro&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s">&#39;3&#39;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">insertSlice</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&#34; name&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">buffer</span><span class="p">.</span><span class="n">items</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">char</span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;{c}&#34;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">char</span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="n">stdout</span><span class="p">.</span><span class="nf">flush</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></div><h3 id="removing-elements">Removing Elements<a href="#removing-elements" class="hanchor" ariaLabel="Anchor">#</a> </h3>
+<p>使用<code>pop</code>方法可以从Array List中移除并返回最后一个元素。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">last_element</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">buf</span><span class="p">.</span><span class="nf">pop</span><span class="p">();</span><span class="w">
+</span></span></span></code></pre></div><p>现在，如果你想从数组的特定位置移除特定元素，可以使用ArrayList对象中的<code>orderedRemove</code>方法。该方法允许你传入一个索引作为参数，随后它会删除数组中该索引对应的值。每次执行<code>orderedRemove</code>操作时，数组的长度实际上都会减少。</p>
+<p>下面的示例中，我们首先创建一个ArrayList对象，并向其中填充数字。接着，我们连续两次使用orderedRemove()方法移除索引为3的值。</p>
+<p>另外，注意到我们将<code>orderedRemove</code>的返回结果赋值给了下划线字符。这意味着我们丢弃了该方法的返回值。<code>orderedRemove</code>方法会返回被删除的值，这一点与<code>pop</code>方法类似。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zig" data-lang="zig"><span class="line"><span class="cl"><span class="kr">var</span><span class="w"> </span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="n">heap</span><span class="p">.</span><span class="nf">GeneralPurposeAllocator</span><span class="p">(.{}){};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">const</span><span class="w"> </span><span class="n">allocator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">gpa</span><span class="p">.</span><span class="nf">allocator</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kr">var</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">std</span><span class="p">.</span><span class="nf">ArrayList</span><span class="p">(</span><span class="kt">u8</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">.</span><span class="nf">initCapacity</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">defer</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">deinit</span><span class="p">(</span><span class="n">allocator</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">..</span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="n">i</span><span class="o">|</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kr">const</span><span class="w"> </span><span class="n">index</span><span class="o">:</span><span class="w"> </span><span class="kt">u8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">@intCast</span><span class="p">(</span><span class="n">i</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">allocator</span><span class="p">,</span><span class="w"> </span><span class="n">index</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">std</span><span class="p">.</span><span class="n">debug</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s">&#34;{any}</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">buffer</span><span class="p">.</span><span class="n">items</span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">orderedRemove</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">buffer</span><span class="p">.</span><span class="nf">orderedRemove</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">std</span><span class="p">.</span><span class="n">debug</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;{any}</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">buffer</span><span class="p">.</span><span class="n">items</span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">std</span><span class="p">.</span><span class="n">debug</span><span class="p">.</span><span class="nf">print</span><span class="p">(</span><span class="s">&#34;{any}</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="p">.{</span><span class="n">buffer</span><span class="p">.</span><span class="n">items</span><span class="p">.</span><span class="n">len</span><span class="p">});</span><span class="w">
+</span></span></span></code></pre></div><h2 id="references">References<a href="#references" class="hanchor" ariaLabel="Anchor">#</a> </h2>
+<p>有关<code>Array List</code>的更多信息，请参阅Zig标准库文档中的<a href="https://ziglang.org/documentation/master/std/#std.array_list">ArrayList</a>部分。</p>
+
+      </div></div>
+
+  
+
+  
+    
+
+  
+</article>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">
+        <span>© <a href='https://github.com/here-Leslie-Lau' target='_blank' rel='noopener'>here-Leslie-Lau</a> || <a href='mailto:i.leslie.lau@gmail.com' target='_blank' rel='noopener'>Contact My Email</a'></span>
+    
+      </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<script type="text/javascript" src="/bundle.min.js"></script>
+
+
+
+
+
+  
+</div>
+
+</body>
+</html>
