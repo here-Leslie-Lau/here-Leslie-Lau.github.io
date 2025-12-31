@@ -179,7 +179,7 @@
   <h1 class="post-title">
     <a href="/post/others/workflow/">My Workflow</a>
   </h1>
-  <div class="post-meta"><time class="post-date">2024-07-08</time><span class="post-author">here-Leslie-Lau</span><span class="post-reading-time">6 min read (2524 words)</span></div>
+  <div class="post-meta"><time class="post-date">2024-07-08</time><span class="post-author">here-Leslie-Lau</span><span class="post-reading-time">6 min read (2516 words)</span></div>
 
   
     <span class="post-tags">
@@ -224,49 +224,45 @@
 <p><del>桌面环境的话我选择的是<code>Gnome</code>，因为<code>KDE</code>个人不太喜欢繁多的配置项，加上<code>Gnome</code>的UI本人更加喜欢。其他的DE还没太了解。</del></p>
 <p>2024-08-30更新: 由于<code>Gnome</code>的一些bug弄得不得劲。目前我改成裸奔一个<code>i3wm</code>了。主要是占用资源少，定好工作流之后效率高很多。</p>
 <h2 id="terminalshell">Terminal&amp;Shell<a href="#terminalshell" class="hanchor" ariaLabel="Anchor">#</a> </h2>
-<p><del>2025-02-23更新：现在换成<a href="https://github.com/ghostty-org/ghostty">ghostty</a></del></p>
-<p>又换回kitty了, 终端用的是<a href="https://github.com/kovidgoyal/kitty">Kitty</a></p>
+<p><del>2025-12-31更新：又换回kitty了, 终端用的是<a href="https://github.com/kovidgoyal/kitty">Kitty</a></del></p>
+<p>现在换成<a href="https://github.com/ghostty-org/ghostty">ghostty</a></p>
 <p>本人配置文件:</p>
-<pre tabindex="0"><code class="language-conf" data-lang="conf"># BEGIN_KITTY_THEME
-# Gruvbox Material Dark Hard
-include current-theme.conf
-# END_KITTY_THEME
+<pre tabindex="0"><code class="language-conf" data-lang="conf">font-family = &#34;Hack Nerd Font&#34;
+font-style = &#34;Bold&#34;
 
-background_opacity 1
+font-style-bold = &#34;Heavy&#34;
+font-size = 11.4
+font-thicken = true
+grapheme-width-method = &#34;unicode&#34;
+font-synthetic-style = bold,bold-italic
 
-# font_family
-font_family Hack Nerd Font
-# font-family JetBrains Mono Nerd Font
-font_size 12.2
-font_features FiraCodeNerdFontCompleteM-Retina +ss02 +ss03 +ss04 +ss05 +ss07 +zero
+# theme and styles
+theme = Gruvbox Dark Hard
+# theme = &#34;Cobalt Neon&#34;
+cursor-style = &#34;block&#34;
+macos-icon = &#34;retro&#34;
+cursor-opacity = 1
 
-# cursor
-cursor_shape beam
-# cursor_beam_thickness 10.0
-cursor_blink_interval -1
-# cursor_trail 2
+# 保持窗口阴影
+macos-window-shadow = true
 
-# tab customization
-tab_bar_edge top
-tab_bar_style powerline
-tab_bar_align left
-tab_powerline_style round
-tab_title_template &#34;{index}:{title}&#34;
+# shell
+shell-integration = fish
+shell-integration-features = no-cursor,title
 
-copy_on_select yes
-mouse_hide_wait 3.0
+# window
+window-theme = dark
+window-decoration = auto
+window-subtitle = false
+window-show-tab-bar = never
+macos-titlebar-style = hidden
 
-# keymaps
-map ctrl+1 goto_tab 1
-map ctrl+2 goto_tab 2
-map ctrl+3 goto_tab 3
-map ctrl+4 goto_tab 4
-map ctrl+5 goto_tab 5
-map ctrl+6 goto_tab 6
-map ctrl+7 goto_tab 7
-map ctrl+8 goto_tab 8
-map ctrl+9 goto_tab 9
-map ctrl+0 goto_tab 10
+# mouse
+mouse-hide-while-typing = true
+clipboard-read = &#34;allow&#34;
+clipboard-write = &#34;allow&#34;
+copy-on-select = true
+mouse-scroll-multiplier = 0.4
 </code></pre><p>Shell使用<a href="https://github.com/fish-shell/fish-shell">fish</a>，搭配自己编写的<a href="https://github.com/here-Leslie-Lau/clearance">prompt</a>使用</p>
 <h2 id="editor">Editor<a href="#editor" class="hanchor" ariaLabel="Anchor">#</a> </h2>
 <p>编辑器用的是<code>Neovim</code>，配置文件已经开源了: <a href="https://github.com/here-Leslie-Lau/my-nvim">here-Leslie-Lau/my-nvim</a>, 欢迎star~</p>
