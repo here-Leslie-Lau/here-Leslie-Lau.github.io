@@ -2550,7 +2550,8 @@
 &lt;p&gt;&lt;del&gt;2025-12-31更新：又换回kitty了, 终端用的是&lt;a href=&#34;https://github.com/kovidgoyal/kitty&#34;&gt;Kitty&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;现在换成&lt;a href=&#34;https://github.com/ghostty-org/ghostty&#34;&gt;ghostty&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本人配置文件:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;font-family = &amp;#34;Hack Nerd Font&amp;#34;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# font
+font-family = &amp;#34;Hack Nerd Font&amp;#34;
 font-style = &amp;#34;Bold&amp;#34;
 
 font-style-bold = &amp;#34;Heavy&amp;#34;
@@ -2578,7 +2579,9 @@ window-theme = dark
 window-decoration = auto
 window-subtitle = false
 window-show-tab-bar = never
-macos-titlebar-style = hidden
+window-colorspace = display-p3
+window-padding-balance = true
+# macos-titlebar-style = hidden
 
 # mouse
 mouse-hide-while-typing = true
@@ -3044,7 +3047,8 @@ set -g @catppuccin_window_status_style &amp;#34;rounded&amp;#34;
 &lt;p&gt;&lt;del&gt;2025-12-31更新：又换回kitty了, 终端用的是&lt;a href=&#34;https://github.com/kovidgoyal/kitty&#34;&gt;Kitty&lt;/a&gt;&lt;/del&gt;&lt;/p&gt;
 &lt;p&gt;现在换成&lt;a href=&#34;https://github.com/ghostty-org/ghostty&#34;&gt;ghostty&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;本人配置文件:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;font-family = &amp;#34;Hack Nerd Font&amp;#34;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-conf&#34; data-lang=&#34;conf&#34;&gt;# font
+font-family = &amp;#34;Hack Nerd Font&amp;#34;
 font-style = &amp;#34;Bold&amp;#34;
 
 font-style-bold = &amp;#34;Heavy&amp;#34;
@@ -3072,7 +3076,9 @@ window-theme = dark
 window-decoration = auto
 window-subtitle = false
 window-show-tab-bar = never
-macos-titlebar-style = hidden
+window-colorspace = display-p3
+window-padding-balance = true
+# macos-titlebar-style = hidden
 
 # mouse
 mouse-hide-while-typing = true
